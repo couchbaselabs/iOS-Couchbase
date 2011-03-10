@@ -35,6 +35,8 @@ The build is finnicky, please follow these instructions exactly. Also, it hasn't
 * Open Demo.xcodeproj with Xcode.
 * Build and Run! (You might have to click the Pause button in the Console to "unstick" the launch. That seems to be a debug issue. When launched from the phone the app should work.)
 
+Since this only works on the device, you will need to have an Apple Developer account to install it. [Here are some notes about how to fix provisioning profile issues if you encounter them](http://developer.apple.com/library/ios/#technotes/tn2010/tn2250.html).
+
 ## License
 
 Portions under Apache, Erlang, and other licenses.
