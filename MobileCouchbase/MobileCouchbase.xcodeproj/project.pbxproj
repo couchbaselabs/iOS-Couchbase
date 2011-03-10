@@ -39,17 +39,12 @@
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
 		79F5314F13208EA700038ADD /* erlang in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
-		BC369FC8132248C3001EBB11 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCB12A19E9E00581D10 /* libiErl14.a */; };
-		BC369FCD132248D3001EBB11 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCC12A19E9F00581D10 /* libiMonkey.a */; };
-		BC369FD3132248F5001EBB11 /* libcrypto_arm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCE12A19E9F00581D10 /* libcrypto_arm.a */; };
 		BC4A60831324C4BD003F32D3 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; };
 		BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
 		BC4A60851324C4CD003F32D3 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCB12A19E9E00581D10 /* libiErl14.a */; };
 		BC4A60861324C4CD003F32D3 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCC12A19E9F00581D10 /* libiMonkey.a */; };
 		BC4A62B61324C554003F32D3 /* Couchbase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; };
 		BC4A6A241324CA80003F32D3 /* libcrypto_arm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D478DCE12A19E9F00581D10 /* libcrypto_arm.a */; };
-		BC72D0F41321BCA2000343E5 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
-		BC72D0FB1321BCCA000343E5 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +100,6 @@
 		79F5314313208D3700038ADD /* MobileCouchbase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileCouchbase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F5314413208D3700038ADD /* MobileCouchbaseBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobileCouchbaseBundle-Info.plist"; sourceTree = "<group>"; };
 		BC4A607D1324C493003F32D3 /* libMobileCouchbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMobileCouchbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC72D0DD1321BB9E000343E5 /* MobileCouchbase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileCouchbase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,16 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC72D0DB1321BB9E000343E5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC369FC8132248C3001EBB11 /* libiErl14.a in Frameworks */,
-				BC369FCD132248D3001EBB11 /* libiMonkey.a in Frameworks */,
-				BC369FD3132248F5001EBB11 /* libcrypto_arm.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,7 +134,6 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC72D0DD1321BB9E000343E5 /* MobileCouchbase.framework */,
 				79F5314313208D3700038ADD /* MobileCouchbase.bundle */,
 				BC4A607D1324C493003F32D3 /* libMobileCouchbase.a */,
 			);
@@ -210,14 +193,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC72D1021321BCCE000343E5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC72D0FB1321BCCA000343E5 /* Couchbase.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -256,25 +231,6 @@
 			productReference = BC4A607D1324C493003F32D3 /* libMobileCouchbase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BC72D0DC1321BB9E000343E5 /* MobileCouchbase.framework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC72D0E51321BBA0000343E5 /* Build configuration list for PBXNativeTarget "MobileCouchbase.framework" */;
-			buildPhases = (
-				BC72D1021321BCCE000343E5 /* Headers */,
-				BC72D0D91321BB9E000343E5 /* Resources */,
-				BC72D0DA1321BB9E000343E5 /* Sources */,
-				BC72D0DB1321BB9E000343E5 /* Frameworks */,
-				BC72D6D41321D4FA000343E5 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MobileCouchbase.framework;
-			productName = Couchbase;
-			productReference = BC72D0DD1321BB9E000343E5 /* MobileCouchbase.framework */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,7 +255,6 @@
 				BC4A62AE1324C542003F32D3 /* Distribution */,
 				BC4A607C1324C493003F32D3 /* libMobileCouchbase */,
 				79F5314213208D3700038ADD /* MobileCouchbase.bundle */,
-				BC72D0DC1321BB9E000343E5 /* MobileCouchbase.framework */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +268,6 @@
 				79F5314C13208EA700038ADD /* icouch.ini in Resources */,
 				79F5314E13208EA700038ADD /* demo.couch in Resources */,
 				79F5314F13208EA700038ADD /* erlang in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC72D0D91321BB9E000343E5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,20 +288,6 @@
 			shellPath = /bin/sh;
 			shellScript = "DESTDIR=\"MobileCouchbase${EFFECTIVE_PLATFORM_NAME}\"\n\ncd \"${SYMROOT}\"\nmkdir -p \"${DESTDIR}\"\n\nfor f in Couchbase.h libMobileCouchbase.a libcrypto_arm.a MobileCouchbase.bundle; do\n cp -R \"${SYMROOT}/${BUILD_STYLE}${EFFECTIVE_PLATFORM_NAME}/${f}\" \"${DESTDIR}\"\ndone\n\ntar jcf \"${DESTDIR}.tar.bz2\" \"${DESTDIR}\"\nrm -rf \"${DESTDIR}\"";
 		};
-		BC72D6D41321D4FA000343E5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "chmod +x \"${CODESIGNING_FOLDER_PATH}/${PRODUCT_NAME}\"\nrm \"${CODESIGNING_FOLDER_PATH}/Info.plist\"";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -369,14 +303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC72D0DA1321BB9E000343E5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC72D0F41321BCA2000343E5 /* Couchbase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,75 +499,6 @@
 			};
 			name = Release;
 		};
-		BC72D0E11321BB9F000343E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "MobileCouchbaseFramework-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PREBINDING = NO;
-				PRODUCT_NAME = MobileCouchbase;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		BC72D0E21321BB9F000343E5 /* Developer Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "MobileCouchbaseFramework-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PREBINDING = NO;
-				PRODUCT_NAME = MobileCouchbase;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = "Developer Release";
-		};
-		BC72D0E31321BB9F000343E5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEAD_CODE_STRIPPING = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "MobileCouchbaseFramework-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PREBINDING = NO;
-				PRODUCT_NAME = MobileCouchbase;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -716,16 +573,6 @@
 				BC52C3FE1322371A00E77F6A /* Debug */,
 				BC52C3FF1322371A00E77F6A /* Developer Release */,
 				BC52C4001322371A00E77F6A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC72D0E51321BBA0000343E5 /* Build configuration list for PBXNativeTarget "MobileCouchbase.framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC72D0E11321BB9F000343E5 /* Debug */,
-				BC72D0E21321BB9F000343E5 /* Developer Release */,
-				BC72D0E31321BB9F000343E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
