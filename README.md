@@ -4,6 +4,8 @@ Apache CouchDB on iOS provides a simple way to sync your application data across
 
 ## Experimental Release
 
+If you just want to get started, jump to **Building the Demo App**
+
 This release is a best effort library and application for data storage and synchronization. We're already making a lot of progress thanks to feedback and patches from users.
 
 The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
@@ -20,15 +22,18 @@ If you have questions or get stuck or just want to say hi, email <mobile@couchba
 
 For details on how to use Mobile Couchbase in your projects see [doc/using_mobile_couchbase.md](https://github.com/couchbaselabs/iOS-Couchbase/blob/master/doc/using_mobile_couchbase.md)
 
-## Trying the Demo App:
+## Building the Demo App:
 
+The build is finnicky, please follow these instructions exactly. Also, it hasn't been tested much with Xcode 4. Patches welcome!
+
+* check out this repository
 * Fetch vendor code dependencies by running `git submodule init` and `git submodule update`
-* Open Demo.xcodeproj with Xcode.
+* Open MobileCouchbase/MobileCouchbase.xcodeproj with Xcode
+* Set the build to Device and the target to MobileCouchbase
+* Build it.
 * Plug your phone into your computer (does NOT work with simulator)
-* From the Run menu, select "Run with Performance Tool" > "Activity Monitor"
-
-I don't know why but if you run it with the Activity Monitor on, it is much more responsive and boots faster. Any hints on what could cause this are much appreciated.
-
+* Open Demo.xcodeproj with Xcode.
+* Build and Run! (You might have to click the Pause button in the Console to "unstick" the launch. That seems to be a debug issue. When launched from the phone the app should work.)
 
 ## License
 
