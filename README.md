@@ -4,7 +4,7 @@ Apache CouchDB on iOS provides a simple way to sync your application data across
 
 ## Experimental Release
 
-If you just want to get started, jump to **Building the Demo App**
+If you just want to get started, jump to **Building the Demo App**. We aren't sure about Xcode 4 support yet.
 
 This release is a best effort library and application for data storage and synchronization. We're already making a lot of progress thanks to feedback and patches from users.
 
@@ -26,7 +26,7 @@ For details on how to use Mobile Couchbase in your projects see [doc/using_mobil
 
 The build is finnicky, please follow these instructions exactly. Also, it hasn't been tested much with Xcode 4. Patches welcome!
 
-* check out this repository
+* Check out this repository
 * Fetch vendor code dependencies by running `git submodule init` and `git submodule update`
 * Open MobileCouchbase/MobileCouchbase.xcodeproj with Xcode
 * Set the build to Device and the target to MobileCouchbase
