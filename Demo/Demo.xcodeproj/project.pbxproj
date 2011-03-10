@@ -15,7 +15,6 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		3D478DD412A19EE300581D10 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DD312A19EE300581D10 /* libicucore.dylib */; };
 		3D47920612A1A11500581D10 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791ED12A1A11500581D10 /* CDataScanner.m */; };
 		3D47920712A1A11500581D10 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F012A1A11500581D10 /* CFilteringJSONSerializer.m */; };
 		3D47920812A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F212A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m */; };
@@ -77,6 +76,7 @@
 		BC4A71451324D6F3003F32D3 /* libcrypto_arm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4A71431324D6F2003F32D3 /* libcrypto_arm.a */; };
 		BC4A71461324D6F3003F32D3 /* libMobileCouchbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */; };
 		BC4A71491324D6FC003F32D3 /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC4A71481324D6FC003F32D3 /* MobileCouchbase.bundle */; };
+		BC506C36132970D400CA9F42 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC506C35132970D400CA9F42 /* libicucore.dylib */; };
 		BC72CDCC13219E28000343E5 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
 		BCDA6E8C132191AA00D8538A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E88132191AA00D8538A /* Default.png */; };
 		BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E89132191AA00D8538A /* Default@2x.png */; };
@@ -97,7 +97,6 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3D478DD312A19EE300581D10 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/usr/lib/libicucore.dylib; sourceTree = "<absolute>"; };
 		3D4791EC12A1A11500581D10 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
 		3D4791ED12A1A11500581D10 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
 		3D4791EF12A1A11500581D10 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
@@ -221,6 +220,7 @@
 		BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileCouchbase.a; sourceTree = "<group>"; };
 		BC4A71471324D6F7003F32D3 /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couchbase.h; sourceTree = "<group>"; };
 		BC4A71481324D6FC003F32D3 /* MobileCouchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MobileCouchbase.bundle; sourceTree = "<group>"; };
+		BC506C35132970D400CA9F42 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		BCDA6DEA13217E2400D8538A /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/gcc/arm-apple-darwin10/4.0.1/libstdc++.dylib"; sourceTree = SDKROOT; };
 		BCDA6E88132191AA00D8538A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BCDA6E89132191AA00D8538A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D478DD412A19EE300581D10 /* libicucore.dylib in Frameworks */,
+				BC506C36132970D400CA9F42 /* libicucore.dylib in Frameworks */,
 				BC72CDCC13219E28000343E5 /* libstdc++.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
@@ -314,10 +314,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC506C35132970D400CA9F42 /* libicucore.dylib */,
 				BC4A71431324D6F2003F32D3 /* libcrypto_arm.a */,
 				BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */,
 				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
-				3D478DD312A19EE300581D10 /* libicucore.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
