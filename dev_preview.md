@@ -1,5 +1,5 @@
 
-At [Couchbase](http://www.couchbase.com) (that's right) we've been working on the mobile stuff for a long time. Apache CouchDB has been [available on Android](https://github.com/couchone/couch-android-launcher) since last July.
+At [Couchbase](http://www.couchbase.com) (that's right) we've been working on the mobile stuff for a long time. Apache CouchDB has been [available on Android](http://arandomurl.com/2011/02/13/developing-with-couchdb-on-android.html) since last July.
 
 
 ## We're announcing Mobile Couchbase
