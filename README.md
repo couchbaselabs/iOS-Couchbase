@@ -30,7 +30,7 @@ The build is finnicky, please follow these instructions exactly. Also, it hasn't
 * Fetch vendor code dependencies by running `git submodule init` and `git submodule update`
 * Open MobileCouchbase/MobileCouchbase.xcodeproj with Xcode
 * Set the build to Device and the target to MobileCouchbase
-* Build it.
+* Build it. (Rumor has it that on Xcode 4 you have to do this step twice...)
 * Plug your phone into your computer (does NOT work with simulator)
 * Open Demo.xcodeproj with Xcode.
 * Build and Run! (You might have to click the Pause button in the Console to "unstick" the launch. That seems to be a debug issue. When launched from the phone the app should work.)
