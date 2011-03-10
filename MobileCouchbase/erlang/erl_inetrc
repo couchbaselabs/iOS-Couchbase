@@ -1,0 +1,5 @@
+%% Use erlang's internal resolver. Native DNS on android is annoying
+{lookup, [file,dns]}.
+%% TODO: Not this,
+{nameserver, {8,8,8,8}}.
+

@@ -1,0 +1,13 @@
+Mobile Couchbase would not be possible without the help of all the people who have contributed to the various open source projects that it depends on.
+
+See the NOTICE file for a list of packaged open source libraries.
+
+Mobile Couchbase is young, so we've only had a few contributors so far. Here's a list of them.
+
+
+Jan Lehnardt <jan@couchbase.com>
+Aaron Miller <aaron@couchbase.com>
+Dale Harvey <dale@couchbase.com>
+Jonathan Wight
+Alexis Hildebrandt <alexis.hildebrandt@surryhill.net>
+Chris Anderson <jchris@couchbase.com>
