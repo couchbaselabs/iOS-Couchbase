@@ -15,6 +15,8 @@
 				BC4A6C5E1324CC4C003F32D3 /* Bundle Distribution */,
 			);
 			dependencies = (
+				BC506C3413296FE400CA9F42 /* PBXTargetDependency */,
+				BC506C3213296FE000CA9F42 /* PBXTargetDependency */,
 			);
 			name = Distribution;
 			productName = Headers;
@@ -61,6 +63,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = BC4A62AE1324C542003F32D3;
 			remoteInfo = Headers;
+		};
+		BC506C3113296FE000CA9F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC4A607C1324C493003F32D3;
+			remoteInfo = libMobileCouchbase;
+		};
+		BC506C3313296FE400CA9F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79F5314213208D3700038ADD;
+			remoteInfo = MobileCouchbase.bundle;
 		};
 		BC52C4061322374100E77F6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -318,6 +334,16 @@
 			isa = PBXTargetDependency;
 			target = BC4A62AE1324C542003F32D3 /* Distribution */;
 			targetProxy = BC4A6C691324CD39003F32D3 /* PBXContainerItemProxy */;
+		};
+		BC506C3213296FE000CA9F42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC4A607C1324C493003F32D3 /* libMobileCouchbase */;
+			targetProxy = BC506C3113296FE000CA9F42 /* PBXContainerItemProxy */;
+		};
+		BC506C3413296FE400CA9F42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79F5314213208D3700038ADD /* MobileCouchbase.bundle */;
+			targetProxy = BC506C3313296FE400CA9F42 /* PBXContainerItemProxy */;
 		};
 		BC52C4071322374100E77F6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
