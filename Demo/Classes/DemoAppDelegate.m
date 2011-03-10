@@ -30,8 +30,12 @@
 -(void)couchbaseDidStart
 {
 	NSLog(@"CouchDB is Ready, go!");
+	
 	// Tell RootViewController to stop spinning
-	[self.navigationController.visibleViewController couchbaseDidStart];
+	UIViewController* vc = self.navigationController.visibleViewController;
+	if ([vc respondsToSelector:@selector(couchbaseDidStart)]) {
+		[self.navigationController.visibleViewController performSelector:@selector(couchbaseDidStart)];
+	}
 }
 
 #pragma mark -
