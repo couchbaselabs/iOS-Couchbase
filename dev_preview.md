@@ -1,4 +1,3 @@
-
 At [Couchbase](http://www.couchbase.com) (that's right) we've been working on the mobile stuff for a long time. Apache CouchDB has been [available on Android](http://arandomurl.com/2011/02/13/developing-with-couchdb-on-android.html) since last July.
 
 
@@ -38,12 +37,8 @@ It looks maybe possible to embed Couch directly as a storage layer for Core Data
 
 There is a [Google Group here for Mobile Couchbase](https://groups.google.com/group/mobile-couchbase). Let's talk about how to optimize the Erlang build, what the best Cocoa APIs are for CouchDB, how to take advantage of replication on mobile devices. It'll be fun.
 
-## Drinkup Tonight
+## Drinkup Was Awesome
 
-We are having a meetup at 6pm tonight (Thursday) at the Irish Bank in San Francisco.
+In case you were wondering, there were at least 10 people there, if you count the guys in suits.
 
-Jan and I will be there, and hopefully friends and folks interested in iOS Couch.
 
-The Irish Bank: <http://theirishbank.com/> It's just a few blocks from the Montgomery BART station.
-
-Hope to see you there!
