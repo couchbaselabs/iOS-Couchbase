@@ -10,6 +10,11 @@ This release is a best effort library and application for data storage and synch
 
 The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
 
+## Join us
+
+There is a [Google Group here for Mobile Couchbase](https://groups.google.com/group/mobile-couchbase). Let's talk about how to optimize the Erlang build, what the best Cocoa APIs are for CouchDB, how to take advantage of replication on mobile devices. It'll be fun.
+
+
 ## Getting Started
 
 These instructions assume you are familiar with how to make an iPhone app because you've done it a lot already.
