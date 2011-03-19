@@ -22,7 +22,7 @@
 
 @protocol CouchbaseDelegate
 @required
--(void)couchbaseDidStart;
+-(void)couchbaseDidStart:(NSURL *)serverURL;
 @end
 
 @interface Couchbase : NSObject {

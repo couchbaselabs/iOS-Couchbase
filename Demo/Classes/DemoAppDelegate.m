@@ -27,14 +27,13 @@
 @synthesize window;
 @synthesize navigationController;
 
--(void)couchbaseDidStart
-{
+-(void)couchbaseDidStart:(NSURL *)serverURL {
 	NSLog(@"CouchDB is Ready, go!");
 	
 	// Tell RootViewController to stop spinning
 	UIViewController* vc = self.navigationController.visibleViewController;
-	if ([vc respondsToSelector:@selector(couchbaseDidStart)]) {
-		[self.navigationController.visibleViewController performSelector:@selector(couchbaseDidStart)];
+	if ([vc respondsToSelector:@selector(couchbaseDidStart:)]) {
+		[self.navigationController.visibleViewController performSelector:@selector(couchbaseDidStart:) withObject:serverURL];
 	}
 }
 
@@ -43,7 +42,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-	[Couchbase startCouchbase:self];
+	[Couchbase startCouchbase:self]; // pass optional URL or port
 
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.

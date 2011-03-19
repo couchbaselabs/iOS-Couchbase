@@ -28,8 +28,9 @@
 @property(nonatomic, retain)NSMutableArray *items;
 @property(nonatomic, retain)UIBarButtonItem *syncItem;
 @property(nonatomic, retain)UIBarButtonItem *activityButtonItem;
+@property(nonatomic, retain)NSURL *couchbaseURL;
 
 -(void)loadItemsIntoView;
--(void)couchbaseDidStart;
+-(void)couchbaseDidStart:(NSURL *)serverURL;
 
 @end

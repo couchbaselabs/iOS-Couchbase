@@ -28,15 +28,16 @@
 @synthesize items;
 @synthesize syncItem;
 @synthesize activityButtonItem;
+@synthesize couchbaseURL;
 
 #pragma mark -
 #pragma mark View lifecycle
 
 
--(void)couchbaseDidStart
-{
+-(void)couchbaseDidStart:(NSURL *)serverURL {
+	self.couchbaseURL = serverURL;
 	[self loadItemsIntoView];
-	
+	NSLog(@"serverURL %@",serverURL);
 	self.syncItem = [[[UIBarButtonItem alloc] 
 					  initWithTitle:@"Sync" style:UIBarButtonItemStyleBordered
 					  target:self 
@@ -73,7 +74,7 @@
 {
 	self.syncItem = self.navigationItem.rightBarButtonItem;
 	[self.navigationItem setRightBarButtonItem: self.activityButtonItem animated:YES];
-	DatabaseManager *manager = [DatabaseManager sharedManager];
+	DatabaseManager *manager = [DatabaseManager sharedManager:self.couchbaseURL];
 	DatabaseManagerSuccessHandler successHandler = ^() {
   	    //woot	
 		NSLog(@"success handler called!");
@@ -94,7 +95,7 @@
 		[self.navigationItem setRightBarButtonItem: syncItem animated:YES];
 	}
 
-	DatabaseManager *sharedManager = [DatabaseManager sharedManager];
+	DatabaseManager *sharedManager = [DatabaseManager sharedManager:self.couchbaseURL];
 	CouchDBSuccessHandler inSuccessHandler = ^(id inParameter) {
 		NSLog(@"RVC Wooohooo! %@: %@", [inParameter class], inParameter);
 		self.items = inParameter;
@@ -205,7 +206,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source.
 		NSUInteger position = [indexPath indexAtPosition:1]; // indexPath is [0, idx]
-		[[DatabaseManager sharedManager] deleteDocument: [items objectAtIndex:position]];
+		[[DatabaseManager sharedManager:self.couchbaseURL] deleteDocument: [items objectAtIndex:position]];
 		[items removeObjectAtIndex: position];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   

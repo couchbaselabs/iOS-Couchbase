@@ -41,6 +41,7 @@ void* erlang_thread(void* data) {
 		"-eval", "application:start(couch).",
 		"-root", erl_root, "-couch_ini",
 		inipath, inipath2};
+
 	erl_start(10, erlang_args);
 	return NULL;
 }
@@ -60,8 +61,7 @@ void* erlang_thread(void* data) {
 	sprintf(erl_root, "%s/erlang", app_root);
 	sprintf(bindir, "%s/erts-5.7.5/bin", erl_root);
 	
-	NSString *focusPath = @"/demo.couch";
-	NSString *iniPath = @"/icouch.ini";
+	NSString *focusPath = @"/demo.couch"; // make this generic
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -70,10 +70,7 @@ void* erlang_thread(void* data) {
 	
 	NSString *focusSource = [myPath stringByAppendingString:focusPath];	
 	NSString *focusTarget = [dataDir stringByAppendingString:focusPath];
-	
-	NSString *iniSource = [myPath stringByAppendingString:iniPath];	
-	NSString *iniTarget = [documentsDirectory stringByAppendingString:iniPath];
-	
+
 	NSFileManager *NSFm= [NSFileManager defaultManager]; 
 	BOOL isDir=YES;
 	
@@ -86,12 +83,18 @@ void* erlang_thread(void* data) {
 		if(![NSFm createDirectoryAtPath:dataDir withIntermediateDirectories:YES attributes:nil error:NULL])
 			NSLog(@"Error: Create folder failed");
 	
-	// Copy Initial focus DB + ini file on first load
+	// Copy Initial DB on first load
 	if(![NSFm fileExistsAtPath:focusTarget]) {
 		[NSFm copyItemAtPath:focusSource toPath:focusTarget error:&copyError];
 	}	
-	if(![NSFm fileExistsAtPath:iniTarget]) {
-		[NSFm copyItemAtPath:iniSource toPath:iniTarget error:&copyError];
+
+	// delete the URI file
+	NSString *uriPath = [documentsDirectory stringByAppendingString:@"/couch.uri"];
+	NSError *removeError = nil;
+
+	if([NSFm fileExistsAtPath:uriPath]) {
+		[NSFm removeItemAtPath:uriPath error:&removeError];
+		NSLog(@"removed file %@", removeError);
 	}
 	
 	[NSFm changeCurrentDirectoryPath: documentsDirectory];
@@ -106,7 +109,7 @@ void* erlang_thread(void* data) {
 	
 	pthread_create(&erlThreadID, &erlThreadAttr, &erlang_thread, app_root);
 
-	NSThread *waiterThread = [[NSThread alloc] initWithTarget:self
+	NSThread *waiterThread = [[NSThread alloc] initWithTarget:self // need to pass URL
 													 selector:@selector(waitAndNotifyMainThread:)
 													   object:delegate];
 	[waiterThread start];
@@ -121,22 +124,49 @@ void* erlang_thread(void* data) {
 	struct in_addr **list = (struct in_addr **)he->h_addr_list;
 	addr.sin_addr = *list[0];
 	addr.sin_port = htons(port);
-	return connect(sockfd,(struct sockaddr*) &addr, sizeof(addr));
+	int result = connect(sockfd,(struct sockaddr*) &addr, sizeof(addr));
+	return result;
 }
 
-+ (void)waitForCouchDB {
-	while ([self connectToHost:"0.0.0.0" port:5984]) {
-		sleep(1);
++ (NSURL *)waitForCouchDB {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+	NSString *uriPath = [documentsDirectory stringByAppendingString:@"/couch.uri"];
+	NSFileManager *NSFm= [[NSFileManager alloc] init];
+	while(![NSFm fileExistsAtPath:uriPath]) {
+		usleep(250000);
 	}
-	sleep(1);
+	usleep(100000);	
+	NSString *rawUriString = [NSString stringWithContentsOfFile:uriPath encoding:NSASCIIStringEncoding error:NULL];
+	NSArray *components = [rawUriString componentsSeparatedByString:@"\n"];
+	NSString *uriString = [components objectAtIndex:0];
+
+	NSURL *myurl = [NSURL URLWithString:uriString];
+
+	NSNumber *portnum = [myurl port];
+	NSString *hoststring = [myurl host];
+
+	int bufferSize = [hoststring lengthOfBytesUsingEncoding: NSASCIIStringEncoding] + 1;
+	char hostname[bufferSize];
+	[hoststring getCString: hostname maxLength:bufferSize encoding: NSASCIIStringEncoding];
+
+	while ([self connectToHost:hostname port:[portnum intValue]]) {
+		usleep(2500);
+	}
+	usleep(250000);
+	return myurl;
 }
 
 + (void)waitAndNotifyMainThread:(NSObject*)delegate
 {
-	[self waitForCouchDB];
-	[delegate performSelectorOnMainThread:@selector(couchbaseDidStart)
-							   withObject:nil
-							waitUntilDone:NO];
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	NSURL *serverURL = [[self waitForCouchDB] retain];
+	if ([delegate respondsToSelector:@selector(couchbaseDidStart:)]) {
+	[delegate performSelectorOnMainThread:@selector(couchbaseDidStart:)
+								   withObject:serverURL
+								waitUntilDone:NO];
+	}
+	[pool release];
 }
 
 @end

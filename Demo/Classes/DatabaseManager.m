@@ -33,18 +33,18 @@ static DatabaseManager *sharedManager;
 @synthesize delegate;
 @synthesize connections;
 
-+(DatabaseManager *)sharedManager
++(DatabaseManager *)sharedManager:(NSURL *)dbURL
 {
 	if(sharedManager == nil) {
-		sharedManager = [[DatabaseManager alloc] init];
+		sharedManager = [[DatabaseManager alloc] init: dbURL];
 	}
 	return sharedManager;
 }
 
--(id)init
+-(id)init:(NSURL *)dbURL
 {
 	[super init];
-	server = [[CCouchDBServer alloc] init];
+	server = [[CCouchDBServer alloc] initWithSession:NULL URL:dbURL];
 	database = [[server databaseNamed:DATABASE_NAME] retain];
 	connections = [[NSMutableDictionary alloc] init];
 	return self;

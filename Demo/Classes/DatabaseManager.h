@@ -37,7 +37,7 @@ typedef void (^DatabaseManagerErrorHandler)(id error);
 @property(readonly)CCouchDBDatabase *database;
 @property(assign) id delegate;
 @property(assign) NSMutableDictionary *connections;
-+(DatabaseManager *)sharedManager;
++(DatabaseManager *)sharedManager:(NSURL *)dbURL;
 -(void)syncFrom:(NSString *)from to:(NSString *)to onSuccess:(DatabaseManagerSuccessHandler)success onError:(DatabaseManagerErrorHandler) error;
 -(void)deleteDocument:(CCouchDBDocument *)inDocument;
 @end
