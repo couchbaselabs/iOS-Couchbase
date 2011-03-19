@@ -33,6 +33,9 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+-(NSURL *)getCouchbaseURL {
+	return self.couchbaseURL;
+}
 
 -(void)couchbaseDidStart:(NSURL *)serverURL {
 	self.couchbaseURL = serverURL;

@@ -80,7 +80,7 @@
     NSString *guid = (NSString*)CFUUIDCreateString(nil, uuid);
     CFRelease(uuid);
 	NSString *docId = [NSString stringWithFormat:@"%f-%@", CFAbsoluteTimeGetCurrent(), guid];
-	DatabaseManager *sharedManager = [DatabaseManager sharedManager];
+	DatabaseManager *sharedManager = [DatabaseManager sharedManager:[delegate getCouchbaseURL]];
 	CURLOperation *op = [sharedManager.database operationToCreateDocument:inDocument 
 															   identifier:docId
 														   successHandler:inSuccessHandler 

@@ -32,5 +32,6 @@
 
 -(void)loadItemsIntoView;
 -(void)couchbaseDidStart:(NSURL *)serverURL;
+-(NSURL *)getCouchbaseURL;
 
 @end

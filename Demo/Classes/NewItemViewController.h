@@ -28,4 +28,5 @@
 
 @property(nonatomic,retain)IBOutlet	UITextView *textView;
 @property(assign) id delegate;
+
 @end
