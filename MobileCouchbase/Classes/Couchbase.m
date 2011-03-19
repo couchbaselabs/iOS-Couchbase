@@ -160,7 +160,7 @@ void* erlang_thread(void* data) {
 + (void)waitAndNotifyMainThread:(NSObject*)delegate
 {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSURL *serverURL = [[self waitForCouchDB] retain];
+	NSURL *serverURL = [self waitForCouchDB];
 	if ([delegate respondsToSelector:@selector(couchbaseDidStart:)]) {
 	[delegate performSelectorOnMainThread:@selector(couchbaseDidStart:)
 								   withObject:serverURL
