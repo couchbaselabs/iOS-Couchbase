@@ -43,8 +43,8 @@ It takes about 10 steps to get Couchbase up and running in your applications. We
  
 Do this by adding some code to your app delegate's `.m` file:
 
-    - (void)couchbaseDidStart {
-        NSLog(@"Couch is ready!");
+    -(void)couchbaseDidStart:(NSURL *)serverURL {
+          NSLog(@"Couch is ready!");
     }
 
 * Start Mobile Couchbase in your `application:didFinishLaunchingWithOptions:` by adding `[Couchbase startCouchbase:self];`
