@@ -53,6 +53,8 @@ void* erlang_thread(void* data) {
 	NSBundle* mainBundle;
 	mainBundle = [NSBundle mainBundle];
 	NSString* myPath = [mainBundle pathForResource:@"MobileCouchbase" ofType:@"bundle"];
+	NSLog(@"my path aka app root: %@", myPath);
+
 	char app_root[1024];
 	char erl_root[1024];
 	char bindir[1024];
