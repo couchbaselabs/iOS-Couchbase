@@ -37,6 +37,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4E3F2B4A134BE21D00AB7D2A /* libcrypto.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E3F2B47134BE1D600AB7D2A /* libcrypto.a */; };
 		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
@@ -46,7 +47,6 @@
 		BC4A60851324C4CD003F32D3 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCB12A19E9E00581D10 /* libiErl14.a */; };
 		BC4A60861324C4CD003F32D3 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D478DCC12A19E9F00581D10 /* libiMonkey.a */; };
 		BC4A62B61324C554003F32D3 /* Couchbase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; };
-		BC4A6A241324CA80003F32D3 /* libcrypto_arm.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D478DCE12A19E9F00581D10 /* libcrypto_arm.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,7 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				BC4A6A241324CA80003F32D3 /* libcrypto_arm.a in CopyFiles */,
+				4E3F2B4A134BE21D00AB7D2A /* libcrypto.a in CopyFiles */,
 				BC4A62B61324C554003F32D3 /* Couchbase.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,12 +104,12 @@
 /* Begin PBXFileReference section */
 		3D478DCB12A19E9E00581D10 /* libiErl14.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiErl14.a; sourceTree = "<group>"; };
 		3D478DCC12A19E9F00581D10 /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiMonkey.a; sourceTree = "<group>"; };
-		3D478DCD12A19E9F00581D10 /* libssl_arm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl_arm.a; sourceTree = "<group>"; };
-		3D478DCE12A19E9F00581D10 /* libcrypto_arm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto_arm.a; sourceTree = "<group>"; };
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
 		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
 		3D47994312A1D4E800581D10 /* demo.couch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.couch; sourceTree = "<group>"; };
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
+		4E3F2B47134BE1D600AB7D2A /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		4E3F2B48134BE1D600AB7D2A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couchbase.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* Couchbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couchbase.m; sourceTree = "<group>"; };
 		79F530BC13202B2D00038ADD /* MobileCouchbaseFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobileCouchbaseFramework-Info.plist"; sourceTree = "<group>"; };
@@ -183,10 +183,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E3F2B47134BE1D600AB7D2A /* libcrypto.a */,
+				4E3F2B48134BE1D600AB7D2A /* libssl.a */,
 				3D478DCB12A19E9E00581D10 /* libiErl14.a */,
 				3D478DCC12A19E9F00581D10 /* libiMonkey.a */,
-				3D478DCD12A19E9F00581D10 /* libssl_arm.a */,
-				3D478DCE12A19E9F00581D10 /* libcrypto_arm.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "DESTDIR=\"MobileCouchbase${EFFECTIVE_PLATFORM_NAME}\"\n\ncd \"${SYMROOT}\"\nmkdir -p \"${DESTDIR}\"\n\nfor f in Couchbase.h libMobileCouchbase.a libcrypto_arm.a MobileCouchbase.bundle; do\n cp -R \"${SYMROOT}/${BUILD_STYLE}${EFFECTIVE_PLATFORM_NAME}/${f}\" \"${DESTDIR}\"\ndone\n\ntar jcf \"${DESTDIR}.tar.bz2\" \"${DESTDIR}\"\nrm -rf \"${DESTDIR}\"";
+			shellScript = "DESTDIR=\"MobileCouchbase${EFFECTIVE_PLATFORM_NAME}\"\n\ncd \"${SYMROOT}\"\nmkdir -p \"${DESTDIR}\"\n\nfor f in Couchbase.h libMobileCouchbase.a libcrypto.a MobileCouchbase.bundle; do\n cp -R \"${SYMROOT}/${BUILD_STYLE}${EFFECTIVE_PLATFORM_NAME}/${f}\" \"${DESTDIR}\"\ndone\n\ntar jcf \"${DESTDIR}.tar.bz2\" \"${DESTDIR}\"\nrm -rf \"${DESTDIR}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
