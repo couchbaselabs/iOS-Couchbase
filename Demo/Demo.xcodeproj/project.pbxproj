@@ -73,6 +73,7 @@
 		3D4798BA12A1B90000581D10 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
 		3D4798BB12A1B90000581D10 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
 		3DEAED5812A2EB7400EEBD22 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */; };
+		79E2E0C213522A6D00BD8080 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E2E0C113522A6D00BD8080 /* libcrypto.a */; };
 		BC4A71451324D6F3003F32D3 /* libcrypto_arm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4A71431324D6F2003F32D3 /* libcrypto_arm.a */; };
 		BC4A71461324D6F3003F32D3 /* libMobileCouchbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */; };
 		BC4A71491324D6FC003F32D3 /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BC4A71481324D6FC003F32D3 /* MobileCouchbase.bundle */; };
@@ -215,6 +216,7 @@
 		3D4798B012A1B90000581D10 /* NSError_CouchDBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSError_CouchDBExtensions.h; sourceTree = "<group>"; };
 		3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSError_CouchDBExtensions.m; sourceTree = "<group>"; };
 		3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		79E2E0C113522A6D00BD8080 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		BC4A71431324D6F2003F32D3 /* libcrypto_arm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto_arm.a; sourceTree = "<group>"; };
 		BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobileCouchbase.a; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				BC4A71451324D6F3003F32D3 /* libcrypto_arm.a in Frameworks */,
 				BC4A71461324D6F3003F32D3 /* libMobileCouchbase.a in Frameworks */,
+				79E2E0C213522A6D00BD8080 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				BC506C35132970D400CA9F42 /* libicucore.dylib */,
+				79E2E0C113522A6D00BD8080 /* libcrypto.a */,
 				BC4A71431324D6F2003F32D3 /* libcrypto_arm.a */,
 				BC4A71441324D6F3003F32D3 /* libMobileCouchbase.a */,
 				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
