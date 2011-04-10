@@ -707,7 +707,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = Demo;
-				VALID_ARCHS = armv6;
+				VALID_ARCHS = "armv6, i386";
 			};
 			name = Debug;
 		};
