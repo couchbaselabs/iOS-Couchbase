@@ -81,8 +81,8 @@
 		035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		03E8393913539EF800D64D0D /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03E8393813539EF800D64D0D /* MobileCouchbase.bundle */; };
 		03E8393A13539EF800D64D0D /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03E8393813539EF800D64D0D /* MobileCouchbase.bundle */; };
-		03E8393D13539F8E00D64D0D /* libMobileCouchbase-device.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393C13539F8E00D64D0D /* libMobileCouchbase-device.a */; };
-		03E8393F13539F9600D64D0D /* libMobileCouchbase-simulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393E13539F9600D64D0D /* libMobileCouchbase-simulator.a */; };
+		03E8393D13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */; };
+		03E8393F13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */; };
 		1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -158,15 +158,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		035638B0135001DD00D2AF03 /* Demo-Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		035638B0135001DD00D2AF03 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E8393813539EF800D64D0D /* MobileCouchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MobileCouchbase.bundle; path = "../build/Debug-iphoneos/MobileCouchbase.bundle"; sourceTree = "<group>"; };
 		03E8393B13539F4B00D64D0D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = "../build/Debug-iphoneos/Couchbase.h"; sourceTree = "<group>"; };
-		03E8393C13539F8E00D64D0D /* libMobileCouchbase-device.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-device.a"; path = "build/Debug-iphoneos/libMobileCouchbase-device.a"; sourceTree = "<group>"; };
-		03E8393E13539F9600D64D0D /* libMobileCouchbase-simulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-simulator.a"; path = "../build/Debug-iphonesimulator/libMobileCouchbase-simulator.a"; sourceTree = "<group>"; };
+		03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-iphoneos.a"; path = "build/Debug-iphoneos/libMobileCouchbase-iphoneos.a"; sourceTree = "<group>"; };
+		03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-iphonesimulator.a"; path = "../build/Debug-iphonesimulator/libMobileCouchbase-iphonesimulator.a"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Demo-Device.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-Device.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* Demo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo_Prefix.pch; sourceTree = "<group>"; };
@@ -312,7 +312,7 @@
 				035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */,
 				035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */,
 				035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */,
-				03E8393F13539F9600D64D0D /* libMobileCouchbase-simulator.a in Frameworks */,
+				03E8393F13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
-				03E8393D13539F8E00D64D0D /* libMobileCouchbase-device.a in Frameworks */,
+				03E8393D13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +335,7 @@
 		035638B21350036300D2AF03 /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				03E8393E13539F9600D64D0D /* libMobileCouchbase-simulator.a */,
+				03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */,
 			);
 			name = Simulator;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 		035638B31350036F00D2AF03 /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				03E8393C13539F8E00D64D0D /* libMobileCouchbase-device.a */,
+				03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */,
 			);
 			name = Device;
 			path = ..;
@@ -367,8 +367,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Demo-Device.app */,
-				035638B0135001DD00D2AF03 /* Demo-Simulator.app */,
+				1D6058910D05DD3D006BFB54 /* Demo.app */,
+				035638B0135001DD00D2AF03 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -664,9 +664,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0356385D135001DD00D2AF03 /* Demo-Simulator */ = {
+		0356385D135001DD00D2AF03 /* Demo-iphonesimulator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-Simulator" */;
+			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-iphonesimulator" */;
 			buildPhases = (
 				0356385E135001DD00D2AF03 /* Resources */,
 				03563868135001DD00D2AF03 /* Sources */,
@@ -676,14 +676,14 @@
 			);
 			dependencies = (
 			);
-			name = "Demo-Simulator";
+			name = "Demo-iphonesimulator";
 			productName = Demo;
-			productReference = 035638B0135001DD00D2AF03 /* Demo-Simulator.app */;
+			productReference = 035638B0135001DD00D2AF03 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D6058900D05DD3D006BFB54 /* Demo-Device */ = {
+		1D6058900D05DD3D006BFB54 /* Demo-iphoneos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-Device" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-iphoneos" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -693,9 +693,9 @@
 			);
 			dependencies = (
 			);
-			name = "Demo-Device";
+			name = "Demo-iphoneos";
 			productName = Demo;
-			productReference = 1D6058910D05DD3D006BFB54 /* Demo-Device.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -718,8 +718,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Demo-Device */,
-				0356385D135001DD00D2AF03 /* Demo-Simulator */,
+				1D6058900D05DD3D006BFB54 /* Demo-iphoneos */,
+				0356385D135001DD00D2AF03 /* Demo-iphonesimulator */,
 			);
 		};
 /* End PBXProject section */
@@ -906,13 +906,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/lib\"",
-				);
-				PRODUCT_NAME = "Demo-Simulator";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
 			};
@@ -929,14 +923,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/lib\"",
-				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "Demo-Simulator";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
 			};
@@ -949,13 +937,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/lib\"",
-				);
-				PRODUCT_NAME = "Demo-Simulator";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = i386;
@@ -973,13 +955,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-				);
-				PRODUCT_NAME = "Demo-Device";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
 			};
@@ -992,13 +968,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-				);
-				PRODUCT_NAME = "Demo-Device";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv6;
@@ -1035,14 +1005,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/../build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-				);
 				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "Demo-Device";
+				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
 			};
@@ -1090,7 +1054,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-Simulator" */ = {
+		035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-iphonesimulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				035638AD135001DD00D2AF03 /* Debug */,
@@ -1100,7 +1064,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-Device" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-iphoneos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
