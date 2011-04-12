@@ -112,5 +112,5 @@ The following instructions can be used to build Mobile Couchbase for devices and
 # To build and run on the device:
 
 * Make sure a properly provisioned device is attached
-* Select "Demo-iphoneos | <DeviceName>(osversion)" from the popup
+* Select "Demo-iphoneos | DeviceName(osversion)" from the popup
 * Click the Run button
