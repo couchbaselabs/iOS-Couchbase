@@ -67,6 +67,7 @@ The following instructions can be used to build Mobile Couchbase for devices and
     git clone git://github.com/arciem/ios-openssl.git
     git clone git://github.com/arciem/iMonkey.git
     git clone git://github.com/arciem/iErl14.git
+    git clone git://github.com/arciem/TouchJSON.git
     git clone git://github.com/arciem/iOS-Couchbase.git
 
 # Build openssl
@@ -99,6 +100,12 @@ The following instructions can be used to build Mobile Couchbase for devices and
     xcodebuild -target MobileCouchbase-iphonesimulator -configuration Debug -sdk iphonesimulator4.3
     cd ../..
 
+# Build TouchJSON
+	cd TouchJSON/Support/
+    xcodebuild -project TouchJSON-iOS.xcodeproj -target TouchJSON -configuration Debug -sdk iphoneos4.3
+    xcodebuild -project TouchJSON-iOS.xcodeproj -target TouchJSON -configuration Debug -sdk iphonesimulator4.3
+	cd ../..
+	
 # Open the Demo in Xcode
 
     cd iOS-Couchbase/Demo/

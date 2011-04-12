@@ -1,6 +1,3 @@
-[submodule "Demo/Vendor/TouchJSON"]
-	path = Demo/Vendor/TouchJSON
-	url = https://github.com/TouchCode/TouchJSON.git
 [submodule "Demo/Vendor/TouchFoundation"]
 	path = Demo/Vendor/TouchFoundation
 	url = https://github.com/TouchCode/TouchFoundation.git

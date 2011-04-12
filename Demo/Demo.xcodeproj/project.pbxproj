@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030D3B9A1354E37300753996 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D3B991354E37300753996 /* libTouchJSON.a */; };
+		030D3B9C1354E37B00753996 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D3B9B1354E37B00753996 /* libTouchJSON.a */; };
 		0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		03563860135001DD00D2AF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
@@ -18,15 +20,6 @@
 		03563869135001DD00D2AF03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		0356386A135001DD00D2AF03 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
 		0356386B135001DD00D2AF03 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		0356386C135001DD00D2AF03 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791ED12A1A11500581D10 /* CDataScanner.m */; };
-		0356386D135001DD00D2AF03 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F012A1A11500581D10 /* CFilteringJSONSerializer.m */; };
-		0356386E135001DD00D2AF03 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F212A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m */; };
-		0356386F135001DD00D2AF03 /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F412A1A11500581D10 /* CJSONSerializedData.m */; };
-		03563870135001DD00D2AF03 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F712A1A11500581D10 /* CDataScanner_Extensions.m */; };
-		03563871135001DD00D2AF03 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791FB12A1A11500581D10 /* NSDictionary_JSONExtensions.m */; };
-		03563872135001DD00D2AF03 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920012A1A11500581D10 /* CJSONDeserializer.m */; };
-		03563873135001DD00D2AF03 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920212A1A11500581D10 /* CJSONScanner.m */; };
-		03563874135001DD00D2AF03 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920412A1A11500581D10 /* CJSONSerializer.m */; };
 		03563875135001DD00D2AF03 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921412A1A16100581D10 /* Base64Transcoder.c */; };
 		03563876135001DD00D2AF03 /* CDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921712A1A16100581D10 /* CDateRange.m */; };
 		03563877135001DD00D2AF03 /* CPointerArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922212A1A16100581D10 /* CPointerArray.m */; };
@@ -91,15 +84,6 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		3D47920612A1A11500581D10 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791ED12A1A11500581D10 /* CDataScanner.m */; };
-		3D47920712A1A11500581D10 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F012A1A11500581D10 /* CFilteringJSONSerializer.m */; };
-		3D47920812A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F212A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m */; };
-		3D47920912A1A11500581D10 /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F412A1A11500581D10 /* CJSONSerializedData.m */; };
-		3D47920A12A1A11500581D10 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791F712A1A11500581D10 /* CDataScanner_Extensions.m */; };
-		3D47920C12A1A11500581D10 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4791FB12A1A11500581D10 /* NSDictionary_JSONExtensions.m */; };
-		3D47920E12A1A11500581D10 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920012A1A11500581D10 /* CJSONDeserializer.m */; };
-		3D47920F12A1A11500581D10 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920212A1A11500581D10 /* CJSONScanner.m */; };
-		3D47921012A1A11500581D10 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47920412A1A11500581D10 /* CJSONSerializer.m */; };
 		3D47926A12A1A16100581D10 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921412A1A16100581D10 /* Base64Transcoder.c */; };
 		3D47926B12A1A16100581D10 /* CDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921712A1A16100581D10 /* CDateRange.m */; };
 		3D47927012A1A16100581D10 /* CPointerArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922212A1A16100581D10 /* CPointerArray.m */; };
@@ -158,6 +142,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		030D3B991354E37300753996 /* libTouchJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTouchJSON.a; path = "../TouchJSON/Support/build/Debug-iphoneos/libTouchJSON.a"; sourceTree = "<group>"; };
+		030D3B9B1354E37B00753996 /* libTouchJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTouchJSON.a; path = "../../TouchJSON/Support/build/Debug-iphonesimulator/libTouchJSON.a"; sourceTree = "<group>"; };
 		035638B0135001DD00D2AF03 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E8393813539EF800D64D0D /* MobileCouchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MobileCouchbase.bundle; path = "../build/Debug-iphoneos/MobileCouchbase.bundle"; sourceTree = "<group>"; };
 		03E8393B13539F4B00D64D0D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = "../build/Debug-iphoneos/Couchbase.h"; sourceTree = "<group>"; };
@@ -175,25 +161,6 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3D4791EC12A1A11500581D10 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		3D4791ED12A1A11500581D10 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		3D4791EF12A1A11500581D10 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
-		3D4791F012A1A11500581D10 /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
-		3D4791F112A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
-		3D4791F212A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
-		3D4791F312A1A11500581D10 /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
-		3D4791F412A1A11500581D10 /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
-		3D4791F612A1A11500581D10 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		3D4791F712A1A11500581D10 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		3D4791FA12A1A11500581D10 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
-		3D4791FB12A1A11500581D10 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
-		3D4791FF12A1A11500581D10 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		3D47920012A1A11500581D10 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		3D47920112A1A11500581D10 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		3D47920212A1A11500581D10 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		3D47920312A1A11500581D10 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		3D47920412A1A11500581D10 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
-		3D47920512A1A11500581D10 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
 		3D47921312A1A16100581D10 /* Asserts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asserts.h; sourceTree = "<group>"; };
 		3D47921412A1A16100581D10 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		3D47921512A1A16100581D10 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
@@ -313,6 +280,7 @@
 				035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */,
 				035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */,
 				03E8393F13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a in Frameworks */,
+				030D3B9C1354E37B00753996 /* libTouchJSON.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +294,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				03E8393D13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a in Frameworks */,
+				030D3B9A1354E37300753996 /* libTouchJSON.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */,
+				030D3B9B1354E37B00753996 /* libTouchJSON.a */,
 			);
 			name = Simulator;
 			sourceTree = "<group>";
@@ -344,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */,
+				030D3B991354E37300753996 /* libTouchJSON.a */,
 			);
 			name = Device;
 			path = ..;
@@ -390,7 +361,6 @@
 			children = (
 				3D47929112A1A17B00581D10 /* trundle */,
 				3D47921112A1A12600581D10 /* TouchFoundation */,
-				3D4791DC12A1A0BF00581D10 /* TouchJSON */,
 				28A0AAE50D9B0CCF005BE974 /* Demo_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				03E8393B13539F4B00D64D0D /* Couchbase.h */,
@@ -427,65 +397,6 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3D4791DC12A1A0BF00581D10 /* TouchJSON */ = {
-			isa = PBXGroup;
-			children = (
-				3D4791EB12A1A11500581D10 /* Source */,
-			);
-			name = TouchJSON;
-			path = Vendor/TouchJSON;
-			sourceTree = "<group>";
-		};
-		3D4791EB12A1A11500581D10 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				3D4791EC12A1A11500581D10 /* CDataScanner.h */,
-				3D4791ED12A1A11500581D10 /* CDataScanner.m */,
-				3D4791EE12A1A11500581D10 /* Experimental */,
-				3D4791F512A1A11500581D10 /* Extensions */,
-				3D4791FE12A1A11500581D10 /* JSON */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		3D4791EE12A1A11500581D10 /* Experimental */ = {
-			isa = PBXGroup;
-			children = (
-				3D4791EF12A1A11500581D10 /* CFilteringJSONSerializer.h */,
-				3D4791F012A1A11500581D10 /* CFilteringJSONSerializer.m */,
-				3D4791F112A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.h */,
-				3D4791F212A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m */,
-				3D4791F312A1A11500581D10 /* CJSONSerializedData.h */,
-				3D4791F412A1A11500581D10 /* CJSONSerializedData.m */,
-			);
-			path = Experimental;
-			sourceTree = "<group>";
-		};
-		3D4791F512A1A11500581D10 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3D4791F612A1A11500581D10 /* CDataScanner_Extensions.h */,
-				3D4791F712A1A11500581D10 /* CDataScanner_Extensions.m */,
-				3D4791FA12A1A11500581D10 /* NSDictionary_JSONExtensions.h */,
-				3D4791FB12A1A11500581D10 /* NSDictionary_JSONExtensions.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3D4791FE12A1A11500581D10 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				3D4791FF12A1A11500581D10 /* CJSONDeserializer.h */,
-				3D47920012A1A11500581D10 /* CJSONDeserializer.m */,
-				3D47920112A1A11500581D10 /* CJSONScanner.h */,
-				3D47920212A1A11500581D10 /* CJSONScanner.m */,
-				3D47920312A1A11500581D10 /* CJSONSerializer.h */,
-				3D47920412A1A11500581D10 /* CJSONSerializer.m */,
-				3D47920512A1A11500581D10 /* JSONRepresentation.h */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		3D47921112A1A12600581D10 /* TouchFoundation */ = {
@@ -767,15 +678,6 @@
 				03563869135001DD00D2AF03 /* main.m in Sources */,
 				0356386A135001DD00D2AF03 /* DemoAppDelegate.m in Sources */,
 				0356386B135001DD00D2AF03 /* RootViewController.m in Sources */,
-				0356386C135001DD00D2AF03 /* CDataScanner.m in Sources */,
-				0356386D135001DD00D2AF03 /* CFilteringJSONSerializer.m in Sources */,
-				0356386E135001DD00D2AF03 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
-				0356386F135001DD00D2AF03 /* CJSONSerializedData.m in Sources */,
-				03563870135001DD00D2AF03 /* CDataScanner_Extensions.m in Sources */,
-				03563871135001DD00D2AF03 /* NSDictionary_JSONExtensions.m in Sources */,
-				03563872135001DD00D2AF03 /* CJSONDeserializer.m in Sources */,
-				03563873135001DD00D2AF03 /* CJSONScanner.m in Sources */,
-				03563874135001DD00D2AF03 /* CJSONSerializer.m in Sources */,
 				03563875135001DD00D2AF03 /* Base64Transcoder.c in Sources */,
 				03563876135001DD00D2AF03 /* CDateRange.m in Sources */,
 				03563877135001DD00D2AF03 /* CPointerArray.m in Sources */,
@@ -833,15 +735,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				3D47920612A1A11500581D10 /* CDataScanner.m in Sources */,
-				3D47920712A1A11500581D10 /* CFilteringJSONSerializer.m in Sources */,
-				3D47920812A1A11500581D10 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
-				3D47920912A1A11500581D10 /* CJSONSerializedData.m in Sources */,
-				3D47920A12A1A11500581D10 /* CDataScanner_Extensions.m in Sources */,
-				3D47920C12A1A11500581D10 /* NSDictionary_JSONExtensions.m in Sources */,
-				3D47920E12A1A11500581D10 /* CJSONDeserializer.m in Sources */,
-				3D47920F12A1A11500581D10 /* CJSONScanner.m in Sources */,
-				3D47921012A1A11500581D10 /* CJSONSerializer.m in Sources */,
 				3D47926A12A1A16100581D10 /* Base64Transcoder.c in Sources */,
 				3D47926B12A1A16100581D10 /* CDateRange.m in Sources */,
 				3D47927012A1A16100581D10 /* CPointerArray.m in Sources */,
@@ -906,6 +799,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
+				);
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
@@ -923,6 +820,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
@@ -937,6 +838,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
+				);
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
@@ -955,6 +860,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
@@ -968,6 +877,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
+				);
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -986,6 +899,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
@@ -1005,6 +919,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Demo_Prefix.pch;
 				INFOPLIST_FILE = "Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
+				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = Demo;
 				SUPPORTED_PLATFORMS = iphoneos;
@@ -1022,6 +940,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
@@ -1042,6 +961,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
