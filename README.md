@@ -70,54 +70,23 @@ The following instructions can be used to build Mobile Couchbase for devices and
     git clone git://github.com/arciem/TouchJSON.git
     git clone git://github.com/arciem/iOS-Couchbase.git
 
-# Build openssl
-
-    cd ios-openssl/
-    ./build.sh
-    cd ..
-
-# Build iMonkey
-
-    cd iMonkey/
-    xcodebuild -target iMonkey-iphoneos -configuration Debug -sdk iphoneos4.3
-    xcodebuild -target iMonkey-iphonesimulator -configuration Debug -sdk iphonesimulator4.3
-    cd ..
-
-# Build iErl14
-
-    cd iErl14/
-    xcodebuild -target iErl14-iphoneos -configuration Debug -sdk iphoneos4.3
-    xcodebuild -target iErl14-iphonesimulator -configuration Debug -sdk iphonesimulator4.3
-    cd ..
-
-# Build iOS-Couchbase
+# Get the submodules
 
     cd iOS-Couchbase/
     git submodule init
     git submodule update
-    cd MobileCouchbase/
-    xcodebuild -target MobileCouchbase-iphoneos -configuration Debug -sdk iphoneos4.3
-    xcodebuild -target MobileCouchbase-iphonesimulator -configuration Debug -sdk iphonesimulator4.3
-    cd ../..
 
-# Build TouchJSON
-	cd TouchJSON/Support/
-    xcodebuild -project TouchJSON-iOS.xcodeproj -target TouchJSON -configuration Debug -sdk iphoneos4.3
-    xcodebuild -project TouchJSON-iOS.xcodeproj -target TouchJSON -configuration Debug -sdk iphonesimulator4.3
-	cd ../..
-	
-# Open the Demo in Xcode
+# Open the Xcode workspace
 
-    cd iOS-Couchbase/Demo/
-    open Demo.xcodeproj/
+    open Couchbase.xcworkspace
 
 # To build and run in the simulator:
 
-* Select "Demo-iphonesimulator | iPhone 4.3 Simulator" from the popup
+* Select "CouchDemo-iphonesimulator | iPhone 4.3 Simulator" from the popup
 * Click the Run button
 
 # To build and run on the device:
 
 * Make sure a properly provisioned device is attached
-* Select "Demo-iphoneos | DeviceName(osversion)" from the popup
+* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the popup
 * Click the Run button
