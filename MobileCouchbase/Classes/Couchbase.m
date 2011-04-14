@@ -52,7 +52,7 @@ void* erlang_thread(void* data) {
 	NSLog(@"Starting the Couch");
 	NSBundle* mainBundle;
 	mainBundle = [NSBundle mainBundle];
-	NSString* myPath = [mainBundle pathForResource:@"MobileCouchbase" ofType:@"bundle"];
+	NSString* myPath = [mainBundle pathForResource:@"Couchbase" ofType:@"bundle"];
 	NSLog(@"my path aka app root: %@", myPath);
 
 	char app_root[1024];

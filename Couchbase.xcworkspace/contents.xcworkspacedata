@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Demo/CouchDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../TouchJSON/Support/TouchJSON-iOS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MobileCouchbase/Couchbase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../iErl14/iErl14.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../iMonkey/iMonkey.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../ios-openssl/openssl.xcodeproj">
+   </FileRef>
+</Workspace>

@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030D3B9A1354E37300753996 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D3B991354E37300753996 /* libTouchJSON.a */; };
-		030D3B9C1354E37B00753996 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 030D3B9B1354E37B00753996 /* libTouchJSON.a */; };
 		0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		03563860135001DD00D2AF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
@@ -72,10 +70,12 @@
 		035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		03E8393913539EF800D64D0D /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03E8393813539EF800D64D0D /* MobileCouchbase.bundle */; };
-		03E8393A13539EF800D64D0D /* MobileCouchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03E8393813539EF800D64D0D /* MobileCouchbase.bundle */; };
-		03E8393D13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */; };
-		03E8393F13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */; };
+		037E114F13566565005FFC4F /* libTouchJSON-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */; };
+		037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */; };
+		037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115113566574005FFC4F /* libCouchbase-iphoneos.a */; };
+		037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */; };
+		037E117F135674E7005FFC4F /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 037E117E135674E7005FFC4F /* Couchbase.bundle */; };
+		037E1180135674E7005FFC4F /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 037E117E135674E7005FFC4F /* Couchbase.bundle */; };
 		1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -142,20 +142,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		030D3B991354E37300753996 /* libTouchJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTouchJSON.a; path = "../TouchJSON/Support/build/Debug-iphoneos/libTouchJSON.a"; sourceTree = "<group>"; };
-		030D3B9B1354E37B00753996 /* libTouchJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTouchJSON.a; path = "../../TouchJSON/Support/build/Debug-iphonesimulator/libTouchJSON.a"; sourceTree = "<group>"; };
-		035638B0135001DD00D2AF03 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		03E8393813539EF800D64D0D /* MobileCouchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MobileCouchbase.bundle; path = "../build/Debug-iphoneos/MobileCouchbase.bundle"; sourceTree = "<group>"; };
-		03E8393B13539F4B00D64D0D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = "../build/Debug-iphoneos/Couchbase.h"; sourceTree = "<group>"; };
-		03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-iphoneos.a"; path = "build/Debug-iphoneos/libMobileCouchbase-iphoneos.a"; sourceTree = "<group>"; };
-		03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libMobileCouchbase-iphonesimulator.a"; path = "../build/Debug-iphonesimulator/libMobileCouchbase-iphonesimulator.a"; sourceTree = "<group>"; };
+		035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphonesimulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphoneos.a"; path = "../Debug/libTouchJSON-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphonesimulator.a"; path = "../Debug/libTouchJSON-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E115113566574005FFC4F /* libCouchbase-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphoneos.a"; path = "../Debug/libCouchbase-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphonesimulator.a"; path = "../Debug/libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E117D135674B3005FFC4F /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = include/Couchbase.h; sourceTree = BUILT_PRODUCTS_DIR; };
+		037E117E135674E7005FFC4F /* Couchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Couchbase.bundle; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug/Couchbase.bundle"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphoneos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28A0AAE50D9B0CCF005BE974 /* Demo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo_Prefix.pch; sourceTree = "<group>"; };
+		28A0AAE50D9B0CCF005BE974 /* CouchDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchDemo_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
@@ -260,7 +260,7 @@
 		3D4798B012A1B90000581D10 /* NSError_CouchDBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSError_CouchDBExtensions.h; sourceTree = "<group>"; };
 		3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSError_CouchDBExtensions.m; sourceTree = "<group>"; };
 		3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* CouchDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CouchDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		BC506C35132970D400CA9F42 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		BCDA6DEA13217E2400D8538A /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/gcc/arm-apple-darwin10/4.0.1/libstdc++.dylib"; sourceTree = SDKROOT; };
 		BCDA6E88132191AA00D8538A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 				035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */,
 				035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */,
 				035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */,
-				03E8393F13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a in Frameworks */,
-				030D3B9C1354E37B00753996 /* libTouchJSON.a in Frameworks */,
+				037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */,
+				037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,31 +293,27 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
-				03E8393D13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a in Frameworks */,
-				030D3B9A1354E37300753996 /* libTouchJSON.a in Frameworks */,
+				037E114F13566565005FFC4F /* libTouchJSON-iphoneos.a in Frameworks */,
+				037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		035638B21350036300D2AF03 /* Simulator */ = {
+		037E114C13566540005FFC4F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				03E8393E13539F9600D64D0D /* libMobileCouchbase-iphonesimulator.a */,
-				030D3B9B1354E37B00753996 /* libTouchJSON.a */,
+				037E117E135674E7005FFC4F /* Couchbase.bundle */,
+				037E117D135674B3005FFC4F /* Couchbase.h */,
+				037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */,
+				037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */,
+				037E115113566574005FFC4F /* libCouchbase-iphoneos.a */,
+				037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */,
+				BC506C35132970D400CA9F42 /* libicucore.dylib */,
+				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
 			);
-			name = Simulator;
-			sourceTree = "<group>";
-		};
-		035638B31350036F00D2AF03 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				03E8393C13539F8E00D64D0D /* libMobileCouchbase-iphoneos.a */,
-				030D3B991354E37300753996 /* libTouchJSON.a */,
-			);
-			name = Device;
-			path = ..;
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
@@ -338,8 +334,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Demo.app */,
-				035638B0135001DD00D2AF03 /* Demo.app */,
+				1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */,
+				035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +346,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				037E114C13566540005FFC4F /* Libraries */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -361,9 +358,8 @@
 			children = (
 				3D47929112A1A17B00581D10 /* trundle */,
 				3D47921112A1A12600581D10 /* TouchFoundation */,
-				28A0AAE50D9B0CCF005BE974 /* Demo_Prefix.pch */,
+				28A0AAE50D9B0CCF005BE974 /* CouchDemo_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				03E8393B13539F4B00D64D0D /* Couchbase.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -371,8 +367,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				03E8393813539EF800D64D0D /* MobileCouchbase.bundle */,
-				8D1107310486CEB800E47090 /* Demo-Info.plist */,
+				8D1107310486CEB800E47090 /* CouchDemo-Info.plist */,
 				3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */,
 				BCDA6E88132191AA00D8538A /* Default.png */,
 				BCDA6E89132191AA00D8538A /* Default@2x.png */,
@@ -388,10 +383,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				035638B31350036F00D2AF03 /* Device */,
-				035638B21350036300D2AF03 /* Simulator */,
-				BC506C35132970D400CA9F42 /* libicucore.dylib */,
-				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -575,9 +566,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0356385D135001DD00D2AF03 /* Demo-iphonesimulator */ = {
+		0356385D135001DD00D2AF03 /* CouchDemo-iphonesimulator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-iphonesimulator" */;
+			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "CouchDemo-iphonesimulator" */;
 			buildPhases = (
 				0356385E135001DD00D2AF03 /* Resources */,
 				03563868135001DD00D2AF03 /* Sources */,
@@ -587,14 +578,14 @@
 			);
 			dependencies = (
 			);
-			name = "Demo-iphonesimulator";
+			name = "CouchDemo-iphonesimulator";
 			productName = Demo;
-			productReference = 035638B0135001DD00D2AF03 /* Demo.app */;
+			productReference = 035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1D6058900D05DD3D006BFB54 /* Demo-iphoneos */ = {
+		1D6058900D05DD3D006BFB54 /* CouchDemo-iphoneos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-iphoneos" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CouchDemo-iphoneos" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -604,9 +595,9 @@
 			);
 			dependencies = (
 			);
-			name = "Demo-iphoneos";
+			name = "CouchDemo-iphoneos";
 			productName = Demo;
-			productReference = 1D6058910D05DD3D006BFB54 /* Demo.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -614,8 +605,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Demo" */;
-			compatibilityVersion = "Xcode 3.1";
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CouchDemo" */;
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -629,8 +620,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Demo-iphoneos */,
-				0356385D135001DD00D2AF03 /* Demo-iphonesimulator */,
+				1D6058900D05DD3D006BFB54 /* CouchDemo-iphoneos */,
+				0356385D135001DD00D2AF03 /* CouchDemo-iphonesimulator */,
 			);
 		};
 /* End PBXProject section */
@@ -648,7 +639,7 @@
 				03563864135001DD00D2AF03 /* Default@2x.png in Resources */,
 				03563865135001DD00D2AF03 /* Icon.png in Resources */,
 				03563866135001DD00D2AF03 /* Icon@2x.png in Resources */,
-				03E8393A13539EF800D64D0D /* MobileCouchbase.bundle in Resources */,
+				037E1180135674E7005FFC4F /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +655,7 @@
 				BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */,
 				BCDA6E8E132191AA00D8538A /* Icon.png in Resources */,
 				BCDA6E8F132191AA00D8538A /* Icon@2x.png in Resources */,
-				03E8393913539EF800D64D0D /* MobileCouchbase.bundle in Resources */,
+				037E117F135674E7005FFC4F /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,57 +783,39 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
 				CODE_SIGN_ENTITLEMENTS = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
+				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
+				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
 				);
-				PRODUCT_NAME = Demo;
+				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
-		035638AE135001DD00D2AF03 /* Developer Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = Demo;
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
-			};
-			name = "Developer Release";
-		};
 		035638AF135001DD00D2AF03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = i386;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
+				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
+				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
 				);
-				PRODUCT_NAME = Demo;
+				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = i386;
@@ -853,18 +826,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CODE_SIGN_ENTITLEMENTS = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
+				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
+				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
 				);
-				PRODUCT_NAME = Demo;
+				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
 			};
@@ -874,68 +852,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
+				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
+				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
 				);
-				PRODUCT_NAME = Demo;
+				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = armv6;
 			};
 			name = Release;
 		};
-		3DEAED5512A2EB5500EEBD22 /* Developer Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_ENTITLEMENTS = Entitlement.plist;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PREBINDING = NO;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos;
-			};
-			name = "Developer Release";
-		};
-		3DEAED5612A2EB5500EEBD22 /* Developer Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = "";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Demo_Prefix.pch;
-				INFOPLIST_FILE = "Demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = Demo;
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = armv6;
-			};
-			name = "Developer Release";
-		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -943,19 +884,17 @@
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
-				SYMROOT = ../build;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -965,40 +904,35 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				SYMROOT = ../build;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "Demo-iphonesimulator" */ = {
+		035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "CouchDemo-iphonesimulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				035638AD135001DD00D2AF03 /* Debug */,
-				035638AE135001DD00D2AF03 /* Developer Release */,
 				035638AF135001DD00D2AF03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Demo-iphoneos" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CouchDemo-iphoneos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
-				3DEAED5612A2EB5500EEBD22 /* Developer Release */,
 				1D6058950D05DD3E006BFB54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Demo" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CouchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
-				3DEAED5512A2EB5500EEBD22 /* Developer Release */,
 				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
