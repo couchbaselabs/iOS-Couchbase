@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		034B4EAF135785200040FE2A /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 034B4EAE135785200040FE2A /* Couchbase.bundle */; };
-		034B4EB0135785200040FE2A /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 034B4EAE135785200040FE2A /* Couchbase.bundle */; };
 		0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		03563860135001DD00D2AF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
@@ -142,7 +140,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		034B4EAE135785200040FE2A /* Couchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Couchbase.bundle; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug/Couchbase.bundle"; sourceTree = "<group>"; };
 		035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphonesimulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphoneos.a"; path = "../Debug/libTouchJSON-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphonesimulator.a"; path = "../Debug/libTouchJSON-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,7 +363,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				034B4EAE135785200040FE2A /* Couchbase.bundle */,
 				8D1107310486CEB800E47090 /* CouchDemo-Info.plist */,
 				3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */,
 				BCDA6E88132191AA00D8538A /* Default.png */,
@@ -571,6 +567,7 @@
 			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "CouchDemo-iphonesimulator" */;
 			buildPhases = (
 				0356385E135001DD00D2AF03 /* Resources */,
+				034B4F06135790D80040FE2A /* Copy Couchbase.bundle */,
 				03563868135001DD00D2AF03 /* Sources */,
 				035638A4135001DD00D2AF03 /* Frameworks */,
 			);
@@ -588,6 +585,7 @@
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CouchDemo-iphoneos" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
+				03D8F57F1357920300D08F9E /* Copy Couchbase.bundle */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
 			);
@@ -639,7 +637,6 @@
 				03563864135001DD00D2AF03 /* Default@2x.png in Resources */,
 				03563865135001DD00D2AF03 /* Icon.png in Resources */,
 				03563866135001DD00D2AF03 /* Icon@2x.png in Resources */,
-				034B4EB0135785200040FE2A /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,11 +652,41 @@
 				BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */,
 				BCDA6E8E132191AA00D8538A /* Icon.png in Resources */,
 				BCDA6E8F132191AA00D8538A /* Icon@2x.png in Resources */,
-				034B4EAF135785200040FE2A /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		034B4F06135790D80040FE2A /* Copy Couchbase.bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Couchbase.bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -a \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+		};
+		03D8F57F1357920300D08F9E /* Copy Couchbase.bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Couchbase.bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -a \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03563868135001DD00D2AF03 /* Sources */ = {
