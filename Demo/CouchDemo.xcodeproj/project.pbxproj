@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034B4EAF135785200040FE2A /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 034B4EAE135785200040FE2A /* Couchbase.bundle */; };
+		034B4EB0135785200040FE2A /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 034B4EAE135785200040FE2A /* Couchbase.bundle */; };
 		0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		03563860135001DD00D2AF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
 		03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
@@ -74,8 +76,6 @@
 		037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */; };
 		037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115113566574005FFC4F /* libCouchbase-iphoneos.a */; };
 		037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */; };
-		037E117F135674E7005FFC4F /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 037E117E135674E7005FFC4F /* Couchbase.bundle */; };
-		037E1180135674E7005FFC4F /* Couchbase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 037E117E135674E7005FFC4F /* Couchbase.bundle */; };
 		1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -142,13 +142,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		034B4EAE135785200040FE2A /* Couchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Couchbase.bundle; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug/Couchbase.bundle"; sourceTree = "<group>"; };
 		035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphonesimulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphoneos.a"; path = "../Debug/libTouchJSON-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphonesimulator.a"; path = "../Debug/libTouchJSON-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E115113566574005FFC4F /* libCouchbase-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphoneos.a"; path = "../Debug/libCouchbase-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphonesimulator.a"; path = "../Debug/libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E117D135674B3005FFC4F /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = include/Couchbase.h; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E117E135674E7005FFC4F /* Couchbase.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Couchbase.bundle; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug/Couchbase.bundle"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
@@ -304,7 +304,6 @@
 		037E114C13566540005FFC4F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				037E117E135674E7005FFC4F /* Couchbase.bundle */,
 				037E117D135674B3005FFC4F /* Couchbase.h */,
 				037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */,
 				037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */,
@@ -367,6 +366,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				034B4EAE135785200040FE2A /* Couchbase.bundle */,
 				8D1107310486CEB800E47090 /* CouchDemo-Info.plist */,
 				3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */,
 				BCDA6E88132191AA00D8538A /* Default.png */,
@@ -639,7 +639,7 @@
 				03563864135001DD00D2AF03 /* Default@2x.png in Resources */,
 				03563865135001DD00D2AF03 /* Icon.png in Resources */,
 				03563866135001DD00D2AF03 /* Icon@2x.png in Resources */,
-				037E1180135674E7005FFC4F /* Couchbase.bundle in Resources */,
+				034B4EB0135785200040FE2A /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +655,7 @@
 				BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */,
 				BCDA6E8E132191AA00D8538A /* Icon.png in Resources */,
 				BCDA6E8F132191AA00D8538A /* Icon@2x.png in Resources */,
-				037E117F135674E7005FFC4F /* Couchbase.bundle in Resources */,
+				034B4EAF135785200040FE2A /* Couchbase.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
