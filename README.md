@@ -55,7 +55,7 @@ Copyright 2011, Couchbase, Inc.
 
 ## Building the Arciem Fork
 
-The following instructions can be used to build Mobile Couchbase for devices and simulators. This uses my forks of the necessary libraries, which have all been updated for Xcode 4 and iOS SDK 4.3. I have also eliminated the need to manually copy dependency files between the projects-- just make sure that the project directories are all siblings.
+The following instructions can be used to build Mobile Couchbase for devices and simulators. This uses my forks of the necessary libraries as submodules, which have all been updated for Xcode 4 and iOS SDK 4.3.
 
 # Get the main repository
 
