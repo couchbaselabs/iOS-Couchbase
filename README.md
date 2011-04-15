@@ -57,17 +57,8 @@ Copyright 2011, Couchbase, Inc.
 
 The following instructions can be used to build Mobile Couchbase for devices and simulators. This uses my forks of the necessary libraries, which have all been updated for Xcode 4 and iOS SDK 4.3. I have also eliminated the need to manually copy dependency files between the projects-- just make sure that the project directories are all siblings.
 
-# Make a directory to hold everything
+# Get the main repository
 
-    mkdir couchdemo
-    cd couchdemo/
-
-# Get everything we need
-
-    git clone git://github.com/arciem/ios-openssl.git
-    git clone git://github.com/arciem/iMonkey.git
-    git clone git://github.com/arciem/iErl14.git
-    git clone git://github.com/arciem/TouchJSON.git
     git clone git://github.com/arciem/iOS-Couchbase.git
 
 # Get the submodules
