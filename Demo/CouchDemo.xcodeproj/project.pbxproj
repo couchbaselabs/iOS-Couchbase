@@ -818,11 +818,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
-				);
 				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
@@ -837,11 +832,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
-				);
 				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
@@ -864,11 +854,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
-				);
 				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
@@ -886,11 +871,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../TouchJSON/Support/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
-				);
 				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -908,7 +888,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -927,7 +907,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../../TouchJSON/Source\"/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
