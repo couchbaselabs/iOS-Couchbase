@@ -13,10 +13,10 @@
 		037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */; };
 		037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */; };
 		037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */; };
-		03E8394A1353ADE600D64D0D /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
-		03E8394B1353ADE600D64D0D /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
-		03E8394E1353ADF300D64D0D /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
-		03E8394F1353ADF300D64D0D /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
+		038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
+		038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
+		0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
+		0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
 		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
@@ -51,10 +51,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E8394E1353ADF300D64D0D /* libcrypto-iphonesimulator.a in Frameworks */,
-				03E8394F1353ADF300D64D0D /* libssl-iphonesimulator.a in Frameworks */,
 				037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */,
 				037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */,
+				0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */,
+				0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E8394A1353ADE600D64D0D /* libcrypto-iphoneos.a in Frameworks */,
-				03E8394B1353ADE600D64D0D /* libssl-iphoneos.a in Frameworks */,
 				037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */,
 				037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */,
+				038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */,
+				038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,15 +295,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/lib/iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../ios-openssl/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Couchbase-iphonesimulator";
@@ -321,15 +313,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/lib/iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../ios-openssl/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphonesimulator\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PREBINDING = NO;
@@ -375,13 +359,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/lib/iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../ios-openssl/lib\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Couchbase-iphoneos";
@@ -402,13 +380,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
-					"\"$(SRCROOT)/lib/iphoneos\"",
-					"\"$(SRCROOT)/lib\"",
-					"\"$(SRCROOT)/../../iMonkey/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../iErl14/build/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../ios-openssl/lib\"",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-bhqokcadbiaublakrcqxlwdosssy/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PREBINDING = NO;
