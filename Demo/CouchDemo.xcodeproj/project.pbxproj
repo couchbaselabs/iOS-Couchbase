@@ -65,8 +65,6 @@
 		035638A1135001DD00D2AF03 /* CCouchDBURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AC12A1B90000581D10 /* CCouchDBURLOperation.m */; };
 		035638A2135001DD00D2AF03 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
 		035638A3135001DD00D2AF03 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
-		035638A5135001DD00D2AF03 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC506C35132970D400CA9F42 /* libicucore.dylib */; };
-		035638A6135001DD00D2AF03 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
 		035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
@@ -74,6 +72,8 @@
 		037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */; };
 		037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115113566574005FFC4F /* libCouchbase-iphoneos.a */; };
 		037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */; };
+		03C67B851358FB76007D817F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
+		03C67B861358FB76007D817F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
 		1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -131,8 +131,6 @@
 		3D4798BA12A1B90000581D10 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
 		3D4798BB12A1B90000581D10 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
 		3DEAED5812A2EB7400EEBD22 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */; };
-		BC506C36132970D400CA9F42 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC506C35132970D400CA9F42 /* libicucore.dylib */; };
-		BC72CDCC13219E28000343E5 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
 		BCDA6E8C132191AA00D8538A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E88132191AA00D8538A /* Default.png */; };
 		BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E89132191AA00D8538A /* Default@2x.png */; };
 		BCDA6E8E132191AA00D8538A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8A132191AA00D8538A /* Icon.png */; };
@@ -258,7 +256,6 @@
 		3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSError_CouchDBExtensions.m; sourceTree = "<group>"; };
 		3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CouchDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CouchDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		BC506C35132970D400CA9F42 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		BCDA6DEA13217E2400D8538A /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/gcc/arm-apple-darwin10/4.0.1/libstdc++.dylib"; sourceTree = SDKROOT; };
 		BCDA6E88132191AA00D8538A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BCDA6E89132191AA00D8538A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -271,13 +268,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035638A5135001DD00D2AF03 /* libicucore.dylib in Frameworks */,
-				035638A6135001DD00D2AF03 /* libstdc++.dylib in Frameworks */,
 				035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */,
 				035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */,
 				035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */,
 				037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */,
 				037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */,
+				03C67B861358FB76007D817F /* libstdc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,13 +281,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC506C36132970D400CA9F42 /* libicucore.dylib in Frameworks */,
-				BC72CDCC13219E28000343E5 /* libstdc++.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				037E114F13566565005FFC4F /* libTouchJSON-iphoneos.a in Frameworks */,
 				037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */,
+				03C67B851358FB76007D817F /* libstdc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +301,6 @@
 				037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */,
 				037E115113566574005FFC4F /* libCouchbase-iphoneos.a */,
 				037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */,
-				BC506C35132970D400CA9F42 /* libicucore.dylib */,
 				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
 			);
 			name = Libraries;
@@ -818,6 +812,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
 				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALID_ARCHS = i386;
@@ -832,6 +830,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
 				PRODUCT_NAME = "CouchDemo-iphonesimulator";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				VALIDATE_PRODUCT = YES;
@@ -854,6 +856,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
 				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALID_ARCHS = armv6;
@@ -871,6 +877,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+				);
 				PRODUCT_NAME = "CouchDemo-iphoneos";
 				SUPPORTED_PLATFORMS = iphoneos;
 				VALIDATE_PRODUCT = YES;
