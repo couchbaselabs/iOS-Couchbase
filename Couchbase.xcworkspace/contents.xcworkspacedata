@@ -5,7 +5,7 @@
       location = "group:Demo/CouchDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../TouchJSON/Support/TouchJSON-iOS.xcodeproj">
+      location = "group:Demo/Vendor/TouchJSON/Support/TouchJSON-iOS.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MobileCouchbase/Couchbase.xcodeproj">
