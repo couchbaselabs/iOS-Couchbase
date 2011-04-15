@@ -30,7 +30,7 @@
                BlueprintIdentifier = "D2AAC07D0554694100DB518D"
                BuildableName = "libiMonkey-iphoneos.a"
                BlueprintName = "iMonkey-iphoneos"
-               ReferencedContainer = "container:../../iMonkey/iMonkey.xcodeproj">
+               ReferencedContainer = "container:../MobileCouchbase/Vendor/iMonkey/iMonkey.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
