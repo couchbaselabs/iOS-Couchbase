@@ -16,7 +16,7 @@
                BlueprintIdentifier = "03E8379E135394B000D64D0D"
                BuildableName = "libiErl14-iphonesimulator.a"
                BlueprintName = "iErl14-iphonesimulator"
-               ReferencedContainer = "container:../../iErl14/iErl14.xcodeproj">
+               ReferencedContainer = "container:../MobileCouchbase/Vendor/iErl14/iErl14.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

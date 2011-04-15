@@ -16,7 +16,7 @@
                BlueprintIdentifier = "03E8379E135394B000D64D0D"
                BuildableName = "libiErl14-iphonesimulator.a"
                BlueprintName = "iErl14-iphonesimulator"
-               ReferencedContainer = "container:../../iErl14/iErl14.xcodeproj">
+               ReferencedContainer = "container:Vendor/iErl14/iErl14.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,7 +30,7 @@
                BlueprintIdentifier = "03E836BF135391BE00D64D0D"
                BuildableName = "libiMonkey-iphonesimulator.a"
                BlueprintName = "iMonkey-iphonesimulator"
-               ReferencedContainer = "container:../../iMonkey/iMonkey.xcodeproj">
+               ReferencedContainer = "container:Vendor/iMonkey/iMonkey.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

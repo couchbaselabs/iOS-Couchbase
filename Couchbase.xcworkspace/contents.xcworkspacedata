@@ -11,12 +11,12 @@
       location = "group:MobileCouchbase/Couchbase.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../iErl14/iErl14.xcodeproj">
+      location = "group:MobileCouchbase/Vendor/iErl14/iErl14.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:MobileCouchbase/Vendor/iMonkey/iMonkey.xcodeproj">
+      location = "group:MobileCouchbase/Vendor/iMonkey/iMonkey.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../ios-openssl/openssl.xcodeproj">
+      location = "group:MobileCouchbase/Vendor/ios-openssl/openssl.xcodeproj">
    </FileRef>
 </Workspace>

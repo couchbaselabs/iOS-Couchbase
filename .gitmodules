@@ -7,3 +7,9 @@
 [submodule "MobileCouchbase/Vendor/iMonkey"]
 	path = MobileCouchbase/Vendor/iMonkey
 	url = git://github.com/arciem/iMonkey.git
+[submodule "MobileCouchbase/Vendor/iErl14"]
+	path = MobileCouchbase/Vendor/iErl14
+	url = git://github.com/arciem/iErl14.git
+[submodule "MobileCouchbase/Vendor/ios-openssl"]
+	path = MobileCouchbase/Vendor/ios-openssl
+	url = git@github.com:arciem/ios-openssl.git
