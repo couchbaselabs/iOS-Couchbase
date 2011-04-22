@@ -6,7 +6,7 @@
 	url = https://github.com/schwa/trundle.git
 [submodule "MobileCouchbase/Vendor/iMonkey"]
 	path = MobileCouchbase/Vendor/iMonkey
-	url = git://github.com/arciem/iMonkey.git
+	url = git://github.com/couchbaselabs/iMonkey.git
 [submodule "MobileCouchbase/Vendor/iErl14"]
 	path = MobileCouchbase/Vendor/iErl14
 	url = git://github.com/arciem/iErl14.git
