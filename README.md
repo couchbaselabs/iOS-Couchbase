@@ -29,21 +29,36 @@ If you have questions or get stuck or just want to say hi, email <mobile@couchba
 
 For details on how to use Mobile Couchbase in your projects see [doc/using_mobile_couchbase.md](https://github.com/couchbaselabs/iOS-Couchbase/blob/master/doc/using_mobile_couchbase.md)
 
-## Building the Demo App:
 
-The build is finnicky, please follow these instructions exactly. Also, it hasn't been tested much with Xcode 4. Patches welcome!
+## Building the Demo App
 
-* Check out this repository
-* Fetch vendor code dependencies by running `git submodule init` and `git submodule update`
-* Open MobileCouchbase/MobileCouchbase.xcodeproj with Xcode
-* Set the build to Device and the target to MobileCouchbase
-* Build it. (Rumor has it that on Xcode 4 you have to do this step twice...)
-* Plug your phone into your computer (does NOT work with simulator)
-* Open Demo.xcodeproj with Xcode.
-* In the Xcode sidebar, browse to Resources > Demo-Info.plist and edit the "Bundle identifier" to be something you are provisioned to deploy, like `com.mycompany.Demo`
-* Build and Run! (You might have to click the Pause button in the Console to "unstick" the launch. That seems to be a debug issue. When launched from the phone the app should work.)
+The following instructions can be used to build Mobile Couchbase for devices and simulators. This uses my forks of the necessary libraries as submodules, which have all been updated for Xcode 4 and iOS SDK 4.3.
 
-Since this only works on the device, you will need to have an Apple Developer account to install it. [Here are some notes about how to fix provisioning profile issues if you encounter them](http://developer.apple.com/library/ios/#technotes/tn2010/tn2250.html).
+### Get the main repository
+
+    git clone git://github.com/arciem/iOS-Couchbase.git
+
+### Get the submodules
+
+    cd iOS-Couchbase/
+    git submodule init
+    git submodule update
+
+### Open the Xcode workspace
+
+    open Couchbase.xcworkspace
+
+### To build and run the Demo App in the simulator:
+
+* Select "CouchDemo-iphonesimulator | iPhone 4.3 Simulator" from the popup
+* Click the Run button
+
+### To build and run the Demo App on a device:
+
+* Make sure a properly provisioned device is attached
+* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the popup
+* Click the Run button
+
 
 ## License
 
@@ -52,32 +67,3 @@ Portions under Apache, Erlang, and other licenses.
 The overall package is released under the Apache license, 2.0.
 
 Copyright 2011, Couchbase, Inc.
-
-## Building the Arciem Fork
-
-The following instructions can be used to build Mobile Couchbase for devices and simulators. This uses my forks of the necessary libraries as submodules, which have all been updated for Xcode 4 and iOS SDK 4.3.
-
-# Get the main repository
-
-    git clone git://github.com/arciem/iOS-Couchbase.git
-
-# Get the submodules
-
-    cd iOS-Couchbase/
-    git submodule init
-    git submodule update
-
-# Open the Xcode workspace
-
-    open Couchbase.xcworkspace
-
-# To build and run in the simulator:
-
-* Select "CouchDemo-iphonesimulator | iPhone 4.3 Simulator" from the popup
-* Click the Run button
-
-# To build and run on the device:
-
-* Make sure a properly provisioned device is attached
-* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the popup
-* Click the Run button
