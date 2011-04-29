@@ -1,14 +1,10 @@
-## Mobile Couchbase for iOS - Arciem Fork
-
-SEE BELOW FOR INSTRUCTIONS ON BUILDING FOR THE SIMULATOR
+## Mobile Couchbase for iOS
 
 Apache CouchDB on iOS provides a simple way to sync your application data across devices and provide cloud backup of user data. Unlike other cloud solutions, the data is hosted on the device by Couchbase Mobile, so even when the network is down or slow (airplane, subway, backyard) the application is responsive to users.
 
-## Experimental Release
+### Beta Release
 
-If you just want to get started, jump to **Building the Demo App**. We aren't sure about Xcode 4 support yet.
-
-This release is a best effort library and application for data storage and synchronization. We're already making a lot of progress thanks to feedback and patches from users.
+If you just want to get started, jump to **Building the Demo App**. We've recently moved to Xcode 4, so for best results you should be on Xcode 4 also.
 
 The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
 
@@ -20,8 +16,6 @@ There is a [Google Group here for Mobile Couchbase](https://groups.google.com/gr
 ## Getting Started
 
 These instructions assume you are familiar with how to make an iPhone app because you've done it a lot already.
-
-One potential gotcha: there is **NO SIMULATOR SUPPORT**
 
 If you have questions or get stuck or just want to say hi, email <mobile@couchbase.com> and let us know that you're interested in Couch on mobile.
 
