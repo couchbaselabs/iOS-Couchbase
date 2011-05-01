@@ -15,4 +15,4 @@
 	url = git@github.com:couchbaselabs/ios-openssl.git
 [submodule "Demo/Vendor/TouchJSON"]
 	path = Demo/Vendor/TouchJSON
-	url = git@github.com:arciem/TouchJSON.git
+	url = git@github.com:TouchCode/TouchJSON.git
