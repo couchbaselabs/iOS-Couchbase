@@ -1,5 +1,7 @@
 # Using Mobile Couchbase
 
+**Note: these docs are for an earlier version of the library, but have been left here as a hint for folks who might want to help us come up with the proper instructions for working with the new Xcode 4 overlords.**
+
 It takes about 10 steps to get Couchbase up and running in your applications. We are working to simplify this, but for now, here is what we've got. Please send feedback to mobile@couchbase.com if you run into any roadblocks with these instructions.
 
 * Extract the files from the pre-built `iOS-Couchbase/build/MobileCouchbase.tar.bz2`, included in the git clone, or just download that file from here: <https://github.com/couchbaselabs/iOS-Couchbase/downloads>
