@@ -24,9 +24,10 @@
 ### Create a new workspace/project
 
    File > New Workspace...
+
    File > New Project...
 
-
+<img src="https://github.com/mschoch/iOS-Couchbase/raw/master/doc/resources/001.png"/>
 
 ###  Copy Couchbase dependencies into your project
 
