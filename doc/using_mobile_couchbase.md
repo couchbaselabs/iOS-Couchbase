@@ -27,7 +27,7 @@
 
    File > New Project...
 
-<img src="https://github.com/mschoch/iOS-Couchbase/raw/master/doc/resources/001.png"/>
+<img src="https://github.com/mschoch/iOS-Couchbase/raw/master/doc/resources/001.png" width="400"/>
 
 ###  Copy Couchbase dependencies into your project
 
