@@ -12,3 +12,4 @@ Jonathan Wight
 Alexis Hildebrandt <alexis.hildebrandt@surryhill.net>
 Chris Anderson <jchris@couchbase.com>
 Robert McNally <robert@arciem.com>
+Marty Schoch <https://github.com/mschoch>
