@@ -2,11 +2,33 @@
 
 **Note: Updated for Xcode 4**
 
-It takes about 10 steps to get Couchbase up and running in your applications. We are working to simplify this, but for now, here is what we've got. Please send feedback to mobile@couchbase.com if you run into any roadblocks with these instructions.
+### Get the main repository
 
-* Extract the files from the pre-built `iOS-Couchbase/build/MobileCouchbase.tar.bz2`, included in the git clone, or just download that file from here: <https://github.com/couchbaselabs/iOS-Couchbase/downloads>
+    git clone git://github.com/couchbaselabs/iOS-Couchbase.git
 
-* Drag the `Couchbase.h` file to the `Other Sources` group in the "Groups & Files" sidebar of your project
+### Get the submodules
+
+    cd iOS-Couchbase/
+    git submodule init
+    git submodule update
+
+### Open the Xcode workspace
+
+    open Couchbase.xcworkspace
+
+### Build the Couchbase
+
+    Select the scheme `Couchbase-iphonesimulator` and Build (press `⌘ B`)
+    Select the scheme `Couchbase-iphoneos` and Build (optional, only if doing on device development)
+
+### Create a new workspace/project
+
+   File > New Workspace...
+   File > New Project...
+
+###  Copy Couchbase dependencies into your project
+
+   Drag the `Couchbase.h` file alongside the other files in the sidebar of your project
 
 <img src="https://github.com/couchbaselabs/iOS-Couchbase/raw/master/doc/resources/001.png" width=400/>
 
