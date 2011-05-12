@@ -6,13 +6,13 @@
 	url = https://github.com/schwa/trundle.git
 [submodule "MobileCouchbase/Vendor/iMonkey"]
 	path = MobileCouchbase/Vendor/iMonkey
-	url = git://github.com/couchbaselabs/iMonkey.git
+	url = https://github.com/couchbaselabs/iMonkey.git
 [submodule "MobileCouchbase/Vendor/iErl14"]
 	path = MobileCouchbase/Vendor/iErl14
-	url = git://github.com/couchbaselabs/iErl14.git
+	url = https://github.com/couchbaselabs/iErl14.git
 [submodule "MobileCouchbase/Vendor/ios-openssl"]
 	path = MobileCouchbase/Vendor/ios-openssl
-	url = git@github.com:couchbaselabs/ios-openssl.git
+	url = https://github.com/couchbaselabs/ios-openssl.git
 [submodule "Demo/Vendor/TouchJSON"]
 	path = Demo/Vendor/TouchJSON
-	url = git@github.com:TouchCode/TouchJSON.git
+	url = https://github.com/TouchCode/TouchJSON.git
