@@ -57,7 +57,9 @@ We are very open to patches,suggestions, and improvements. Please share what you
 <img src="https://github.com/couchbaselabs/iOS-Couchbase/raw/master/doc/resources/006.png" width=400/>
 <img src="https://github.com/couchbaselabs/iOS-Couchbase/raw/master/doc/resources/007.png" width=400/>
 
-* Drag the `Couchbase.bundle` to the `Supporting Files` group and add it to your target, this ensures that all Mobile Couchbase runtime files are embedded into your application
+* Drag the `Couchbase.bundle` to the `Supporting Files` group and add it to your target, this ensures that all Mobile Couchbase runtime files are embedded into your application. 
+
+* **Important:** to get the JavaScript query server to work, you need to edit a file in the bundle. Open the bundle (the copy in your project) and edit default.ini to replace all instances of `Demo.app` with the name of your app.
 
 <img src="https://github.com/couchbaselabs/iOS-Couchbase/raw/master/doc/resources/008.png" width=400/>
 <img src="https://github.com/couchbaselabs/iOS-Couchbase/raw/master/doc/resources/009.png" width=400/>
