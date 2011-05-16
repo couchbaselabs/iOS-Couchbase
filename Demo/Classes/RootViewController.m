@@ -100,7 +100,7 @@
 
 	DatabaseManager *sharedManager = [DatabaseManager sharedManager:self.couchbaseURL];
 	CouchDBSuccessHandler inSuccessHandler = ^(id inParameter) {
-		NSLog(@"RVC Wooohooo! %@: %@", [inParameter class], inParameter);
+//		NSLog(@"RVC Wooohooo! %@: %@", [inParameter class], inParameter);
 		self.items = inParameter;
 		[self.tableView reloadData];
 	};
