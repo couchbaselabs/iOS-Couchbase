@@ -67,7 +67,9 @@
 {
 	NSString *text = textView.text;
 	
-	NSDictionary *inDocument = [NSDictionary dictionaryWithObjectsAndKeys:text, @"text", nil];
+	NSDictionary *inDocument = [NSDictionary dictionaryWithObjectsAndKeys:text, @"text"
+                                , [[NSDate date] description], @"created_at"
+                                , nil];
 	CouchDBSuccessHandler inSuccessHandler = ^(id inParameter) {
 		NSLog(@"Wooohooo! %@", inParameter);
 		[delegate performSelector:@selector(newItemAdded)];
