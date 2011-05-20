@@ -39,6 +39,7 @@
 		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
 		3D47994312A1D4E800581D10 /* demo.couch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.couch; sourceTree = "<group>"; };
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
+		795D60E813872609002B237E /* couchdb.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = couchdb.xcodeproj; path = Vendor/couchdb/couchdb.xcodeproj; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couchbase.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* Couchbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couchbase.m; sourceTree = "<group>"; };
 		79F5314313208D3700038ADD /* Couchbase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +102,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				795D60E813872609002B237E /* couchdb.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Libraries */,
@@ -134,6 +136,13 @@
 				03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		795D60E913872609002B237E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +244,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 795D60E913872609002B237E /* Products */;
+					ProjectRef = 795D60E813872609002B237E /* couchdb.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */,
