@@ -16,3 +16,6 @@
 [submodule "Demo/Vendor/TouchJSON"]
 	path = Demo/Vendor/TouchJSON
 	url = https://github.com/TouchCode/TouchJSON.git
+[submodule "MobileCouchbase/Vendor/couchdb"]
+	path = MobileCouchbase/Vendor/couchdb
+	url = https://github.com/couchbaselabs/couchdb.git
