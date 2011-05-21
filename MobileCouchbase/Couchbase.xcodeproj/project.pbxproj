@@ -465,8 +465,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79F5314813208D3800038ADD /* Build configuration list for PBXNativeTarget "Couchbase.bundle" */;
 			buildPhases = (
-				795D60ED13872799002B237E /* CopyFiles */,
 				79F5313F13208D3700038ADD /* Resources */,
+				795D60ED13872799002B237E /* CopyFiles */,
 				79F5314013208D3700038ADD /* Sources */,
 				79F5314113208D3700038ADD /* Frameworks */,
 				79F5337D13208EEE00038ADD /* Headers */,
