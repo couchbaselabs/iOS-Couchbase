@@ -28,6 +28,7 @@
 		795EA72313875C8E00C9FA61 /* couch_changes.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F413872C73002B237E /* couch_changes.beam */; };
 		795EA72413875C8E00C9FA61 /* couch_config_writer.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F513872C73002B237E /* couch_config_writer.beam */; };
 		795EA72513875C8E00C9FA61 /* couch_config.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F613872C73002B237E /* couch_config.beam */; };
+		795EA7611388259200C9FA61 /* couch_view_group.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612313872C74002B237E /* couch_view_group.beam */; };
 		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
@@ -53,6 +54,7 @@
 			dstPath = "erlang/lib/couch-0.12/ebin";
 			dstSubfolderSpec = 7;
 			files = (
+				795EA7611388259200C9FA61 /* couch_view_group.beam in CopyFiles */,
 				795EA72213875C8E00C9FA61 /* couch_btree.beam in CopyFiles */,
 				795EA72313875C8E00C9FA61 /* couch_changes.beam in CopyFiles */,
 				795EA72413875C8E00C9FA61 /* couch_config_writer.beam in CopyFiles */,
