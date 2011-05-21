@@ -17,66 +17,17 @@
 		038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
 		0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
 		0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
-		795D612A13872C74002B237E /* couch_app_server_emonk.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60EE13872C73002B237E /* couch_app_server_emonk.beam */; };
-		795D612B13872C74002B237E /* couch_app_server_erlang.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60EF13872C73002B237E /* couch_app_server_erlang.beam */; };
-		795D612C13872C74002B237E /* couch_app_server.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F013872C73002B237E /* couch_app_server.beam */; };
-		795D612D13872C74002B237E /* couch_app.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F113872C73002B237E /* couch_app.beam */; };
-		795D612E13872C74002B237E /* couch_auth_cache.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F213872C73002B237E /* couch_auth_cache.beam */; };
-		795D612F13872C74002B237E /* couch_btree.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F313872C73002B237E /* couch_btree.beam */; };
-		795D613013872C74002B237E /* couch_changes.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F413872C73002B237E /* couch_changes.beam */; };
-		795D613113872C74002B237E /* couch_config_writer.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F513872C73002B237E /* couch_config_writer.beam */; };
-		795D613213872C74002B237E /* couch_config.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F613872C73002B237E /* couch_config.beam */; };
-		795D613313872C74002B237E /* couch_db_update_notifier_sup.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F713872C73002B237E /* couch_db_update_notifier_sup.beam */; };
-		795D613413872C74002B237E /* couch_db_update_notifier.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F813872C73002B237E /* couch_db_update_notifier.beam */; };
-		795D613513872C74002B237E /* couch_db_updater.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F913872C73002B237E /* couch_db_updater.beam */; };
-		795D613613872C74002B237E /* couch_db.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FA13872C73002B237E /* couch_db.beam */; };
-		795D613713872C74002B237E /* couch_doc.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FB13872C73002B237E /* couch_doc.beam */; };
-		795D613813872C74002B237E /* couch_event_sup.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FC13872C73002B237E /* couch_event_sup.beam */; };
-		795D613913872C74002B237E /* couch_external_manager.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FD13872C73002B237E /* couch_external_manager.beam */; };
-		795D613A13872C74002B237E /* couch_external_server.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FE13872C73002B237E /* couch_external_server.beam */; };
-		795D613B13872C74002B237E /* couch_file.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60FF13872C73002B237E /* couch_file.beam */; };
-		795D613C13872C74002B237E /* couch_httpd_auth.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610013872C73002B237E /* couch_httpd_auth.beam */; };
-		795D613D13872C74002B237E /* couch_httpd_db.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610113872C73002B237E /* couch_httpd_db.beam */; };
-		795D613E13872C74002B237E /* couch_httpd_external.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610213872C73002B237E /* couch_httpd_external.beam */; };
-		795D613F13872C74002B237E /* couch_httpd_misc_handlers.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610313872C73002B237E /* couch_httpd_misc_handlers.beam */; };
-		795D614013872C74002B237E /* couch_httpd_oauth.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610413872C73002B237E /* couch_httpd_oauth.beam */; };
-		795D614113872C74002B237E /* couch_httpd_rewrite.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610513872C73002B237E /* couch_httpd_rewrite.beam */; };
-		795D614213872C74002B237E /* couch_httpd_show.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610613872C73002B237E /* couch_httpd_show.beam */; };
-		795D614313872C74002B237E /* couch_httpd_stats_handlers.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610713872C73002B237E /* couch_httpd_stats_handlers.beam */; };
-		795D614413872C74002B237E /* couch_httpd_vhost.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610813872C73002B237E /* couch_httpd_vhost.beam */; };
-		795D614513872C74002B237E /* couch_httpd_view.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610913872C73002B237E /* couch_httpd_view.beam */; };
-		795D614613872C74002B237E /* couch_httpd.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610A13872C73002B237E /* couch_httpd.beam */; };
-		795D614713872C74002B237E /* couch_key_tree.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610B13872C73002B237E /* couch_key_tree.beam */; };
-		795D614813872C74002B237E /* couch_log.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610C13872C73002B237E /* couch_log.beam */; };
-		795D614913872C74002B237E /* couch_native_process.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610D13872C73002B237E /* couch_native_process.beam */; };
-		795D614A13872C74002B237E /* couch_os_process.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610E13872C73002B237E /* couch_os_process.beam */; };
-		795D614B13872C74002B237E /* couch_query_servers.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D610F13872C73002B237E /* couch_query_servers.beam */; };
-		795D614C13872C74002B237E /* couch_ref_counter.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611013872C73002B237E /* couch_ref_counter.beam */; };
-		795D614D13872C74002B237E /* couch_rep_att.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611113872C73002B237E /* couch_rep_att.beam */; };
-		795D614E13872C74002B237E /* couch_rep_changes_feed.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611213872C73002B237E /* couch_rep_changes_feed.beam */; };
-		795D614F13872C74002B237E /* couch_rep_db_listener.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611313872C73002B237E /* couch_rep_db_listener.beam */; };
-		795D615013872C74002B237E /* couch_rep_httpc.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611413872C73002B237E /* couch_rep_httpc.beam */; };
-		795D615113872C74002B237E /* couch_rep_missing_revs.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611513872C73002B237E /* couch_rep_missing_revs.beam */; };
-		795D615213872C74002B237E /* couch_rep_reader.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611613872C73002B237E /* couch_rep_reader.beam */; };
-		795D615313872C74002B237E /* couch_rep_sup.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611713872C73002B237E /* couch_rep_sup.beam */; };
-		795D615413872C74002B237E /* couch_rep_writer.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611813872C73002B237E /* couch_rep_writer.beam */; };
-		795D615513872C74002B237E /* couch_rep.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611913872C73002B237E /* couch_rep.beam */; };
-		795D615613872C74002B237E /* couch_server_sup.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611A13872C73002B237E /* couch_server_sup.beam */; };
-		795D615713872C74002B237E /* couch_server.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611B13872C73002B237E /* couch_server.beam */; };
-		795D615813872C74002B237E /* couch_stats_aggregator.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611C13872C73002B237E /* couch_stats_aggregator.beam */; };
-		795D615913872C74002B237E /* couch_stats_collector.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611D13872C73002B237E /* couch_stats_collector.beam */; };
-		795D615A13872C74002B237E /* couch_stream.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611E13872C73002B237E /* couch_stream.beam */; };
-		795D615B13872C74002B237E /* couch_task_status.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D611F13872C73002B237E /* couch_task_status.beam */; };
-		795D615C13872C74002B237E /* couch_util.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612013872C73002B237E /* couch_util.beam */; };
-		795D615D13872C74002B237E /* couch_uuids.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612113872C74002B237E /* couch_uuids.beam */; };
-		795D615E13872C74002B237E /* couch_view_compactor.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612213872C74002B237E /* couch_view_compactor.beam */; };
-		795D615F13872C74002B237E /* couch_view_group.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612313872C74002B237E /* couch_view_group.beam */; };
-		795D616013872C74002B237E /* couch_view_server_emonk.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612413872C74002B237E /* couch_view_server_emonk.beam */; };
-		795D616113872C74002B237E /* couch_view_server_erlang.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612513872C74002B237E /* couch_view_server_erlang.beam */; };
-		795D616213872C74002B237E /* couch_view_server_os.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612613872C74002B237E /* couch_view_server_os.beam */; };
-		795D616313872C75002B237E /* couch_view_server.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612713872C74002B237E /* couch_view_server.beam */; };
-		795D616413872C75002B237E /* couch_view_updater.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612813872C74002B237E /* couch_view_updater.beam */; };
 		795D616513872C75002B237E /* couch_view.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612913872C74002B237E /* couch_view.beam */; };
+		795EA71B13875BC300C9FA61 /* couch_view_updater.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D612813872C74002B237E /* couch_view_updater.beam */; };
+		795EA71D13875C4600C9FA61 /* couch_app.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F113872C73002B237E /* couch_app.beam */; };
+		795EA71E13875C6C00C9FA61 /* couch_app_server_emonk.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60EE13872C73002B237E /* couch_app_server_emonk.beam */; };
+		795EA71F13875C6C00C9FA61 /* couch_app_server_erlang.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60EF13872C73002B237E /* couch_app_server_erlang.beam */; };
+		795EA72013875C6C00C9FA61 /* couch_app_server.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F013872C73002B237E /* couch_app_server.beam */; };
+		795EA72113875C6C00C9FA61 /* couch_auth_cache.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F213872C73002B237E /* couch_auth_cache.beam */; };
+		795EA72213875C8E00C9FA61 /* couch_btree.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F313872C73002B237E /* couch_btree.beam */; };
+		795EA72313875C8E00C9FA61 /* couch_changes.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F413872C73002B237E /* couch_changes.beam */; };
+		795EA72413875C8E00C9FA61 /* couch_config_writer.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F513872C73002B237E /* couch_config_writer.beam */; };
+		795EA72513875C8E00C9FA61 /* couch_config.beam in CopyFiles */ = {isa = PBXBuildFile; fileRef = 795D60F613872C73002B237E /* couch_config.beam */; };
 		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
@@ -102,65 +53,16 @@
 			dstPath = "erlang/lib/couch-0.12/ebin";
 			dstSubfolderSpec = 7;
 			files = (
-				795D612A13872C74002B237E /* couch_app_server_emonk.beam in CopyFiles */,
-				795D612B13872C74002B237E /* couch_app_server_erlang.beam in CopyFiles */,
-				795D612C13872C74002B237E /* couch_app_server.beam in CopyFiles */,
-				795D612D13872C74002B237E /* couch_app.beam in CopyFiles */,
-				795D612E13872C74002B237E /* couch_auth_cache.beam in CopyFiles */,
-				795D612F13872C74002B237E /* couch_btree.beam in CopyFiles */,
-				795D613013872C74002B237E /* couch_changes.beam in CopyFiles */,
-				795D613113872C74002B237E /* couch_config_writer.beam in CopyFiles */,
-				795D613213872C74002B237E /* couch_config.beam in CopyFiles */,
-				795D613313872C74002B237E /* couch_db_update_notifier_sup.beam in CopyFiles */,
-				795D613413872C74002B237E /* couch_db_update_notifier.beam in CopyFiles */,
-				795D613513872C74002B237E /* couch_db_updater.beam in CopyFiles */,
-				795D613613872C74002B237E /* couch_db.beam in CopyFiles */,
-				795D613713872C74002B237E /* couch_doc.beam in CopyFiles */,
-				795D613813872C74002B237E /* couch_event_sup.beam in CopyFiles */,
-				795D613913872C74002B237E /* couch_external_manager.beam in CopyFiles */,
-				795D613A13872C74002B237E /* couch_external_server.beam in CopyFiles */,
-				795D613B13872C74002B237E /* couch_file.beam in CopyFiles */,
-				795D613C13872C74002B237E /* couch_httpd_auth.beam in CopyFiles */,
-				795D613D13872C74002B237E /* couch_httpd_db.beam in CopyFiles */,
-				795D613E13872C74002B237E /* couch_httpd_external.beam in CopyFiles */,
-				795D613F13872C74002B237E /* couch_httpd_misc_handlers.beam in CopyFiles */,
-				795D614013872C74002B237E /* couch_httpd_oauth.beam in CopyFiles */,
-				795D614113872C74002B237E /* couch_httpd_rewrite.beam in CopyFiles */,
-				795D614213872C74002B237E /* couch_httpd_show.beam in CopyFiles */,
-				795D614313872C74002B237E /* couch_httpd_stats_handlers.beam in CopyFiles */,
-				795D614413872C74002B237E /* couch_httpd_vhost.beam in CopyFiles */,
-				795D614513872C74002B237E /* couch_httpd_view.beam in CopyFiles */,
-				795D614613872C74002B237E /* couch_httpd.beam in CopyFiles */,
-				795D614713872C74002B237E /* couch_key_tree.beam in CopyFiles */,
-				795D614813872C74002B237E /* couch_log.beam in CopyFiles */,
-				795D614913872C74002B237E /* couch_native_process.beam in CopyFiles */,
-				795D614A13872C74002B237E /* couch_os_process.beam in CopyFiles */,
-				795D614B13872C74002B237E /* couch_query_servers.beam in CopyFiles */,
-				795D614C13872C74002B237E /* couch_ref_counter.beam in CopyFiles */,
-				795D614D13872C74002B237E /* couch_rep_att.beam in CopyFiles */,
-				795D614E13872C74002B237E /* couch_rep_changes_feed.beam in CopyFiles */,
-				795D614F13872C74002B237E /* couch_rep_db_listener.beam in CopyFiles */,
-				795D615013872C74002B237E /* couch_rep_httpc.beam in CopyFiles */,
-				795D615113872C74002B237E /* couch_rep_missing_revs.beam in CopyFiles */,
-				795D615213872C74002B237E /* couch_rep_reader.beam in CopyFiles */,
-				795D615313872C74002B237E /* couch_rep_sup.beam in CopyFiles */,
-				795D615413872C74002B237E /* couch_rep_writer.beam in CopyFiles */,
-				795D615513872C74002B237E /* couch_rep.beam in CopyFiles */,
-				795D615613872C74002B237E /* couch_server_sup.beam in CopyFiles */,
-				795D615713872C74002B237E /* couch_server.beam in CopyFiles */,
-				795D615813872C74002B237E /* couch_stats_aggregator.beam in CopyFiles */,
-				795D615913872C74002B237E /* couch_stats_collector.beam in CopyFiles */,
-				795D615A13872C74002B237E /* couch_stream.beam in CopyFiles */,
-				795D615B13872C74002B237E /* couch_task_status.beam in CopyFiles */,
-				795D615C13872C74002B237E /* couch_util.beam in CopyFiles */,
-				795D615D13872C74002B237E /* couch_uuids.beam in CopyFiles */,
-				795D615E13872C74002B237E /* couch_view_compactor.beam in CopyFiles */,
-				795D615F13872C74002B237E /* couch_view_group.beam in CopyFiles */,
-				795D616013872C74002B237E /* couch_view_server_emonk.beam in CopyFiles */,
-				795D616113872C74002B237E /* couch_view_server_erlang.beam in CopyFiles */,
-				795D616213872C74002B237E /* couch_view_server_os.beam in CopyFiles */,
-				795D616313872C75002B237E /* couch_view_server.beam in CopyFiles */,
-				795D616413872C75002B237E /* couch_view_updater.beam in CopyFiles */,
+				795EA72213875C8E00C9FA61 /* couch_btree.beam in CopyFiles */,
+				795EA72313875C8E00C9FA61 /* couch_changes.beam in CopyFiles */,
+				795EA72413875C8E00C9FA61 /* couch_config_writer.beam in CopyFiles */,
+				795EA72513875C8E00C9FA61 /* couch_config.beam in CopyFiles */,
+				795EA71E13875C6C00C9FA61 /* couch_app_server_emonk.beam in CopyFiles */,
+				795EA71F13875C6C00C9FA61 /* couch_app_server_erlang.beam in CopyFiles */,
+				795EA72013875C6C00C9FA61 /* couch_app_server.beam in CopyFiles */,
+				795EA72113875C6C00C9FA61 /* couch_auth_cache.beam in CopyFiles */,
+				795EA71D13875C4600C9FA61 /* couch_app.beam in CopyFiles */,
+				795EA71B13875BC300C9FA61 /* couch_view_updater.beam in CopyFiles */,
 				795D616513872C75002B237E /* couch_view.beam in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
