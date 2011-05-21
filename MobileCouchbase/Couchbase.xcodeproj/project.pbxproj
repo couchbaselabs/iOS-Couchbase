@@ -85,6 +85,16 @@
 		BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		79C4FB961387336700189C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 795D60E813872609002B237E /* couchdb.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 795D60C8138725D8002B237E;
+			remoteInfo = couchdb;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		795D60ED13872799002B237E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -464,6 +474,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				79C4FB971387336700189C43 /* PBXTargetDependency */,
 			);
 			name = Couchbase.bundle;
 			productName = CouchbaseBundle;
@@ -559,6 +570,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79C4FB971387336700189C43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = couchdb;
+			targetProxy = 79C4FB961387336700189C43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		035638D21350096B00D2AF03 /* Debug */ = {
