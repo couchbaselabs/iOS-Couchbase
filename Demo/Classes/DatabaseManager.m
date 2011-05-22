@@ -114,5 +114,6 @@ static DatabaseManager *sharedManager;
 {
 	[server release];
 	[connections release];
+    [super dealloc];
 }
 @end
