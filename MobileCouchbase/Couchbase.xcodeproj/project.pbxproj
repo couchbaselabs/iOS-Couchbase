@@ -6,6 +6,21 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E0F5ADDD1399A0AF006A8AFC /* Couchbase User Package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E0F5ADE01399A0AF006A8AFC /* Build configuration list for PBXAggregateTarget "Couchbase User Package" */;
+			buildPhases = (
+				E0F5ADE21399A0D2006A8AFC /* Create Universal Library */,
+				E0F5ADE31399A14B006A8AFC /* Create iOS Couchbase Zip */,
+			);
+			dependencies = (
+			);
+			name = "Couchbase User Package";
+			productName = "Couchbase User Package";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		035638C91350096B00D2AF03 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		035638CB1350096B00D2AF03 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
@@ -240,6 +255,7 @@
 				BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */,
 				035638C71350096B00D2AF03 /* Couchbase-iphonesimulator */,
 				79F5314213208D3700038ADD /* Couchbase.bundle */,
+				E0F5ADDD1399A0AF006A8AFC /* Couchbase User Package */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +273,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E0F5ADE21399A0D2006A8AFC /* Create Universal Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create Universal Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "lipo -create -output ${BUILT_PRODUCTS_DIR}/libCouchbase.a ${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a ${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a";
+		};
+		E0F5ADE31399A14B006A8AFC /* Create iOS Couchbase Zip */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create iOS Couchbase Zip";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${BUILT_PRODUCTS_DIR}/;\nzip -r iOSCouchbase.zip include/Couchbase.h Couchbase.bundle libCouchbase.a";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		035638CA1350096B00D2AF03 /* Sources */ = {
@@ -429,6 +476,20 @@
 			};
 			name = Release;
 		};
+		E0F5ADDE1399A0AF006A8AFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E0F5ADDF1399A0AF006A8AFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +528,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E0F5ADE01399A0AF006A8AFC /* Build configuration list for PBXAggregateTarget "Couchbase User Package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0F5ADDE1399A0AF006A8AFC /* Debug */,
+				E0F5ADDF1399A0AF006A8AFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
