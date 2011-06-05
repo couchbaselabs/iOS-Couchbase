@@ -11,6 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = E0F5ADE01399A0AF006A8AFC /* Build configuration list for PBXAggregateTarget "Couchbase User Package" */;
 			buildPhases = (
+				E05336DD139B201C00B042DC /* Check Dependencies */,
 				E0F5ADE21399A0D2006A8AFC /* Create Universal Library */,
 				E0F5ADE31399A14B006A8AFC /* Create iOS Couchbase Zip */,
 			);
@@ -275,6 +276,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		E05336DD139B201C00B042DC /* Check Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Dependencies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Checking that dependencies have been met...\"\n\nRETURN=0;\nif [ ! -e \"${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a\"\n  echo \"Please be sure to build the Couchbase-iphoneos target first before building the user package.\"\n  RETURN=1;\nfi\n\nif [ ! -e \"${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a\"\n  echo \"Please be sure to build the Couchbase-iphonesimulator target first before building the user package.\"\n  RETURN=1;\nfi\n\nif [ ! -d \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/Couchbase.bundle\"\n  echo \"Please be sure to build the Couchbase.bundle target first before building the user package.\"\n  RETURN=1;\nfi\n\nexit $RETURN;\n";
+		};
 		E0F5ADE21399A0D2006A8AFC /* Create Universal Library */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -536,6 +551,7 @@
 				E0F5ADDF1399A0AF006A8AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
