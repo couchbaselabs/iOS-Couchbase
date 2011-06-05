@@ -44,6 +44,16 @@ The following instructions can be used to build Mobile Couchbase for devices and
     git submodule init
     git submodule update
 
+### Get Couch Erlang build ready to run
+
+    git checkout couch_from_source   #unless you are already on this branch
+    git submodule init
+    git submodule update
+    cd MobileCouchbase/Vendor/couchdb
+    ./bootstrap && ./configure
+
+Xcode will run make for you.
+
 ### Open the Xcode workspace
 
     open Couchbase.xcworkspace
