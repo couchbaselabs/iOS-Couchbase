@@ -26,9 +26,7 @@
 		035638C91350096B00D2AF03 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		035638CB1350096B00D2AF03 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
 		037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111413565A04005FFC4F /* libiErl14-iphoneos.a */; };
-		037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */; };
 		037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */; };
-		037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */; };
 		038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
 		038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
 		0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
@@ -44,9 +42,7 @@
 /* Begin PBXFileReference section */
 		035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E111413565A04005FFC4F /* libiErl14-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphoneos.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphoneos.a"; sourceTree = SOURCE_ROOT; };
 		03E839491353ADE600D64D0D /* libssl-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphoneos.a"; path = "Vendor/ios-openssl/lib/libssl-iphoneos.a"; sourceTree = SOURCE_ROOT; };
 		03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
@@ -68,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */,
-				037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */,
 				0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */,
 				0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */,
 			);
@@ -86,7 +81,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */,
-				037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */,
 				038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */,
 				038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */,
 			);
@@ -141,11 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				037E111413565A04005FFC4F /* libiErl14-iphoneos.a */,
-				037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */,
 				03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */,
 				03E839491353ADE600D64D0D /* libssl-iphoneos.a */,
 				037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */,
-				037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */,
 				03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */,
 				03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */,
 			);
