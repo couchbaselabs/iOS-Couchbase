@@ -53,7 +53,7 @@ void* erlang_thread(void* data) {
 	NSBundle* mainBundle;
 	mainBundle = [NSBundle mainBundle];
 	NSString* myPath = [mainBundle pathForResource:@"Couchbase" ofType:@"bundle"];
-	NSLog(@"my path aka app root: %@", myPath);
+	NSLog(@"my bundle path: %@", myPath);
 
 	char app_root[1024];
 	char erl_root[1024];
@@ -79,7 +79,6 @@ void* erlang_thread(void* data) {
 		if(![NSFm createDirectoryAtPath:dataDir withIntermediateDirectories:YES attributes:nil error:NULL])
 			NSLog(@"Error: Create folder failed");
 	
-    
     NSString *focusPath = @"/demo.couch"; // make this generic
 	NSString *focusSource = [myPath stringByAppendingString:focusPath];	
 	NSString *focusTarget = [dataDir stringByAppendingString:focusPath];
@@ -89,7 +88,10 @@ void* erlang_thread(void* data) {
 	if(![NSFm fileExistsAtPath:focusTarget]) {
 		[NSFm copyItemAtPath:focusSource toPath:focusTarget error:&copyError];
 	}
-	
+    if (copyError) {
+        NSLog(@"copyError demo.couch %@", copyError);
+    }
+    copyError = nil;
     NSString *configPath = @"/icouch.ini"; // local config
 	NSString *configSource = [myPath stringByAppendingString:configPath];	
 	NSString *configTarget = [documentsDirectory stringByAppendingString:configPath];
@@ -98,8 +100,10 @@ void* erlang_thread(void* data) {
 	if(![NSFm fileExistsAtPath:configTarget]) {
 		[NSFm copyItemAtPath:configSource toPath:configTarget error:&copyError];
 	}
-    NSLog(@"maybe copyError icouch.ini %@", copyError);
-
+    if (copyError) {
+        NSLog(@"copyError icouch %@", copyError);
+    }
+    copyError = nil;
     // emonk view server files
 	NSString *emonkMrSource = [myPath stringByAppendingString:@"/erlang/emonk_mapred.js"];
 	NSString *emonkMrTarget = [documentsDirectory stringByAppendingString:@"/emonk_mapred.js"];
@@ -107,15 +111,19 @@ void* erlang_thread(void* data) {
 	if(![NSFm fileExistsAtPath:emonkMrTarget]) {
 		[NSFm copyItemAtPath:emonkMrSource toPath:emonkMrTarget error:&copyError];
 	}
-    NSLog(@"maybe copyError emonkMR %@", copyError);
-
+    if (copyError) {
+        NSLog(@"copyError emonkApp %@", copyError);
+    }
+    copyError = nil;
 	NSString *emonkAppSource = [myPath stringByAppendingString:@"/erlang/emonk_app.js"];	
 	NSString *emonkAppTarget = [documentsDirectory stringByAppendingString:@"/emonk_app.js"];
     
 	if(![NSFm fileExistsAtPath:emonkAppTarget]) {
 		[NSFm copyItemAtPath:emonkAppSource toPath:emonkAppTarget error:&copyError];
 	}
-    NSLog(@"maybe copyError emonkApp %@", copyError);
+    if (copyError) {
+        NSLog(@"maybe copyError emonkApp %@", copyError);
+    }
 
     
     
@@ -125,7 +133,9 @@ void* erlang_thread(void* data) {
 
 	if([NSFm fileExistsAtPath:uriPath]) {
 		[NSFm removeItemAtPath:uriPath error:&removeError];
-		NSLog(@"removed file %@", removeError);
+        if (removeError) {
+            NSLog(@"removed uri file %@", removeError);
+        }
 	}
 	
 	[NSFm changeCurrentDirectoryPath: documentsDirectory];
