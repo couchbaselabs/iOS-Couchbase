@@ -25,189 +25,325 @@
 #include <sys/socket.h>
 #include <netdb.h>
 
+// Erlang entry point
 void erl_start(int, char**);
 
-void* erlang_thread(void* data) {
-	char inipath[1024];
-	char inipath2[1024];
-	char erl_root[1024];
-	char erl_inetrc[1024];
-	sprintf(erl_root, "%s/erlang", (char*) data);
-	sprintf(erl_inetrc, "%s/erlang/erl_inetrc", (char*) data);
-	setenv("ERL_INETRC", erl_inetrc, 1);
-	sprintf(inipath, "%s/default.ini", (char*) data);
-	sprintf(inipath2, "%s/../../Documents/icouch.ini", (char*) data);
-	char* erlang_args[] = {"beam", "--", "-noinput", 
-		"-eval", "application:start(couch).",
-		"-root", erl_root, "-couch_ini",
-		inipath, inipath2};
 
-	erl_start(10, erlang_args);
-	return NULL;
-}
+static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for CouchDB to start
+
+
+@interface Couchbase ()
+@property (readwrite, retain) NSURL* serverURL;
+@property (readwrite, retain) NSError* error;
+- (BOOL)createDir:(NSString*)dirName;
+- (BOOL)installFileNamed:(NSString*)name fromDir:(NSString*)fromDir toDir:(NSString*)toDir;
+- (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir;
+- (BOOL)launchErlang;
+@end
+
 
 @implementation Couchbase
 
-+ (void)startCouchbase:(id<CouchbaseDelegate>)delegate {
-	NSLog(@"Starting the Couch");
-	NSBundle* mainBundle;
-	mainBundle = [NSBundle mainBundle];
-	NSString* myPath = [mainBundle pathForResource:@"Couchbase" ofType:@"bundle"];
-	NSLog(@"my bundle path: %@", myPath);
 
-	char app_root[1024];
++ (Couchbase*) startCouchbase: (id<CouchbaseDelegate>)delegate {
+    static Couchbase* sCouchbase;
+    NSAssert(!sCouchbase, @"+startCouchbase has already been called");
+
+    sCouchbase = [[self alloc] init];
+    sCouchbase.delegate = delegate;
+    if (![sCouchbase start]) {
+        [sCouchbase release];
+        sCouchbase = nil;
+    }
+    return sCouchbase;
+}
+
+
+- (id) initWithBundlePath: (NSString*)bundlePath {
+    NSParameterAssert(bundlePath);
+    self = [super init];
+    if (self) {
+        _bundlePath = [bundlePath copy];
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,
+                                                             YES);
+        _documentsDirectory = [[paths objectAtIndex:0] copy];
+    }
+    return self;
+}
+
+
+- (id)init {
+    NSString* bundlePath = [[NSBundle mainBundle] pathForResource:@"CouchDB" ofType:nil];
+    NSAssert(bundlePath, @"Couldn't find CouchDB bundle in app's Resources directory");
+    return [self initWithBundlePath: bundlePath];
+}
+
+
+- (void)dealloc {
+    [_documentsDirectory release];
+    [_bundlePath release];
+    [_serverURL release];
+    [_error release];
+    [super dealloc];
+}
+
+
+@synthesize delegate = _delegate, serverURL = _serverURL, error = _error;
+
+
+- (NSString*) logDirectory {
+    return [_documentsDirectory stringByAppendingPathComponent:@"log"];
+}
+
+- (NSString*) databaseDirectory {
+    return [_documentsDirectory stringByAppendingPathComponent:@"couchdb"];
+}
+
+
+- (BOOL) installDefaultDatabase: (NSString*)databasePath {
+    NSString* dbDir = self.databaseDirectory;
+    return [self createDir: dbDir] &&
+            [self installFileNamed: databasePath fromDir:nil toDir: dbDir];
+}
+
+
+#pragma mark STARTING COUCHDB:
+
+- (BOOL)start
+{
+    if (_erlangThread)
+        return YES;
+
+    _timeStarted = CFAbsoluteTimeGetCurrent();
+	NSLog(@"Couchbase: Starting CouchDB, using runtime files at: %@ (built %s, %s)",
+          _bundlePath, __DATE__, __TIME__);
+
+    if(![self createDir: self.logDirectory]
+           || ![self createDir: self.databaseDirectory]
+           || ![self installFileNamed:@"icouch.ini" fromDir:_bundlePath
+                                toDir:_documentsDirectory]
+           || ![self installFileNamed:@"erlang/emonk_mapred.js" fromDir:_bundlePath
+                                toDir:_documentsDirectory]
+           || ![self installFileNamed:@"erlang/emonk_app.js" fromDir:_bundlePath
+                                toDir:_documentsDirectory]
+           || ![self deleteFile:@"couch.uri" fromDir:_documentsDirectory])
+    {
+        return NO;
+    }
+
+	[[NSFileManager defaultManager] changeCurrentDirectoryPath: _documentsDirectory];    //FIX: Seems bad to do...
+
+    if (![self launchErlang])
+        return NO;
+
+    [self performSelectorInBackground: @selector(waitForStart) withObject: nil];
+    return YES;
+}
+
+
+#pragma mark LAUNCHING ERLANG:
+
+typedef struct {
+    char couchDBDirPath[1024];
+    char documentsDirPath[1024];
+} ErlangThreadParams;
+
+
+// Body of the pthread that runs Erlang (and CouchDB)
+static void* couchdb_erlang_thread(void* data) {
+    ErlangThreadParams* params = data;
+
 	char erl_root[1024];
-	char bindir[1024];
-	
-	strncpy(app_root, [myPath UTF8String], 1024);
-	sprintf(erl_root, "%s/erlang", app_root);
-	sprintf(bindir, "%s/erts-5.7.5/bin", erl_root);
-		
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *logDir = [documentsDirectory stringByAppendingString:@"/log"];
-	NSString *dataDir = [documentsDirectory stringByAppendingString:@"/couchdb"];
+    sprintf(erl_root, "%s/erlang", params->couchDBDirPath);
+    
+    // Set some environment variables for Erlang:
+    {
+        char erl_bin[1024];
+        char erl_inetrc[1024];
+        sprintf(erl_bin, "%s/erts-5.7.5/bin", erl_root);
+        sprintf(erl_inetrc, "%s/erl_inetrc", erl_root);
 
-	NSFileManager *NSFm= [NSFileManager defaultManager]; 
-	BOOL isDir=YES;
-	
-	
-	if(![NSFm fileExistsAtPath:logDir isDirectory:&isDir])
-		if(![NSFm createDirectoryAtPath:logDir withIntermediateDirectories:YES attributes:nil error:NULL])
-			NSLog(@"Error: Create folder failed");
-	if(![NSFm fileExistsAtPath:dataDir isDirectory:&isDir])
-		if(![NSFm createDirectoryAtPath:dataDir withIntermediateDirectories:YES attributes:nil error:NULL])
-			NSLog(@"Error: Create folder failed");
-	
-    NSString *focusPath = @"/demo.couch"; // make this generic
-	NSString *focusSource = [myPath stringByAppendingString:focusPath];	
-	NSString *focusTarget = [dataDir stringByAppendingString:focusPath];
-	NSError *copyError = nil;
-
-	// Copy Initial DB on first load
-	if(![NSFm fileExistsAtPath:focusTarget]) {
-		[NSFm copyItemAtPath:focusSource toPath:focusTarget error:&copyError];
-	}
-    if (copyError) {
-        NSLog(@"copyError demo.couch %@", copyError);
-    }
-    copyError = nil;
-    NSString *configPath = @"/icouch.ini"; // local config
-	NSString *configSource = [myPath stringByAppendingString:configPath];	
-	NSString *configTarget = [documentsDirectory stringByAppendingString:configPath];
-    
-	// Copy Initial DB on first load
-	if(![NSFm fileExistsAtPath:configTarget]) {
-		[NSFm copyItemAtPath:configSource toPath:configTarget error:&copyError];
-	}
-    if (copyError) {
-        NSLog(@"copyError icouch %@", copyError);
-    }
-    copyError = nil;
-    // emonk view server files
-	NSString *emonkMrSource = [myPath stringByAppendingString:@"/erlang/emonk_mapred.js"];
-	NSString *emonkMrTarget = [documentsDirectory stringByAppendingString:@"/emonk_mapred.js"];
-    
-	if(![NSFm fileExistsAtPath:emonkMrTarget]) {
-		[NSFm copyItemAtPath:emonkMrSource toPath:emonkMrTarget error:&copyError];
-	}
-    if (copyError) {
-        NSLog(@"copyError emonkApp %@", copyError);
-    }
-    copyError = nil;
-	NSString *emonkAppSource = [myPath stringByAppendingString:@"/erlang/emonk_app.js"];	
-	NSString *emonkAppTarget = [documentsDirectory stringByAppendingString:@"/emonk_app.js"];
-    
-	if(![NSFm fileExistsAtPath:emonkAppTarget]) {
-		[NSFm copyItemAtPath:emonkAppSource toPath:emonkAppTarget error:&copyError];
-	}
-    if (copyError) {
-        NSLog(@"maybe copyError emonkApp %@", copyError);
+        setenv("ROOTDIR", erl_root, 1);
+        setenv("BINDIR", erl_bin, 1);
+        setenv("ERL_INETRC", erl_inetrc, 1);
     }
 
-    
-    
-	// delete the URI file
-	NSString *uriPath = [documentsDirectory stringByAppendingString:@"/couch.uri"];
-	NSError *removeError = nil;
+	char inipath[1024];
+	char inipath2[1024];
+	sprintf(inipath, "%s/default.ini", params->couchDBDirPath);
+	sprintf(inipath2, "%s/icouch.ini", params->documentsDirPath);
 
-	if([NSFm fileExistsAtPath:uriPath]) {
-		[NSFm removeItemAtPath:uriPath error:&removeError];
-        if (removeError) {
-            NSLog(@"removed uri file %@", removeError);
-        }
-	}
-	
-	[NSFm changeCurrentDirectoryPath: documentsDirectory];
-	
-	setenv("BINDIR", bindir, 1);
-	setenv("ROOTDIR", erl_root, 1);
-	setenv("HOME", app_root, 1);
-    pthread_t erlThreadID;
+    free(params);  // balances malloc call that created the pointer
+
+	char* erlang_args[10] = {"beam", "--", "-noinput",
+		"-eval", "application:start(couch).",
+		"-root", erl_root, "-couch_ini",
+		inipath, inipath2};
+	erl_start(10, erlang_args);     // This never returns (unless Erlang exits)
+	return NULL;
+}
+
+
+- (BOOL)launchErlang {
+    NSLog(@"Couchbase: Starting server thread...");
+
+    ErlangThreadParams* params = malloc(sizeof(ErlangThreadParams));
+    strlcpy(params->couchDBDirPath, [_bundlePath fileSystemRepresentation],
+            sizeof(params->couchDBDirPath));
+    strlcpy(params->documentsDirPath, [_documentsDirectory fileSystemRepresentation],
+            sizeof(params->documentsDirPath));
+
 	pthread_attr_t erlThreadAttr;
 	assert(!pthread_attr_init(&erlThreadAttr));
 	assert(!pthread_attr_setdetachstate(&erlThreadAttr, PTHREAD_CREATE_DETACHED));
-	
-	pthread_create(&erlThreadID, &erlThreadAttr, &erlang_thread, app_root);
 
-	NSThread *waiterThread = [[NSThread alloc] initWithTarget:self // need to pass URL
-													 selector:@selector(waitAndNotifyMainThread:)
-													   object:delegate];
-	[waiterThread start];
+	int err = pthread_create(&_erlangThread, &erlThreadAttr, &couchdb_erlang_thread, params);
+    if (err) {
+        NSLog(@"Couchbase: Error starting Erlang pthread: %i", err);
+        self.error = [NSError errorWithDomain: NSPOSIXErrorDomain code: err userInfo: nil];
+        return NO;
+    }
+    return YES;
 }
 
-+ (int)connectToHost:(char*)host port:(int) port {
-	struct sockaddr_in addr;
-	int sockfd;
-	sockfd = socket(AF_INET,SOCK_STREAM, 0);
-	addr.sin_family= AF_INET;
-	struct hostent *he = gethostbyname(host);
-	struct in_addr **list = (struct in_addr **)he->h_addr_list;
-	addr.sin_addr = *list[0];
-	addr.sin_port = htons(port);
+
+#pragma mark WAITING FOR COUCHDB TO START:
+
+- (BOOL)shouldKeepWaiting {
+    if (CFAbsoluteTimeGetCurrent() - _timeStarted < kWaitTimeout)
+        return YES;
+    NSLog(@"Couchbase: Warning: Timeout waiting for CouchDB to start; giving up");
+    return NO;
+}
+
+
+- (BOOL)canConnectToPort:(int) port {
+	struct sockaddr_in addr = {sizeof(struct sockaddr_in), AF_INET, htons(port), {0}};
+	int sockfd = socket(AF_INET,SOCK_STREAM, 0);
 	int result = connect(sockfd,(struct sockaddr*) &addr, sizeof(addr));
-	return result;
+    close(sockfd);
+	return result == 0;
 }
 
-+ (NSURL *)waitForCouchDB {
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-	NSString *uriPath = [documentsDirectory stringByAppendingString:@"/couch.uri"];
-	NSFileManager *NSFm= [[NSFileManager alloc] init];
-	while(![NSFm fileExistsAtPath:uriPath]) {
-		usleep(250000);
-	}
-	usleep(100000);	
-	NSString *rawUriString = [NSString stringWithContentsOfFile:uriPath encoding:NSASCIIStringEncoding error:NULL];
-	NSArray *components = [rawUriString componentsSeparatedByString:@"\n"];
-	NSString *uriString = [components objectAtIndex:0];
 
-	NSURL *myurl = [NSURL URLWithString:uriString];
-
-	NSNumber *portnum = [myurl port];
-	NSString *hoststring = [myurl host];
-
-	int bufferSize = [hoststring lengthOfBytesUsingEncoding: NSASCIIStringEncoding] + 1;
-	char hostname[bufferSize];
-	[hoststring getCString: hostname maxLength:bufferSize encoding: NSASCIIStringEncoding];
-
-	while ([self connectToHost:hostname port:[portnum intValue]]) {
-		usleep(2500);
-	}
-	usleep(250000);
-	return myurl;
-}
-
-+ (void)waitAndNotifyMainThread:(NSObject*)delegate
+- (void)waitForStart
 {
+    // This method runs on a background thread!
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-	NSURL *serverURL = [self waitForCouchDB];
-	if ([delegate respondsToSelector:@selector(couchbaseDidStart:)]) {
-	[delegate performSelectorOnMainThread:@selector(couchbaseDidStart:)
-								   withObject:serverURL
-								waitUntilDone:NO];
+
+    // First wait for CouchDB to create the 'couch.uri' file (the 'uri_file' in default.ini):
+    NSLog(@"Couchbase: Waiting to acquire CouchDB URL...");
+	NSString *uriPath = [_documentsDirectory stringByAppendingPathComponent:@"couch.uri"];
+    
+    int port = 0;
+    do {
+        usleep(10000);
+        // Read the URI out of the file:
+        NSString *rawUriString = [NSString stringWithContentsOfFile:uriPath
+                                                           encoding:NSASCIIStringEncoding
+                                                              error:NULL];
+        if (rawUriString) {
+            NSArray *components = [rawUriString componentsSeparatedByString:@"\n"];
+            NSString *uriString = [components objectAtIndex:0];
+            if (uriString) {
+                NSURL *url = [NSURL URLWithString:uriString];
+                if (url)
+                    port = url.port.intValue;  // Got the port!
+            }
+        }
+    } while (port == 0 && [self shouldKeepWaiting]);
+    
+    if (port) {
+        // Wait till the port accepts a connection:
+        NSLog(@"Couchbase: Checking connection to CouchDB on port %i...", port);
+        while (![self canConnectToPort:port]) {
+            if (![self shouldKeepWaiting]) {
+                // Timed out trying to contact the server!
+                port = 0;
+                break;
+            }
+            usleep(2500);
+        }
+    }
+
+    // Done -- now notify the client on the main thread:
+    [self performSelectorOnMainThread:@selector(finishedWaiting:)
+                           withObject:[NSNumber numberWithInt: port]
+                        waitUntilDone:NO];
+	[pool drain];
+}
+
+
+- (void)finishedWaiting: (NSNumber*)portObj {
+    // Runs on the main thread after waitForStart completes.
+    UInt16 port = [portObj intValue];
+    if (port) {
+        NSURL* serverURL = [NSURL URLWithString: [NSString stringWithFormat:@"http://0.0.0.0:%i/",
+                                                  port]];
+        NSLog(@"Couchbase: CouchDB is up and running after %.3f sec at <%@>",
+              (CFAbsoluteTimeGetCurrent() - _timeStarted), serverURL);
+        self.serverURL = serverURL; // Will trigger KVO notification
+    } else {
+        NSLog(@"Couchbase: Error: Unable to read CouchDB URI file / connect to server");
+        self.error = [NSError errorWithDomain: @"Couchbase" code: 1 userInfo: nil]; //TODO: Real error
+    }
+    
+    [_delegate couchbaseDidStart:_serverURL];
+}
+
+
+#pragma mark UTILITIES:
+
+- (BOOL)createDir:(NSString*)dirName {
+	BOOL isDir=YES;
+	NSFileManager *fm= [NSFileManager defaultManager];
+	if(![fm fileExistsAtPath:dirName isDirectory:&isDir]) {
+        NSError* createError = nil;
+		if([fm createDirectoryAtPath:dirName withIntermediateDirectories:YES
+                          attributes:nil error:&createError]) {
+            NSLog(@"Couchbase: Created dir %@", dirName);
+        } else {
+			NSLog(@"Couchbase: Error creating dir '%@': %@", dirName, createError);
+            self.error = createError;
+            return NO;
+        }
+    } else if (!isDir) {
+        NSLog(@"Couchbase: Error creating dir '%@': already exists as file", dirName);
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)installFileNamed:(NSString*)name fromDir:(NSString*)fromDir toDir:(NSString*)toDir {
+	NSString *source = fromDir ? [fromDir stringByAppendingPathComponent: name] : name;
+	NSString *target = [toDir stringByAppendingPathComponent: [name lastPathComponent]];
+
+	NSFileManager *fm= [NSFileManager defaultManager];
+    NSError* copyError = nil;
+	if(![fm fileExistsAtPath: target]) {
+        if ([fm copyItemAtPath: source toPath: target error: &copyError]) {
+            NSLog(@"Couchbase: Installed %@ into %@", [name lastPathComponent], target);
+        } else {
+            NSLog(@"Couchbase: Error copying %@: %@", name, copyError);
+            self.error = copyError;
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir {
+    NSString* path = [fromDir stringByAppendingPathComponent: filename];
+	NSFileManager *fm= [NSFileManager defaultManager];
+	if([fm fileExistsAtPath:path]) {
+        NSError* removeError = nil;
+		if (![fm removeItemAtPath:path error:&removeError]) {
+            NSLog(@"Couchbase: Error deleting %@: %@", path, removeError);
+            self.error = removeError;
+            return NO;
+        }
 	}
-	[pool release];
+    return YES;
 }
 
 @end

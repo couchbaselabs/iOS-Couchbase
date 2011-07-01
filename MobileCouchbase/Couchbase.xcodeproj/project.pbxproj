@@ -3,92 +3,87 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		E0F5ADDD1399A0AF006A8AFC /* Couchbase User Package */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = E0F5ADE01399A0AF006A8AFC /* Build configuration list for PBXAggregateTarget "Couchbase User Package" */;
-			buildPhases = (
-				E05336DD139B201C00B042DC /* Check Dependencies */,
-				E0F5ADE21399A0D2006A8AFC /* Create Universal Library */,
-				E0F5ADE31399A14B006A8AFC /* Create iOS Couchbase Zip */,
-			);
-			dependencies = (
-			);
-			name = "Couchbase User Package";
-			productName = "Couchbase User Package";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		035638C91350096B00D2AF03 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		035638CB1350096B00D2AF03 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
-		037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111413565A04005FFC4F /* libiErl14-iphoneos.a */; };
-		037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */; };
-		037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */; };
-		037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */; };
-		038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
-		038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
-		0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
-		0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
-		79F5314B13208EA700038ADD /* default.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
-		79F5314C13208EA700038ADD /* icouch.ini in Resources */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
-		79F5314E13208EA700038ADD /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 3D47994312A1D4E800581D10 /* demo.couch */; };
-		79F5314F13208EA700038ADD /* erlang in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
-		BC4A60831324C4BD003F32D3 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
+		27167C5C13C4DB53001CC5B6 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27167C5E13C4DB53001CC5B6 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
+		27167C6213C4DB53001CC5B6 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
+		27167C6313C4DB53001CC5B6 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
+		27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
+		27167C6C13C4E002001CC5B6 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
+		27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECB13C4E644001CC5B6 /* libiErl14.a */; };
+		27167ECE13C4E64B001CC5B6 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECD13C4E64B001CC5B6 /* libiMonkey.a */; };
+		273A733613BD473D0078870D /* Couchbase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; };
+		273A734013BD4DE90078870D /* erlang in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
+		273A734213BD4DE90078870D /* default.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
+		273A734313BD4DE90078870D /* icouch.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		27167ED513C4EF62001CC5B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27167C5A13C4DB53001CC5B6;
+			remoteInfo = Couchbase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		273A733513BD471A0078870D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Headers;
+			dstSubfolderSpec = 1;
+			files = (
+				273A733613BD473D0078870D /* Couchbase.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		273A733F13BD4DDC0078870D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = CouchDB;
+			dstSubfolderSpec = 1;
+			files = (
+				273A734013BD4DE90078870D /* erlang in CopyFiles */,
+				273A734213BD4DE90078870D /* default.ini in CopyFiles */,
+				273A734313BD4DE90078870D /* icouch.ini in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111413565A04005FFC4F /* libiErl14-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiErl14-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libiMonkey-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphoneos.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphoneos.a"; sourceTree = SOURCE_ROOT; };
 		03E839491353ADE600D64D0D /* libssl-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphoneos.a"; path = "Vendor/ios-openssl/lib/libssl-iphoneos.a"; sourceTree = SOURCE_ROOT; };
 		03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
 		03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libssl-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
+		27167ECB13C4E644001CC5B6 /* libiErl14.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiErl14.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		27167ECD13C4E64B001CC5B6 /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiMonkey.a; path = "../DerivedXData/Couchbase/Build/Products/Release-iphoneos/libiMonkey.a"; sourceTree = "<group>"; };
+		273A731E13BD44670078870D /* Couchbase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		273A732813BD44670078870D /* Couchbase.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Couchbase.framework-Info.plist"; path = "Couchbase.framework/Couchbase.framework-Info.plist"; sourceTree = "<group>"; };
+		27A72C3413C502980096E41D /* libCouchbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCouchbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
 		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
-		3D47994312A1D4E800581D10 /* demo.couch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.couch; sourceTree = "<group>"; };
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couchbase.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* Couchbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couchbase.m; sourceTree = "<group>"; };
-		79F5314313208D3700038ADD /* Couchbase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		79F5314413208D3700038ADD /* CouchbaseBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CouchbaseBundle-Info.plist"; sourceTree = "<group>"; };
-		BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCouchbase-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		035638CC1350096B00D2AF03 /* Frameworks */ = {
+		27167C5F13C4DB53001CC5B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				037E111A13565A1F005FFC4F /* libiErl14-iphonesimulator.a in Frameworks */,
-				037E111B13565A1F005FFC4F /* libiMonkey-iphonesimulator.a in Frameworks */,
-				0385926713583863005928F5 /* libcrypto-iphonesimulator.a in Frameworks */,
-				0385926813583863005928F5 /* libssl-iphonesimulator.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		79F5314113208D3700038ADD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC4A607B1324C493003F32D3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				037E111613565A04005FFC4F /* libiErl14-iphoneos.a in Frameworks */,
-				037E111713565A04005FFC4F /* libiMonkey-iphoneos.a in Frameworks */,
-				038592651358385A005928F5 /* libcrypto-iphoneos.a in Frameworks */,
-				038592661358385A005928F5 /* libssl-iphoneos.a in Frameworks */,
+				27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */,
+				27167ECE13C4E64B001CC5B6 /* libiMonkey.a in Frameworks */,
+				27167C6213C4DB53001CC5B6 /* libcrypto-iphonesimulator.a in Frameworks */,
+				27167C6313C4DB53001CC5B6 /* libssl-iphonesimulator.a in Frameworks */,
+				27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */,
+				27167C6C13C4E002001CC5B6 /* libssl-iphoneos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +102,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				79F5314313208D3700038ADD /* Couchbase.bundle */,
-				BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */,
-				035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */,
+				273A731E13BD44670078870D /* Couchbase.framework */,
+				27A72C3413C502980096E41D /* libCouchbase.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,9 +122,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				79F5314413208D3700038ADD /* CouchbaseBundle-Info.plist */,
+				273A732813BD44670078870D /* Couchbase.framework-Info.plist */,
 				3DEAEA6612A2D70B00EEBD22 /* erlang */,
-				3D47994312A1D4E800581D10 /* demo.couch */,
 				3D4791CB12A19F6A00581D10 /* default.ini */,
 				3D4791CC12A19F6A00581D10 /* icouch.ini */,
 			);
@@ -140,12 +133,10 @@
 		29B97323FDCFA39411CA2CEA /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				037E111413565A04005FFC4F /* libiErl14-iphoneos.a */,
-				037E111513565A04005FFC4F /* libiMonkey-iphoneos.a */,
+				27167ECB13C4E644001CC5B6 /* libiErl14.a */,
+				27167ECD13C4E64B001CC5B6 /* libiMonkey.a */,
 				03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */,
 				03E839491353ADE600D64D0D /* libssl-iphoneos.a */,
-				037E111813565A1F005FFC4F /* libiErl14-iphonesimulator.a */,
-				037E111913565A1F005FFC4F /* libiMonkey-iphonesimulator.a */,
 				03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */,
 				03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */,
 			);
@@ -155,91 +146,72 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		035638C81350096B00D2AF03 /* Headers */ = {
+		27167C5B13C4DB53001CC5B6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035638C91350096B00D2AF03 /* Couchbase.h in Headers */,
+				27167C5C13C4DB53001CC5B6 /* Couchbase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79F5337D13208EEE00038ADD /* Headers */ = {
+		273A733113BD44CF0078870D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC4A60791324C493003F32D3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC4A60831324C4BD003F32D3 /* Couchbase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		035638C71350096B00D2AF03 /* Couchbase-iphonesimulator */ = {
+		27167C5A13C4DB53001CC5B6 /* Couchbase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035638D11350096B00D2AF03 /* Build configuration list for PBXNativeTarget "Couchbase-iphonesimulator" */;
+			buildConfigurationList = 27167C6413C4DB53001CC5B6 /* Build configuration list for PBXNativeTarget "Couchbase" */;
 			buildPhases = (
-				035638C81350096B00D2AF03 /* Headers */,
-				035638CA1350096B00D2AF03 /* Sources */,
-				035638CC1350096B00D2AF03 /* Frameworks */,
+				27167C5B13C4DB53001CC5B6 /* Headers */,
+				27167C5D13C4DB53001CC5B6 /* Sources */,
+				27167C5F13C4DB53001CC5B6 /* Frameworks */,
+				27167ED013C4E731001CC5B6 /* Build Fat Library */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Couchbase-iphonesimulator";
+			name = Couchbase;
 			productName = MobileCouchbase;
-			productReference = 035638D51350096B00D2AF03 /* libCouchbase-iphonesimulator.a */;
+			productReference = 27A72C3413C502980096E41D /* libCouchbase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		79F5314213208D3700038ADD /* Couchbase.bundle */ = {
+		273A731D13BD44670078870D /* Couchbase.framework */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79F5314813208D3800038ADD /* Build configuration list for PBXNativeTarget "Couchbase.bundle" */;
+			buildConfigurationList = 273A732F13BD44670078870D /* Build configuration list for PBXNativeTarget "Couchbase.framework" */;
 			buildPhases = (
-				79F5313F13208D3700038ADD /* Resources */,
-				79F5314013208D3700038ADD /* Sources */,
-				79F5314113208D3700038ADD /* Frameworks */,
-				79F5337D13208EEE00038ADD /* Headers */,
+				273A731A13BD44670078870D /* Sources */,
+				273A733113BD44CF0078870D /* Headers */,
+				273A733513BD471A0078870D /* CopyFiles */,
+				273A733F13BD4DDC0078870D /* CopyFiles */,
+				27167EEF13C4F09A001CC5B6 /* Copy library */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				27167ED613C4EF62001CC5B6 /* PBXTargetDependency */,
 			);
-			name = Couchbase.bundle;
-			productName = CouchbaseBundle;
-			productReference = 79F5314313208D3700038ADD /* Couchbase.bundle */;
+			name = Couchbase.framework;
+			productName = Couchbase.framework;
+			productReference = 273A731E13BD44670078870D /* Couchbase.framework */;
 			productType = "com.apple.product-type.bundle";
-		};
-		BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase-iphoneos" */;
-			buildPhases = (
-				BC4A60791324C493003F32D3 /* Headers */,
-				BC4A607A1324C493003F32D3 /* Sources */,
-				BC4A607B1324C493003F32D3 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Couchbase-iphoneos";
-			productName = MobileCouchbase;
-			productReference = BC4A607D1324C493003F32D3 /* libCouchbase-iphoneos.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Couchbase" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -253,105 +225,76 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC4A607C1324C493003F32D3 /* Couchbase-iphoneos */,
-				035638C71350096B00D2AF03 /* Couchbase-iphonesimulator */,
-				79F5314213208D3700038ADD /* Couchbase.bundle */,
-				E0F5ADDD1399A0AF006A8AFC /* Couchbase User Package */,
+				273A731D13BD44670078870D /* Couchbase.framework */,
+				27167C5A13C4DB53001CC5B6 /* Couchbase */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		79F5313F13208D3700038ADD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				79F5314B13208EA700038ADD /* default.ini in Resources */,
-				79F5314C13208EA700038ADD /* icouch.ini in Resources */,
-				79F5314E13208EA700038ADD /* demo.couch in Resources */,
-				79F5314F13208EA700038ADD /* erlang in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
-		E05336DD139B201C00B042DC /* Check Dependencies */ = {
+		27167ED013C4E731001CC5B6 /* Build Fat Library */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Dependencies";
+			name = "Build Fat Library";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Checking that dependencies have been met...\"\n\nRETURN=0;\nif [ ! -e \"${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a\"\n  echo \"Please be sure to build the Couchbase-iphoneos target first before building the user package.\"\n  RETURN=1;\nfi\n\nif [ ! -e \"${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a\"\n  echo \"Please be sure to build the Couchbase-iphonesimulator target first before building the user package.\"\n  RETURN=1;\nfi\n\nif [ ! -d \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" ];\nthen\n  echo \"Unable to find file: ${BUILT_PRODUCTS_DIR}/Couchbase.bundle\"\n  echo \"Please be sure to build the Couchbase.bundle target first before building the user package.\"\n  RETURN=1;\nfi\n\nexit $RETURN;\n";
+			shellScript = "# Version 2.0 (updated for Xcode 4, with some fixes)\n# Changes:\n#    - Works with xcode 4, even when running xcode 3 projects (Workarounds for apple bugs)\n#    - Faster / better: only runs lipo once, instead of once per recursion\n#    - Added some debugging statemetns that can be switched on/off by changing the DEBUG_THIS_SCRIPT variable to \"true\"\n#    - Fixed some typos\n# \n# Purpose:\n#   Create a static library for iPhone from within XCode\n#   Because Apple staff DELIBERATELY broke Xcode to make this impossible from the GUI (Xcode 3.2.3 specifically states this in the Release notes!)\n#   ...no, I don't understand why they did this!\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n# More info: see this Stack Overflow question: http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '.\\{3\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\"\nxcodebuild -configuration \"${CONFIGURATION}\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" || exit 1\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nlipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\" || exit 1\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\n# * needs to be outside the double quotes?\ncp \"${CURRENTCONFIG_DEVICE_DIR}/usr/local/include/\"* \"${CREATING_UNIVERSAL_DIR}/usr/local/include\"\nfi\nfi\n";
+			showEnvVarsInLog = 0;
 		};
-		E0F5ADE21399A0D2006A8AFC /* Create Universal Library */ = {
+		27167EEF13C4F09A001CC5B6 /* Copy library */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Create Universal Library";
+			name = "Copy library";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "lipo -create -output ${BUILT_PRODUCTS_DIR}/libCouchbase.a ${BUILT_PRODUCTS_DIR}/libCouchbase-iphoneos.a ${BUILT_PRODUCTS_DIR}/libCouchbase-iphonesimulator.a";
-		};
-		E0F5ADE31399A14B006A8AFC /* Create iOS Couchbase Zip */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Create iOS Couchbase Zip";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd ${BUILT_PRODUCTS_DIR}/;\nzip -r iOSCouchbase.zip include/Couchbase.h Couchbase.bundle libCouchbase.a";
+			shellScript = "cp \"${CONFIGURATION_BUILD_DIR}/libCouchbase.a\" \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		035638CA1350096B00D2AF03 /* Sources */ = {
+		27167C5D13C4DB53001CC5B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035638CB1350096B00D2AF03 /* Couchbase.m in Sources */,
+				27167C5E13C4DB53001CC5B6 /* Couchbase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		79F5314013208D3700038ADD /* Sources */ = {
+		273A731A13BD44670078870D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC4A607A1324C493003F32D3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC4A60841324C4C2003F32D3 /* Couchbase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		27167ED613C4EF62001CC5B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27167C5A13C4DB53001CC5B6 /* Couchbase */;
+			targetProxy = 27167ED513C4EF62001CC5B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		035638D21350096B00D2AF03 /* Debug */ = {
+		27167C6513C4DB53001CC5B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -359,97 +302,67 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
+				PRODUCT_NAME = Couchbase;
 			};
 			name = Debug;
 		};
-		035638D41350096B00D2AF03 /* Release */ = {
+		27167C6613C4DB53001CC5B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
 				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
+				PRODUCT_NAME = Couchbase;
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		79F5314513208D3800038ADD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				INFOPLIST_FILE = "CouchbaseBundle-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = Couchbase;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		79F5314713208D3800038ADD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				INFOPLIST_FILE = "CouchbaseBundle-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = Couchbase;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		BC4A607E1324C494003F32D3 /* Debug */ = {
+		273A732D13BD44670078870D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-universal";
 				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				LIBRARY_SEARCH_PATHS = (
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Couchbase.framework/Couchbase.framework-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 				);
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = "armv6 armv7";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Couchbase.framework/Couchbase.framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = Couchbase;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
 		};
-		BC4A60801324C494003F32D3 /* Release */ = {
+		273A732E13BD44670078870D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-universal";
 				COPY_PHASE_STRIP = YES;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
-				);
-				OTHER_LDFLAGS = "-all_load";
-				PREBINDING = NO;
-				PRODUCT_NAME = "Couchbase-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = "armv6 armv7";
-				ZERO_LINK = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Couchbase.framework/Couchbase.framework-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "Couchbase.framework/Couchbase.framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = Couchbase;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -457,17 +370,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PREBINDING = NO;
 				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
 		};
@@ -475,62 +387,38 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				PUBLIC_HEADERS_FOLDER_PATH = include;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E0F5ADDE1399A0AF006A8AFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E0F5ADDF1399A0AF006A8AFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035638D11350096B00D2AF03 /* Build configuration list for PBXNativeTarget "Couchbase-iphonesimulator" */ = {
+		27167C6413C4DB53001CC5B6 /* Build configuration list for PBXNativeTarget "Couchbase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				035638D21350096B00D2AF03 /* Debug */,
-				035638D41350096B00D2AF03 /* Release */,
+				27167C6513C4DB53001CC5B6 /* Debug */,
+				27167C6613C4DB53001CC5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79F5314813208D3800038ADD /* Build configuration list for PBXNativeTarget "Couchbase.bundle" */ = {
+		273A732F13BD44670078870D /* Build configuration list for PBXNativeTarget "Couchbase.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79F5314513208D3800038ADD /* Debug */,
-				79F5314713208D3800038ADD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC4A62A91324C4E2003F32D3 /* Build configuration list for PBXNativeTarget "Couchbase-iphoneos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC4A607E1324C494003F32D3 /* Debug */,
-				BC4A60801324C494003F32D3 /* Release */,
+				273A732D13BD44670078870D /* Debug */,
+				273A732E13BD44670078870D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -540,15 +428,6 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E0F5ADE01399A0AF006A8AFC /* Build configuration list for PBXAggregateTarget "Couchbase User Package" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E0F5ADDE1399A0AF006A8AFC /* Debug */,
-				E0F5ADDF1399A0AF006A8AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

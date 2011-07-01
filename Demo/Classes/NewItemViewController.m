@@ -22,6 +22,7 @@
 #import "CCouchDBDatabase.h"
 #import "CouchDBClientTypes.h"
 #import "DatabaseManager.h"
+#import "RootViewController.h"
 #import "CURLOperation.h"
 
 @implementation NewItemViewController

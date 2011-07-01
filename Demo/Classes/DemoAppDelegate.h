@@ -18,7 +18,7 @@
 // the License.
 //
 #import <UIKit/UIKit.h>
-#import "Couchbase.h"
+#import <Couchbase/Couchbase.h>
 
 @interface DemoAppDelegate : NSObject <UIApplicationDelegate, CouchbaseDelegate> {
     

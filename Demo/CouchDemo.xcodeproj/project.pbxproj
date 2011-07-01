@@ -7,148 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		03563860135001DD00D2AF03 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
-		03563862135001DD00D2AF03 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */; };
-		03563863135001DD00D2AF03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E88132191AA00D8538A /* Default.png */; };
-		03563864135001DD00D2AF03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E89132191AA00D8538A /* Default@2x.png */; };
-		03563865135001DD00D2AF03 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8A132191AA00D8538A /* Icon.png */; };
-		03563866135001DD00D2AF03 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8B132191AA00D8538A /* Icon@2x.png */; };
-		03563869135001DD00D2AF03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		0356386A135001DD00D2AF03 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
-		0356386B135001DD00D2AF03 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		03563875135001DD00D2AF03 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921412A1A16100581D10 /* Base64Transcoder.c */; };
-		03563876135001DD00D2AF03 /* CDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921712A1A16100581D10 /* CDateRange.m */; };
-		03563877135001DD00D2AF03 /* CPointerArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922212A1A16100581D10 /* CPointerArray.m */; };
-		03563878135001DD00D2AF03 /* CTemporaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922412A1A16100581D10 /* CTemporaryData.m */; };
-		03563879135001DD00D2AF03 /* CTemporaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922612A1A16100581D10 /* CTemporaryFile.m */; };
-		0356387A135001DD00D2AF03 /* CTrivialTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922812A1A16100581D10 /* CTrivialTemplate.m */; };
-		0356387B135001DD00D2AF03 /* CURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922A12A1A16100581D10 /* CURLOperation.m */; };
-		0356387C135001DD00D2AF03 /* CValueValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922C12A1A16100581D10 /* CValueValidator.m */; };
-		0356387D135001DD00D2AF03 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923112A1A16100581D10 /* ISO8601DateFormatter.m */; };
-		0356387E135001DD00D2AF03 /* NSDate_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923312A1A16100581D10 /* NSDate_Extensions.m */; };
-		0356387F135001DD00D2AF03 /* NSDate_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923512A1A16100581D10 /* NSDate_InternetDateExtensions.m */; };
-		03563880135001DD00D2AF03 /* NSDateFormatter_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923712A1A16100581D10 /* NSDateFormatter_InternetDateExtensions.m */; };
-		03563881135001DD00D2AF03 /* NSData_Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923912A1A16100581D10 /* NSData_Base64Extensions.m */; };
-		03563882135001DD00D2AF03 /* NSData_DigestExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923B12A1A16100581D10 /* NSData_DigestExtensions.m */; };
-		03563883135001DD00D2AF03 /* NSData_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923D12A1A16100581D10 /* NSData_Extensions.m */; };
-		03563884135001DD00D2AF03 /* NSDecimalNumber_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923F12A1A16100581D10 /* NSDecimalNumber_Extensions.m */; };
-		03563885135001DD00D2AF03 /* NSError_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924112A1A16100581D10 /* NSError_Extensions.m */; };
-		03563886135001DD00D2AF03 /* NSFileManager_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924312A1A16100581D10 /* NSFileManager_Extensions.m */; };
-		03563887135001DD00D2AF03 /* NSIndexPath_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924512A1A16100581D10 /* NSIndexPath_Extensions.m */; };
-		03563888135001DD00D2AF03 /* NSOperation_DebugExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924712A1A16100581D10 /* NSOperation_DebugExtensions.m */; };
-		03563889135001DD00D2AF03 /* NSOperationQueue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924912A1A16100581D10 /* NSOperationQueue_Extensions.m */; };
-		0356388A135001DD00D2AF03 /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924B12A1A16100581D10 /* NSScanner_Extensions.m */; };
-		0356388B135001DD00D2AF03 /* NSScanner_HTMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924D12A1A16100581D10 /* NSScanner_HTMLExtensions.m */; };
-		0356388C135001DD00D2AF03 /* NSString_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924F12A1A16100581D10 /* NSString_Extensions.m */; };
-		0356388D135001DD00D2AF03 /* NSURL_DataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925112A1A16100581D10 /* NSURL_DataExtensions.m */; };
-		0356388E135001DD00D2AF03 /* NSURL_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925312A1A16100581D10 /* NSURL_Extensions.m */; };
-		0356388F135001DD00D2AF03 /* NSURLResponse_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925512A1A16100581D10 /* NSURLResponse_Extensions.m */; };
-		03563890135001DD00D2AF03 /* NSValue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925712A1A16100581D10 /* NSValue_Extensions.m */; };
-		03563891135001DD00D2AF03 /* CInvocationGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925A12A1A16100581D10 /* CInvocationGrabber.m */; };
-		03563892135001DD00D2AF03 /* NSObject_InvocationGrabberExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925C12A1A16100581D10 /* NSObject_InvocationGrabberExtensions.m */; };
-		03563893135001DD00D2AF03 /* CBundleResourceURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926012A1A16100581D10 /* CBundleResourceURLProtocol.m */; };
-		03563894135001DD00D2AF03 /* CCommaArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926312A1A16100581D10 /* CCommaArrayTransformer.m */; };
-		03563895135001DD00D2AF03 /* CFloatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926512A1A16100581D10 /* CFloatTransformer.m */; };
-		03563896135001DD00D2AF03 /* CHumanDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926712A1A16100581D10 /* CHumanDateFormatter.m */; };
-		03563897135001DD00D2AF03 /* CNumberToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926912A1A16100581D10 /* CNumberToStringValueTransformer.m */; };
-		03563898135001DD00D2AF03 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4792DE12A1A86400581D10 /* NewItemViewController.m */; };
-		03563899135001DD00D2AF03 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47930B12A1AF0500581D10 /* DatabaseManager.m */; };
-		0356389A135001DD00D2AF03 /* CCouchDBAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47989E12A1B90000581D10 /* CCouchDBAttachment.m */; };
-		0356389B135001DD00D2AF03 /* CCouchDBChangeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A012A1B90000581D10 /* CCouchDBChangeSet.m */; };
-		0356389C135001DD00D2AF03 /* CCouchDBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A212A1B90000581D10 /* CCouchDBDatabase.m */; };
-		0356389D135001DD00D2AF03 /* CCouchDBDesignDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A412A1B90000581D10 /* CCouchDBDesignDocument.m */; };
-		0356389E135001DD00D2AF03 /* CCouchDBDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A612A1B90000581D10 /* CCouchDBDocument.m */; };
-		0356389F135001DD00D2AF03 /* CCouchDBServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A812A1B90000581D10 /* CCouchDBServer.m */; };
-		035638A0135001DD00D2AF03 /* CCouchDBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AA12A1B90000581D10 /* CCouchDBSession.m */; };
-		035638A1135001DD00D2AF03 /* CCouchDBURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AC12A1B90000581D10 /* CCouchDBURLOperation.m */; };
-		035638A2135001DD00D2AF03 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
-		035638A3135001DD00D2AF03 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
-		035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		037E114F13566565005FFC4F /* libTouchJSON-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */; };
-		037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */; };
-		037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115113566574005FFC4F /* libCouchbase-iphoneos.a */; };
-		037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */; };
-		03C67B851358FB76007D817F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
-		03C67B861358FB76007D817F /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
-		1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
-		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
-		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
-		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
-		3D47926A12A1A16100581D10 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921412A1A16100581D10 /* Base64Transcoder.c */; };
-		3D47926B12A1A16100581D10 /* CDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921712A1A16100581D10 /* CDateRange.m */; };
-		3D47927012A1A16100581D10 /* CPointerArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922212A1A16100581D10 /* CPointerArray.m */; };
-		3D47927112A1A16100581D10 /* CTemporaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922412A1A16100581D10 /* CTemporaryData.m */; };
-		3D47927212A1A16100581D10 /* CTemporaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922612A1A16100581D10 /* CTemporaryFile.m */; };
-		3D47927312A1A16100581D10 /* CTrivialTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922812A1A16100581D10 /* CTrivialTemplate.m */; };
-		3D47927412A1A16100581D10 /* CURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922A12A1A16100581D10 /* CURLOperation.m */; };
-		3D47927512A1A16100581D10 /* CValueValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922C12A1A16100581D10 /* CValueValidator.m */; };
-		3D47927612A1A16100581D10 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923112A1A16100581D10 /* ISO8601DateFormatter.m */; };
-		3D47927712A1A16100581D10 /* NSDate_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923312A1A16100581D10 /* NSDate_Extensions.m */; };
-		3D47927812A1A16100581D10 /* NSDate_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923512A1A16100581D10 /* NSDate_InternetDateExtensions.m */; };
-		3D47927912A1A16100581D10 /* NSDateFormatter_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923712A1A16100581D10 /* NSDateFormatter_InternetDateExtensions.m */; };
-		3D47927A12A1A16100581D10 /* NSData_Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923912A1A16100581D10 /* NSData_Base64Extensions.m */; };
-		3D47927B12A1A16100581D10 /* NSData_DigestExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923B12A1A16100581D10 /* NSData_DigestExtensions.m */; };
-		3D47927C12A1A16100581D10 /* NSData_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923D12A1A16100581D10 /* NSData_Extensions.m */; };
-		3D47927D12A1A16100581D10 /* NSDecimalNumber_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923F12A1A16100581D10 /* NSDecimalNumber_Extensions.m */; };
-		3D47927E12A1A16100581D10 /* NSError_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924112A1A16100581D10 /* NSError_Extensions.m */; };
-		3D47927F12A1A16100581D10 /* NSFileManager_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924312A1A16100581D10 /* NSFileManager_Extensions.m */; };
-		3D47928012A1A16100581D10 /* NSIndexPath_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924512A1A16100581D10 /* NSIndexPath_Extensions.m */; };
-		3D47928112A1A16100581D10 /* NSOperation_DebugExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924712A1A16100581D10 /* NSOperation_DebugExtensions.m */; };
-		3D47928212A1A16100581D10 /* NSOperationQueue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924912A1A16100581D10 /* NSOperationQueue_Extensions.m */; };
-		3D47928312A1A16100581D10 /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924B12A1A16100581D10 /* NSScanner_Extensions.m */; };
-		3D47928412A1A16100581D10 /* NSScanner_HTMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924D12A1A16100581D10 /* NSScanner_HTMLExtensions.m */; };
-		3D47928512A1A16100581D10 /* NSString_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924F12A1A16100581D10 /* NSString_Extensions.m */; };
-		3D47928612A1A16100581D10 /* NSURL_DataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925112A1A16100581D10 /* NSURL_DataExtensions.m */; };
-		3D47928712A1A16100581D10 /* NSURL_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925312A1A16100581D10 /* NSURL_Extensions.m */; };
-		3D47928812A1A16100581D10 /* NSURLResponse_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925512A1A16100581D10 /* NSURLResponse_Extensions.m */; };
-		3D47928912A1A16100581D10 /* NSValue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925712A1A16100581D10 /* NSValue_Extensions.m */; };
-		3D47928A12A1A16100581D10 /* CInvocationGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925A12A1A16100581D10 /* CInvocationGrabber.m */; };
-		3D47928B12A1A16100581D10 /* NSObject_InvocationGrabberExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925C12A1A16100581D10 /* NSObject_InvocationGrabberExtensions.m */; };
-		3D47928C12A1A16100581D10 /* CBundleResourceURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926012A1A16100581D10 /* CBundleResourceURLProtocol.m */; };
-		3D47928D12A1A16100581D10 /* CCommaArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926312A1A16100581D10 /* CCommaArrayTransformer.m */; };
-		3D47928E12A1A16100581D10 /* CFloatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926512A1A16100581D10 /* CFloatTransformer.m */; };
-		3D47928F12A1A16100581D10 /* CHumanDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926712A1A16100581D10 /* CHumanDateFormatter.m */; };
-		3D47929012A1A16100581D10 /* CNumberToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926912A1A16100581D10 /* CNumberToStringValueTransformer.m */; };
-		3D4792E012A1A86400581D10 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4792DE12A1A86400581D10 /* NewItemViewController.m */; };
-		3D4792E112A1A86400581D10 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
-		3D47930C12A1AF0500581D10 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47930B12A1AF0500581D10 /* DatabaseManager.m */; };
-		3D4798B212A1B90000581D10 /* CCouchDBAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47989E12A1B90000581D10 /* CCouchDBAttachment.m */; };
-		3D4798B312A1B90000581D10 /* CCouchDBChangeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A012A1B90000581D10 /* CCouchDBChangeSet.m */; };
-		3D4798B412A1B90000581D10 /* CCouchDBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A212A1B90000581D10 /* CCouchDBDatabase.m */; };
-		3D4798B512A1B90000581D10 /* CCouchDBDesignDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A412A1B90000581D10 /* CCouchDBDesignDocument.m */; };
-		3D4798B612A1B90000581D10 /* CCouchDBDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A612A1B90000581D10 /* CCouchDBDocument.m */; };
-		3D4798B712A1B90000581D10 /* CCouchDBServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A812A1B90000581D10 /* CCouchDBServer.m */; };
-		3D4798B812A1B90000581D10 /* CCouchDBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AA12A1B90000581D10 /* CCouchDBSession.m */; };
-		3D4798B912A1B90000581D10 /* CCouchDBURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AC12A1B90000581D10 /* CCouchDBURLOperation.m */; };
-		3D4798BA12A1B90000581D10 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
-		3D4798BB12A1B90000581D10 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
-		3DEAED5812A2EB7400EEBD22 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */; };
-		BCDA6E8C132191AA00D8538A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E88132191AA00D8538A /* Default.png */; };
-		BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E89132191AA00D8538A /* Default@2x.png */; };
-		BCDA6E8E132191AA00D8538A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8A132191AA00D8538A /* Icon.png */; };
-		BCDA6E8F132191AA00D8538A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8B132191AA00D8538A /* Icon@2x.png */; };
+		27167F1A13C4FA57001CC5B6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		27167F1B13C4FA57001CC5B6 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		27167F1C13C4FA57001CC5B6 /* NewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D4792DF12A1A86400581D10 /* NewItemViewController.xib */; };
+		27167F1D13C4FA57001CC5B6 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */; };
+		27167F1E13C4FA57001CC5B6 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E88132191AA00D8538A /* Default.png */; };
+		27167F1F13C4FA57001CC5B6 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E89132191AA00D8538A /* Default@2x.png */; };
+		27167F2013C4FA57001CC5B6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8A132191AA00D8538A /* Icon.png */; };
+		27167F2113C4FA57001CC5B6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BCDA6E8B132191AA00D8538A /* Icon@2x.png */; };
+		27167F2213C4FA57001CC5B6 /* demo.couch in Resources */ = {isa = PBXBuildFile; fileRef = 27ED52D713C3944B00AB846D /* demo.couch */; };
+		27167F2513C4FA57001CC5B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		27167F2613C4FA57001CC5B6 /* DemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* DemoAppDelegate.m */; };
+		27167F2713C4FA57001CC5B6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		27167F2813C4FA57001CC5B6 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921412A1A16100581D10 /* Base64Transcoder.c */; };
+		27167F2913C4FA57001CC5B6 /* CDateRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47921712A1A16100581D10 /* CDateRange.m */; };
+		27167F2A13C4FA57001CC5B6 /* CPointerArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922212A1A16100581D10 /* CPointerArray.m */; };
+		27167F2B13C4FA57001CC5B6 /* CTemporaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922412A1A16100581D10 /* CTemporaryData.m */; };
+		27167F2C13C4FA57001CC5B6 /* CTemporaryFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922612A1A16100581D10 /* CTemporaryFile.m */; };
+		27167F2D13C4FA57001CC5B6 /* CTrivialTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922812A1A16100581D10 /* CTrivialTemplate.m */; };
+		27167F2E13C4FA57001CC5B6 /* CURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922A12A1A16100581D10 /* CURLOperation.m */; };
+		27167F2F13C4FA57001CC5B6 /* CValueValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47922C12A1A16100581D10 /* CValueValidator.m */; };
+		27167F3013C4FA57001CC5B6 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923112A1A16100581D10 /* ISO8601DateFormatter.m */; };
+		27167F3113C4FA57001CC5B6 /* NSDate_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923312A1A16100581D10 /* NSDate_Extensions.m */; };
+		27167F3213C4FA57001CC5B6 /* NSDate_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923512A1A16100581D10 /* NSDate_InternetDateExtensions.m */; };
+		27167F3313C4FA57001CC5B6 /* NSDateFormatter_InternetDateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923712A1A16100581D10 /* NSDateFormatter_InternetDateExtensions.m */; };
+		27167F3413C4FA57001CC5B6 /* NSData_Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923912A1A16100581D10 /* NSData_Base64Extensions.m */; };
+		27167F3513C4FA57001CC5B6 /* NSData_DigestExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923B12A1A16100581D10 /* NSData_DigestExtensions.m */; };
+		27167F3613C4FA57001CC5B6 /* NSData_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923D12A1A16100581D10 /* NSData_Extensions.m */; };
+		27167F3713C4FA57001CC5B6 /* NSDecimalNumber_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47923F12A1A16100581D10 /* NSDecimalNumber_Extensions.m */; };
+		27167F3813C4FA57001CC5B6 /* NSError_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924112A1A16100581D10 /* NSError_Extensions.m */; };
+		27167F3913C4FA57001CC5B6 /* NSFileManager_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924312A1A16100581D10 /* NSFileManager_Extensions.m */; };
+		27167F3A13C4FA57001CC5B6 /* NSIndexPath_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924512A1A16100581D10 /* NSIndexPath_Extensions.m */; };
+		27167F3B13C4FA57001CC5B6 /* NSOperation_DebugExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924712A1A16100581D10 /* NSOperation_DebugExtensions.m */; };
+		27167F3C13C4FA57001CC5B6 /* NSOperationQueue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924912A1A16100581D10 /* NSOperationQueue_Extensions.m */; };
+		27167F3D13C4FA57001CC5B6 /* NSScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924B12A1A16100581D10 /* NSScanner_Extensions.m */; };
+		27167F3E13C4FA57001CC5B6 /* NSScanner_HTMLExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924D12A1A16100581D10 /* NSScanner_HTMLExtensions.m */; };
+		27167F3F13C4FA57001CC5B6 /* NSString_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47924F12A1A16100581D10 /* NSString_Extensions.m */; };
+		27167F4013C4FA57001CC5B6 /* NSURL_DataExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925112A1A16100581D10 /* NSURL_DataExtensions.m */; };
+		27167F4113C4FA57001CC5B6 /* NSURL_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925312A1A16100581D10 /* NSURL_Extensions.m */; };
+		27167F4213C4FA57001CC5B6 /* NSURLResponse_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925512A1A16100581D10 /* NSURLResponse_Extensions.m */; };
+		27167F4313C4FA57001CC5B6 /* NSValue_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925712A1A16100581D10 /* NSValue_Extensions.m */; };
+		27167F4413C4FA57001CC5B6 /* CInvocationGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925A12A1A16100581D10 /* CInvocationGrabber.m */; };
+		27167F4513C4FA57001CC5B6 /* NSObject_InvocationGrabberExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47925C12A1A16100581D10 /* NSObject_InvocationGrabberExtensions.m */; };
+		27167F4613C4FA57001CC5B6 /* CBundleResourceURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926012A1A16100581D10 /* CBundleResourceURLProtocol.m */; };
+		27167F4713C4FA57001CC5B6 /* CCommaArrayTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926312A1A16100581D10 /* CCommaArrayTransformer.m */; };
+		27167F4813C4FA57001CC5B6 /* CFloatTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926512A1A16100581D10 /* CFloatTransformer.m */; };
+		27167F4913C4FA57001CC5B6 /* CHumanDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926712A1A16100581D10 /* CHumanDateFormatter.m */; };
+		27167F4A13C4FA57001CC5B6 /* CNumberToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47926912A1A16100581D10 /* CNumberToStringValueTransformer.m */; };
+		27167F4B13C4FA57001CC5B6 /* NewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4792DE12A1A86400581D10 /* NewItemViewController.m */; };
+		27167F4C13C4FA57001CC5B6 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47930B12A1AF0500581D10 /* DatabaseManager.m */; };
+		27167F4D13C4FA57001CC5B6 /* CCouchDBAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47989E12A1B90000581D10 /* CCouchDBAttachment.m */; };
+		27167F4E13C4FA57001CC5B6 /* CCouchDBChangeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A012A1B90000581D10 /* CCouchDBChangeSet.m */; };
+		27167F4F13C4FA57001CC5B6 /* CCouchDBDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A212A1B90000581D10 /* CCouchDBDatabase.m */; };
+		27167F5013C4FA57001CC5B6 /* CCouchDBDesignDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A412A1B90000581D10 /* CCouchDBDesignDocument.m */; };
+		27167F5113C4FA57001CC5B6 /* CCouchDBDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A612A1B90000581D10 /* CCouchDBDocument.m */; };
+		27167F5213C4FA57001CC5B6 /* CCouchDBServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798A812A1B90000581D10 /* CCouchDBServer.m */; };
+		27167F5313C4FA57001CC5B6 /* CCouchDBSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AA12A1B90000581D10 /* CCouchDBSession.m */; };
+		27167F5413C4FA57001CC5B6 /* CCouchDBURLOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AC12A1B90000581D10 /* CCouchDBURLOperation.m */; };
+		27167F5513C4FA57001CC5B6 /* CouchDBClientConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798AE12A1B90000581D10 /* CouchDBClientConstants.m */; };
+		27167F5613C4FA57001CC5B6 /* NSError_CouchDBExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4798B112A1B90000581D10 /* NSError_CouchDBExtensions.m */; };
+		27167F5813C4FA57001CC5B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		27167F5913C4FA57001CC5B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		27167F5A13C4FA57001CC5B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		27167F5B13C4FA57001CC5B6 /* Couchbase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273A739613BE918A0078870D /* Couchbase.framework */; };
+		27167F5D13C4FA57001CC5B6 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCDA6DEA13217E2400D8538A /* libstdc++.dylib */; };
+		27BCDD1513C4FE86002A3FC3 /* libTouchJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27BCDD1413C4FE86002A3FC3 /* libTouchJSON.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphonesimulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphoneos.a"; path = "../Debug/libTouchJSON-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libTouchJSON-iphonesimulator.a"; path = "../Debug/libTouchJSON-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E115113566574005FFC4F /* libCouchbase-iphoneos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphoneos.a"; path = "../Debug/libCouchbase-iphoneos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCouchbase-iphonesimulator.a"; path = "../Debug/libCouchbase-iphonesimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		037E117D135674B3005FFC4F /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Couchbase.h; path = include/Couchbase.h; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* DemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* DemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CouchDemo-iphoneos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		27167F6113C4FA57001CC5B6 /* CouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		273A739613BE918A0078870D /* Couchbase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Couchbase.framework; path = "../DerivedData/Couchbase/Build/Products/Debug-universal/Couchbase.framework"; sourceTree = SOURCE_ROOT; };
+		27BCDD1413C4FE86002A3FC3 /* libTouchJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTouchJSON.a; path = "../DerivedData/Couchbase/Build/Products/Debug-iphoneos/libTouchJSON.a"; sourceTree = "<group>"; };
+		27ED52D713C3944B00AB846D /* demo.couch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.couch; sourceTree = "<group>"; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* CouchDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchDemo_Prefix.pch; sourceTree = "<group>"; };
 		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -264,29 +198,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		035638A4135001DD00D2AF03 /* Frameworks */ = {
+		27167F5713C4FA57001CC5B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035638A7135001DD00D2AF03 /* Foundation.framework in Frameworks */,
-				035638A8135001DD00D2AF03 /* UIKit.framework in Frameworks */,
-				035638A9135001DD00D2AF03 /* CoreGraphics.framework in Frameworks */,
-				037E115013566568005FFC4F /* libTouchJSON-iphonesimulator.a in Frameworks */,
-				037E11541356657D005FFC4F /* libCouchbase-iphonesimulator.a in Frameworks */,
-				03C67B861358FB76007D817F /* libstdc++.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
-				037E114F13566565005FFC4F /* libTouchJSON-iphoneos.a in Frameworks */,
-				037E11531356657A005FFC4F /* libCouchbase-iphoneos.a in Frameworks */,
-				03C67B851358FB76007D817F /* libstdc++.dylib in Frameworks */,
+				27BCDD1513C4FE86002A3FC3 /* libTouchJSON.a in Frameworks */,
+				27167F5813C4FA57001CC5B6 /* Foundation.framework in Frameworks */,
+				27167F5913C4FA57001CC5B6 /* UIKit.framework in Frameworks */,
+				27167F5A13C4FA57001CC5B6 /* CoreGraphics.framework in Frameworks */,
+				27167F5B13C4FA57001CC5B6 /* Couchbase.framework in Frameworks */,
+				27167F5D13C4FA57001CC5B6 /* libstdc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +217,7 @@
 		037E114C13566540005FFC4F /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				037E117D135674B3005FFC4F /* Couchbase.h */,
-				037E114D13566560005FFC4F /* libTouchJSON-iphoneos.a */,
-				037E114E13566560005FFC4F /* libTouchJSON-iphonesimulator.a */,
-				037E115113566574005FFC4F /* libCouchbase-iphoneos.a */,
-				037E115213566574005FFC4F /* libCouchbase-iphonesimulator.a */,
+				27BCDD1413C4FE86002A3FC3 /* libTouchJSON.a */,
 				BCDA6DEA13217E2400D8538A /* libstdc++.dylib */,
 			);
 			name = Libraries;
@@ -324,8 +241,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */,
-				035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */,
+				27167F6113C4FA57001CC5B6 /* CouchDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,6 +275,7 @@
 			children = (
 				8D1107310486CEB800E47090 /* CouchDemo-Info.plist */,
 				3DEAED5712A2EB7400EEBD22 /* Entitlements.plist */,
+				27ED52D713C3944B00AB846D /* demo.couch */,
 				BCDA6E88132191AA00D8538A /* Default.png */,
 				BCDA6E89132191AA00D8538A /* Default@2x.png */,
 				BCDA6E8A132191AA00D8538A /* Icon.png */,
@@ -373,6 +290,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				273A739613BE918A0078870D /* Couchbase.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -556,40 +474,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0356385D135001DD00D2AF03 /* CouchDemo-iphonesimulator */ = {
+		27167F1813C4FA57001CC5B6 /* CouchDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "CouchDemo-iphonesimulator" */;
+			buildConfigurationList = 27167F5E13C4FA57001CC5B6 /* Build configuration list for PBXNativeTarget "CouchDemo" */;
 			buildPhases = (
-				0356385E135001DD00D2AF03 /* Resources */,
-				034B4F06135790D80040FE2A /* Copy Couchbase.bundle */,
-				03563868135001DD00D2AF03 /* Sources */,
-				035638A4135001DD00D2AF03 /* Frameworks */,
+				27167F1913C4FA57001CC5B6 /* Resources */,
+				27167F2313C4FA57001CC5B6 /* Copy CouchDB */,
+				27167F2413C4FA57001CC5B6 /* Sources */,
+				27167F5713C4FA57001CC5B6 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "CouchDemo-iphonesimulator";
+			name = CouchDemo;
 			productName = Demo;
-			productReference = 035638B0135001DD00D2AF03 /* CouchDemo-iphonesimulator.app */;
-			productType = "com.apple.product-type.application";
-		};
-		1D6058900D05DD3D006BFB54 /* CouchDemo-iphoneos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CouchDemo-iphoneos" */;
-			buildPhases = (
-				1D60588D0D05DD3D006BFB54 /* Resources */,
-				03D8F57F1357920300D08F9E /* Copy Couchbase.bundle */,
-				1D60588E0D05DD3D006BFB54 /* Sources */,
-				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CouchDemo-iphoneos";
-			productName = Demo;
-			productReference = 1D6058910D05DD3D006BFB54 /* CouchDemo-iphoneos.app */;
+			productReference = 27167F6113C4FA57001CC5B6 /* CouchDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -597,6 +497,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CouchDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -612,199 +515,112 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* CouchDemo-iphoneos */,
-				0356385D135001DD00D2AF03 /* CouchDemo-iphonesimulator */,
+				27167F1813C4FA57001CC5B6 /* CouchDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0356385E135001DD00D2AF03 /* Resources */ = {
+		27167F1913C4FA57001CC5B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0356385F135001DD00D2AF03 /* MainWindow.xib in Resources */,
-				03563860135001DD00D2AF03 /* RootViewController.xib in Resources */,
-				03563861135001DD00D2AF03 /* NewItemViewController.xib in Resources */,
-				03563862135001DD00D2AF03 /* Entitlements.plist in Resources */,
-				03563863135001DD00D2AF03 /* Default.png in Resources */,
-				03563864135001DD00D2AF03 /* Default@2x.png in Resources */,
-				03563865135001DD00D2AF03 /* Icon.png in Resources */,
-				03563866135001DD00D2AF03 /* Icon@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D60588D0D05DD3D006BFB54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
-				3D4792E112A1A86400581D10 /* NewItemViewController.xib in Resources */,
-				3DEAED5812A2EB7400EEBD22 /* Entitlements.plist in Resources */,
-				BCDA6E8C132191AA00D8538A /* Default.png in Resources */,
-				BCDA6E8D132191AA00D8538A /* Default@2x.png in Resources */,
-				BCDA6E8E132191AA00D8538A /* Icon.png in Resources */,
-				BCDA6E8F132191AA00D8538A /* Icon@2x.png in Resources */,
+				27167F1A13C4FA57001CC5B6 /* MainWindow.xib in Resources */,
+				27167F1B13C4FA57001CC5B6 /* RootViewController.xib in Resources */,
+				27167F1C13C4FA57001CC5B6 /* NewItemViewController.xib in Resources */,
+				27167F1D13C4FA57001CC5B6 /* Entitlements.plist in Resources */,
+				27167F1E13C4FA57001CC5B6 /* Default.png in Resources */,
+				27167F1F13C4FA57001CC5B6 /* Default@2x.png in Resources */,
+				27167F2013C4FA57001CC5B6 /* Icon.png in Resources */,
+				27167F2113C4FA57001CC5B6 /* Icon@2x.png in Resources */,
+				27167F2213C4FA57001CC5B6 /* demo.couch in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		034B4F06135790D80040FE2A /* Copy Couchbase.bundle */ = {
+		27167F2313C4FA57001CC5B6 /* Copy CouchDB */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Couchbase.bundle";
+			name = "Copy CouchDB";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rsync -a \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
-		};
-		03D8F57F1357920300D08F9E /* Copy Couchbase.bundle */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Couchbase.bundle";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "rsync -a \"${BUILT_PRODUCTS_DIR}/Couchbase.bundle\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+			shellScript = "# The 'CouchDB' subfolder of the framework contains Erlang code and other resources needed at runtime.\n# Copy it into the app bundle:\nrsync -a \"../DerivedData/Couchbase/Build/Products/Debug-universal/Couchbase.framework/CouchDB\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03563868135001DD00D2AF03 /* Sources */ = {
+		27167F2413C4FA57001CC5B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03563869135001DD00D2AF03 /* main.m in Sources */,
-				0356386A135001DD00D2AF03 /* DemoAppDelegate.m in Sources */,
-				0356386B135001DD00D2AF03 /* RootViewController.m in Sources */,
-				03563875135001DD00D2AF03 /* Base64Transcoder.c in Sources */,
-				03563876135001DD00D2AF03 /* CDateRange.m in Sources */,
-				03563877135001DD00D2AF03 /* CPointerArray.m in Sources */,
-				03563878135001DD00D2AF03 /* CTemporaryData.m in Sources */,
-				03563879135001DD00D2AF03 /* CTemporaryFile.m in Sources */,
-				0356387A135001DD00D2AF03 /* CTrivialTemplate.m in Sources */,
-				0356387B135001DD00D2AF03 /* CURLOperation.m in Sources */,
-				0356387C135001DD00D2AF03 /* CValueValidator.m in Sources */,
-				0356387D135001DD00D2AF03 /* ISO8601DateFormatter.m in Sources */,
-				0356387E135001DD00D2AF03 /* NSDate_Extensions.m in Sources */,
-				0356387F135001DD00D2AF03 /* NSDate_InternetDateExtensions.m in Sources */,
-				03563880135001DD00D2AF03 /* NSDateFormatter_InternetDateExtensions.m in Sources */,
-				03563881135001DD00D2AF03 /* NSData_Base64Extensions.m in Sources */,
-				03563882135001DD00D2AF03 /* NSData_DigestExtensions.m in Sources */,
-				03563883135001DD00D2AF03 /* NSData_Extensions.m in Sources */,
-				03563884135001DD00D2AF03 /* NSDecimalNumber_Extensions.m in Sources */,
-				03563885135001DD00D2AF03 /* NSError_Extensions.m in Sources */,
-				03563886135001DD00D2AF03 /* NSFileManager_Extensions.m in Sources */,
-				03563887135001DD00D2AF03 /* NSIndexPath_Extensions.m in Sources */,
-				03563888135001DD00D2AF03 /* NSOperation_DebugExtensions.m in Sources */,
-				03563889135001DD00D2AF03 /* NSOperationQueue_Extensions.m in Sources */,
-				0356388A135001DD00D2AF03 /* NSScanner_Extensions.m in Sources */,
-				0356388B135001DD00D2AF03 /* NSScanner_HTMLExtensions.m in Sources */,
-				0356388C135001DD00D2AF03 /* NSString_Extensions.m in Sources */,
-				0356388D135001DD00D2AF03 /* NSURL_DataExtensions.m in Sources */,
-				0356388E135001DD00D2AF03 /* NSURL_Extensions.m in Sources */,
-				0356388F135001DD00D2AF03 /* NSURLResponse_Extensions.m in Sources */,
-				03563890135001DD00D2AF03 /* NSValue_Extensions.m in Sources */,
-				03563891135001DD00D2AF03 /* CInvocationGrabber.m in Sources */,
-				03563892135001DD00D2AF03 /* NSObject_InvocationGrabberExtensions.m in Sources */,
-				03563893135001DD00D2AF03 /* CBundleResourceURLProtocol.m in Sources */,
-				03563894135001DD00D2AF03 /* CCommaArrayTransformer.m in Sources */,
-				03563895135001DD00D2AF03 /* CFloatTransformer.m in Sources */,
-				03563896135001DD00D2AF03 /* CHumanDateFormatter.m in Sources */,
-				03563897135001DD00D2AF03 /* CNumberToStringValueTransformer.m in Sources */,
-				03563898135001DD00D2AF03 /* NewItemViewController.m in Sources */,
-				03563899135001DD00D2AF03 /* DatabaseManager.m in Sources */,
-				0356389A135001DD00D2AF03 /* CCouchDBAttachment.m in Sources */,
-				0356389B135001DD00D2AF03 /* CCouchDBChangeSet.m in Sources */,
-				0356389C135001DD00D2AF03 /* CCouchDBDatabase.m in Sources */,
-				0356389D135001DD00D2AF03 /* CCouchDBDesignDocument.m in Sources */,
-				0356389E135001DD00D2AF03 /* CCouchDBDocument.m in Sources */,
-				0356389F135001DD00D2AF03 /* CCouchDBServer.m in Sources */,
-				035638A0135001DD00D2AF03 /* CCouchDBSession.m in Sources */,
-				035638A1135001DD00D2AF03 /* CCouchDBURLOperation.m in Sources */,
-				035638A2135001DD00D2AF03 /* CouchDBClientConstants.m in Sources */,
-				035638A3135001DD00D2AF03 /* NSError_CouchDBExtensions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D60588E0D05DD3D006BFB54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* DemoAppDelegate.m in Sources */,
-				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				3D47926A12A1A16100581D10 /* Base64Transcoder.c in Sources */,
-				3D47926B12A1A16100581D10 /* CDateRange.m in Sources */,
-				3D47927012A1A16100581D10 /* CPointerArray.m in Sources */,
-				3D47927112A1A16100581D10 /* CTemporaryData.m in Sources */,
-				3D47927212A1A16100581D10 /* CTemporaryFile.m in Sources */,
-				3D47927312A1A16100581D10 /* CTrivialTemplate.m in Sources */,
-				3D47927412A1A16100581D10 /* CURLOperation.m in Sources */,
-				3D47927512A1A16100581D10 /* CValueValidator.m in Sources */,
-				3D47927612A1A16100581D10 /* ISO8601DateFormatter.m in Sources */,
-				3D47927712A1A16100581D10 /* NSDate_Extensions.m in Sources */,
-				3D47927812A1A16100581D10 /* NSDate_InternetDateExtensions.m in Sources */,
-				3D47927912A1A16100581D10 /* NSDateFormatter_InternetDateExtensions.m in Sources */,
-				3D47927A12A1A16100581D10 /* NSData_Base64Extensions.m in Sources */,
-				3D47927B12A1A16100581D10 /* NSData_DigestExtensions.m in Sources */,
-				3D47927C12A1A16100581D10 /* NSData_Extensions.m in Sources */,
-				3D47927D12A1A16100581D10 /* NSDecimalNumber_Extensions.m in Sources */,
-				3D47927E12A1A16100581D10 /* NSError_Extensions.m in Sources */,
-				3D47927F12A1A16100581D10 /* NSFileManager_Extensions.m in Sources */,
-				3D47928012A1A16100581D10 /* NSIndexPath_Extensions.m in Sources */,
-				3D47928112A1A16100581D10 /* NSOperation_DebugExtensions.m in Sources */,
-				3D47928212A1A16100581D10 /* NSOperationQueue_Extensions.m in Sources */,
-				3D47928312A1A16100581D10 /* NSScanner_Extensions.m in Sources */,
-				3D47928412A1A16100581D10 /* NSScanner_HTMLExtensions.m in Sources */,
-				3D47928512A1A16100581D10 /* NSString_Extensions.m in Sources */,
-				3D47928612A1A16100581D10 /* NSURL_DataExtensions.m in Sources */,
-				3D47928712A1A16100581D10 /* NSURL_Extensions.m in Sources */,
-				3D47928812A1A16100581D10 /* NSURLResponse_Extensions.m in Sources */,
-				3D47928912A1A16100581D10 /* NSValue_Extensions.m in Sources */,
-				3D47928A12A1A16100581D10 /* CInvocationGrabber.m in Sources */,
-				3D47928B12A1A16100581D10 /* NSObject_InvocationGrabberExtensions.m in Sources */,
-				3D47928C12A1A16100581D10 /* CBundleResourceURLProtocol.m in Sources */,
-				3D47928D12A1A16100581D10 /* CCommaArrayTransformer.m in Sources */,
-				3D47928E12A1A16100581D10 /* CFloatTransformer.m in Sources */,
-				3D47928F12A1A16100581D10 /* CHumanDateFormatter.m in Sources */,
-				3D47929012A1A16100581D10 /* CNumberToStringValueTransformer.m in Sources */,
-				3D4792E012A1A86400581D10 /* NewItemViewController.m in Sources */,
-				3D47930C12A1AF0500581D10 /* DatabaseManager.m in Sources */,
-				3D4798B212A1B90000581D10 /* CCouchDBAttachment.m in Sources */,
-				3D4798B312A1B90000581D10 /* CCouchDBChangeSet.m in Sources */,
-				3D4798B412A1B90000581D10 /* CCouchDBDatabase.m in Sources */,
-				3D4798B512A1B90000581D10 /* CCouchDBDesignDocument.m in Sources */,
-				3D4798B612A1B90000581D10 /* CCouchDBDocument.m in Sources */,
-				3D4798B712A1B90000581D10 /* CCouchDBServer.m in Sources */,
-				3D4798B812A1B90000581D10 /* CCouchDBSession.m in Sources */,
-				3D4798B912A1B90000581D10 /* CCouchDBURLOperation.m in Sources */,
-				3D4798BA12A1B90000581D10 /* CouchDBClientConstants.m in Sources */,
-				3D4798BB12A1B90000581D10 /* NSError_CouchDBExtensions.m in Sources */,
+				27167F2513C4FA57001CC5B6 /* main.m in Sources */,
+				27167F2613C4FA57001CC5B6 /* DemoAppDelegate.m in Sources */,
+				27167F2713C4FA57001CC5B6 /* RootViewController.m in Sources */,
+				27167F2813C4FA57001CC5B6 /* Base64Transcoder.c in Sources */,
+				27167F2913C4FA57001CC5B6 /* CDateRange.m in Sources */,
+				27167F2A13C4FA57001CC5B6 /* CPointerArray.m in Sources */,
+				27167F2B13C4FA57001CC5B6 /* CTemporaryData.m in Sources */,
+				27167F2C13C4FA57001CC5B6 /* CTemporaryFile.m in Sources */,
+				27167F2D13C4FA57001CC5B6 /* CTrivialTemplate.m in Sources */,
+				27167F2E13C4FA57001CC5B6 /* CURLOperation.m in Sources */,
+				27167F2F13C4FA57001CC5B6 /* CValueValidator.m in Sources */,
+				27167F3013C4FA57001CC5B6 /* ISO8601DateFormatter.m in Sources */,
+				27167F3113C4FA57001CC5B6 /* NSDate_Extensions.m in Sources */,
+				27167F3213C4FA57001CC5B6 /* NSDate_InternetDateExtensions.m in Sources */,
+				27167F3313C4FA57001CC5B6 /* NSDateFormatter_InternetDateExtensions.m in Sources */,
+				27167F3413C4FA57001CC5B6 /* NSData_Base64Extensions.m in Sources */,
+				27167F3513C4FA57001CC5B6 /* NSData_DigestExtensions.m in Sources */,
+				27167F3613C4FA57001CC5B6 /* NSData_Extensions.m in Sources */,
+				27167F3713C4FA57001CC5B6 /* NSDecimalNumber_Extensions.m in Sources */,
+				27167F3813C4FA57001CC5B6 /* NSError_Extensions.m in Sources */,
+				27167F3913C4FA57001CC5B6 /* NSFileManager_Extensions.m in Sources */,
+				27167F3A13C4FA57001CC5B6 /* NSIndexPath_Extensions.m in Sources */,
+				27167F3B13C4FA57001CC5B6 /* NSOperation_DebugExtensions.m in Sources */,
+				27167F3C13C4FA57001CC5B6 /* NSOperationQueue_Extensions.m in Sources */,
+				27167F3D13C4FA57001CC5B6 /* NSScanner_Extensions.m in Sources */,
+				27167F3E13C4FA57001CC5B6 /* NSScanner_HTMLExtensions.m in Sources */,
+				27167F3F13C4FA57001CC5B6 /* NSString_Extensions.m in Sources */,
+				27167F4013C4FA57001CC5B6 /* NSURL_DataExtensions.m in Sources */,
+				27167F4113C4FA57001CC5B6 /* NSURL_Extensions.m in Sources */,
+				27167F4213C4FA57001CC5B6 /* NSURLResponse_Extensions.m in Sources */,
+				27167F4313C4FA57001CC5B6 /* NSValue_Extensions.m in Sources */,
+				27167F4413C4FA57001CC5B6 /* CInvocationGrabber.m in Sources */,
+				27167F4513C4FA57001CC5B6 /* NSObject_InvocationGrabberExtensions.m in Sources */,
+				27167F4613C4FA57001CC5B6 /* CBundleResourceURLProtocol.m in Sources */,
+				27167F4713C4FA57001CC5B6 /* CCommaArrayTransformer.m in Sources */,
+				27167F4813C4FA57001CC5B6 /* CFloatTransformer.m in Sources */,
+				27167F4913C4FA57001CC5B6 /* CHumanDateFormatter.m in Sources */,
+				27167F4A13C4FA57001CC5B6 /* CNumberToStringValueTransformer.m in Sources */,
+				27167F4B13C4FA57001CC5B6 /* NewItemViewController.m in Sources */,
+				27167F4C13C4FA57001CC5B6 /* DatabaseManager.m in Sources */,
+				27167F4D13C4FA57001CC5B6 /* CCouchDBAttachment.m in Sources */,
+				27167F4E13C4FA57001CC5B6 /* CCouchDBChangeSet.m in Sources */,
+				27167F4F13C4FA57001CC5B6 /* CCouchDBDatabase.m in Sources */,
+				27167F5013C4FA57001CC5B6 /* CCouchDBDesignDocument.m in Sources */,
+				27167F5113C4FA57001CC5B6 /* CCouchDBDocument.m in Sources */,
+				27167F5213C4FA57001CC5B6 /* CCouchDBServer.m in Sources */,
+				27167F5313C4FA57001CC5B6 /* CCouchDBSession.m in Sources */,
+				27167F5413C4FA57001CC5B6 /* CCouchDBURLOperation.m in Sources */,
+				27167F5513C4FA57001CC5B6 /* CouchDBClientConstants.m in Sources */,
+				27167F5613C4FA57001CC5B6 /* NSError_CouchDBExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		035638AD135001DD00D2AF03 /* Debug */ = {
+		27167F5F13C4FA57001CC5B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
 				CODE_SIGN_ENTITLEMENTS = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -814,77 +630,25 @@
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(SRCROOT)/../DerivedData/Couchbase/Build/Products/Debug-iphoneos\"",
 				);
-				PRODUCT_NAME = "CouchDemo-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				VALID_ARCHS = i386;
+				PRODUCT_NAME = CouchDemo;
 			};
 			name = Debug;
 		};
-		035638AF135001DD00D2AF03 /* Release */ = {
+		27167F6013C4FA57001CC5B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = i386;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
 				INFOPLIST_FILE = "CouchDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(SRCROOT)/../DerivedData/Couchbase/Build/Products/Debug-iphoneos\"",
 				);
-				PRODUCT_NAME = "CouchDemo-iphonesimulator";
-				SUPPORTED_PLATFORMS = iphonesimulator;
+				PRODUCT_NAME = CouchDemo;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = i386;
-			};
-			name = Release;
-		};
-		1D6058940D05DD3E006BFB54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				CODE_SIGN_ENTITLEMENTS = "";
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
-				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
-				);
-				PRODUCT_NAME = "CouchDemo-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALID_ARCHS = armv6;
-			};
-			name = Debug;
-		};
-		1D6058950D05DD3E006BFB54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = CouchDemo_Prefix.pch;
-				INFOPLIST_FILE = "CouchDemo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
-				);
-				PRODUCT_NAME = "CouchDemo-iphoneos";
-				SUPPORTED_PLATFORMS = iphoneos;
-				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = armv6;
 			};
 			name = Release;
 		};
@@ -892,15 +656,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../DerivedData/Couchbase/Build/Products/Debug-universal/",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PREBINDING = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+				);
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
@@ -910,17 +680,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"../DerivedData/Couchbase/Build/Products/Debug-universal/",
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/Vendor/TouchJSON/Source\"/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/gcc/arm-apple-darwin10/4.0.1\"",
+					"\"$(BUILT_PRODUCTS_DIR)\"",
+				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -928,20 +704,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035638AC135001DD00D2AF03 /* Build configuration list for PBXNativeTarget "CouchDemo-iphonesimulator" */ = {
+		27167F5E13C4FA57001CC5B6 /* Build configuration list for PBXNativeTarget "CouchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				035638AD135001DD00D2AF03 /* Debug */,
-				035638AF135001DD00D2AF03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CouchDemo-iphoneos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D6058940D05DD3E006BFB54 /* Debug */,
-				1D6058950D05DD3E006BFB54 /* Release */,
+				27167F5F13C4FA57001CC5B6 /* Debug */,
+				27167F6013C4FA57001CC5B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

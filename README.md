@@ -10,7 +10,7 @@ What this means for you:
 
 ### Beta Release
 
-If you just want to get started, jump to **Building the Demo App**. We've recently moved to Xcode 4, so for best results you should be on Xcode 4 also.
+If you just want to get started, jump to **Building the Demo App**.
 
 The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
 
@@ -30,9 +30,9 @@ If you have questions or get stuck or just want to say hi, email <mobile@couchba
 For details on how to use Mobile Couchbase in your own apps see [doc/using_mobile_couchbase.md](https://github.com/couchbaselabs/iOS-Couchbase/blob/master/doc/using_mobile_couchbase.md)
 
 
-## Building the Demo App
+## Building The Framework And Demo App
 
-The following instructions can be used to build Mobile Couchbase for devices and simulators, using Xcode 4.
+The following instructions can be used to build Mobile Couchbase for devices and simulators, using Xcode 4. (It is possible the projects might still work with Xcode 3, but we're not testing or supporting this anymore. It's difficult enough to get all the moving parts to mesh together in one version of Xcode at a time!)
 
 ### Get the main repository
 
@@ -48,17 +48,31 @@ The following instructions can be used to build Mobile Couchbase for devices and
 
     open Couchbase.xcworkspace
 
-### To build and run the Demo App in the simulator:
+### First, build the framework
 
-* Select "CouchDemo-iphonesimulator | iPhone 4.3 Simulator" from the popup
+* Select "CouchBase.framework" from the scheme popup in the toolbar (it doesn't matter which destination device/simulator you pick)
+* Select "Build" from the "Product" menu (Cmd-B)
+
+The framework will be created at
+
+    DerivedData/Couchbase/Build/Products/Release-universal/Couchbase.framework
+
+### To build and run the included Demo App in the simulator:
+
+* First build the framework if you haven't already (the demo app target's dependencies won't correctly build the framework)
+* Select "CouchDemo-iphonesimulator | Simulator" from the scheme popup in the toolbar (choosing the appropriate simulator)
 * Click the Run button
 
-### To build and run the Demo App on a device:
+### To build and run the included Demo App on a device:
 
+* First build the framework if you haven't already (the demo app target's dependencies won't correctly build the framework)
 * Make sure a properly provisioned device is attached
-* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the popup
+* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the scheme popup in the toolbar
 * Click the Run button
 
+### To add the framework to your existing Xcode project
+
+_TBD_
 
 ## License
 

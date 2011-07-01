@@ -25,9 +25,51 @@
 -(void)couchbaseDidStart:(NSURL *)serverURL;
 @end
 
-@interface Couchbase : NSObject {
+
+/** Manages an embedded instance of CouchDB that runs in a background thread. */
+@interface Couchbase : NSObject
+{
+    id<CouchbaseDelegate> _delegate;
+    CFAbsoluteTime _timeStarted;
+    NSString* _documentsDirectory;
+    NSString* _bundlePath;
+    NSURL* _serverURL;
+    NSError* _error;
+    pthread_t _erlangThread;
 }
 
-+ (void)startCouchbase:(id<CouchbaseDelegate>)delegate;
+/** Convenience to instantiate and start a new instance. */
++ (Couchbase*) startCouchbase: (id<CouchbaseDelegate>)delegate;
+
+/** Initializes the instance. */
+- (id) init;
+
+/** Initializes the instance with a nonstandard CouchDB bundle location. */
+- (id) initWithBundlePath: (NSString*)bundlePath;
+
+/** The delegate object, which will be notified when the server starts. */
+@property (assign) id<CouchbaseDelegate> delegate;
+
+/** The directory where CouchDB writes its log files. */
+@property (readonly) NSString* logDirectory;
+
+/** The directory where CouchDB stores its database files. */
+@property (readonly) NSString* databaseDirectory;
+
+/** Copies a database file into the databaseDirectory if no such file exists there already.
+    Call this before -start, to set up initial contents of one or more databases on first run. */
+- (BOOL) installDefaultDatabase: (NSString*)databasePath;
+
+/** Starts the server, asynchronously. The delegate will be called when it's ready.
+    @return  YES if the server is starting, NO if it failed to start. */
+- (BOOL) start;
+
+/** The HTTP URL the server is listening on.
+    Will be nil until the server has finished starting up, some time after -start is called.
+    This property is KV-observable, so an alternative to setting a delegate is to observe this property and wait for it to change to non-nil (although this will not detect if the server fails to start up.) */
+@property (readonly, retain) NSURL* serverURL;
+
+/** If the server fails to start up, this will be set to a description of the error. */
+@property (readonly, retain) NSError* error;
 
 @end
