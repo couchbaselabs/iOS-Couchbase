@@ -2,10 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Demo/CouchDemo.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Demo/Vendor/TouchJSON/Support/TouchJSON-iOS.xcodeproj">
+      location = "group:EmptyApp/Couchbase Empty App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MobileCouchbase/Couchbase.xcodeproj">
