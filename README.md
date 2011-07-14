@@ -10,7 +10,7 @@ What this means for you:
 
 ### Beta Release
 
-If you just want to get started, jump to **Building the Demo App**.
+If you just want to get started, jump to **Building the Framework**.
 
 The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
 
@@ -30,7 +30,7 @@ If you have questions or get stuck or just want to say hi, email <mobile@couchba
 For details on how to use Mobile Couchbase in your own apps see [doc/using_mobile_couchbase.md](https://github.com/couchbaselabs/iOS-Couchbase/blob/master/doc/using_mobile_couchbase.md)
 
 
-## Building The Framework And Demo App
+## Building The Framework
 
 The following instructions can be used to build Mobile Couchbase for devices and simulators, using Xcode 4. (It is possible the projects might still work with Xcode 3, but we're not testing or supporting this anymore. It's difficult enough to get all the moving parts to mesh together in one version of Xcode at a time!)
 
@@ -48,31 +48,41 @@ The following instructions can be used to build Mobile Couchbase for devices and
 
     open Couchbase.xcworkspace
 
-### First, build the framework
+### Build the framework
 
-* Select "CouchBase.framework" from the scheme popup in the toolbar (it doesn't matter which destination device/simulator you pick)
+* Select "CouchBase.framework" from the scheme popup in the toolbar (it doesn't matter whether you pick a device or simulator destination)
 * Select "Build" from the "Product" menu (Cmd-B)
 
 The framework will be created at
 
     DerivedData/Couchbase/Build/Products/Release-universal/Couchbase.framework
 
-### To build and run the included Demo App in the simulator:
+### Sanity Check: Run The Empty App
 
-* First build the framework if you haven't already (the demo app target's dependencies won't correctly build the framework)
-* Select "CouchDemo-iphonesimulator | Simulator" from the scheme popup in the toolbar (choosing the appropriate simulator)
+* First build the framework if you haven't already (the app target's dependencies won't correctly build the framework)
+* Select "Empty App" from the scheme popup in the toolbar (choosing the appropriate destination, either device or simulator)
 * Click the Run button
 
-### To build and run the included Demo App on a device:
+The empty app, as the name implies, doesn't actually do anything. It's just an integration test to make sure CouchDB can initialize and run. If everything goes correctly, the last line logged to the Xcode console should end with "Everything works!". Otherwise the app should log an error message and exit.
 
-* First build the framework if you haven't already (the demo app target's dependencies won't correctly build the framework)
-* Make sure a properly provisioned device is attached
-* Select "CouchDemo-iphoneos | DeviceName(osversion)" from the scheme popup in the toolbar
-* Click the Run button
+## Using The Framework In Your Xcode Projects
 
-### To add the framework to your existing Xcode project
+0. Open your Xcode project.
+1. Drag the Couchbase.framework you built previously into the “Frameworks” section of the file list in your project window.
+2. Open your target build settings, find the “Search Paths” group, and double-click “Framework Search Paths”.
+3. Add an entry with the path of the parent directory of the framework; in our example, “$(SRCROOT)/Frameworks”.
+4. If your project doesn't already contain any C++ code, you'll need to add the C++ library: Go to the target's Build Phases, open "Link Binary With Libraries", click the "+" button, and add "libstdc++.dylib".
+5. Go to the target's Build Phases and add a new Run Script phase.
+6. Paste the following into the script content of the new phase. (If you put the Couchbase framework elsewhere, update the path in the 2nd argument to ‘rsync’ accordingly.)
 
-_TBD_
+_Important: The `rsync` command below is a single long line. Do not put a newline in the middle!_
+
+    # The 'CouchDB' subfolder of the framework contains Erlang code and
+    # other resources needed at runtime. Copy it into the app bundle:
+    rsync -a "${SRCROOT}/Frameworks/Couchbase.framework/CouchDB" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}”
+
+That’s it. Of course you’ll still need to call [Couchbase start:] when the app launches, as before. (See DemoAppDelegate.m in the SDK sources.)
+
 
 ## License
 
