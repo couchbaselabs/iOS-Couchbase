@@ -77,11 +77,11 @@ The empty app, as the name implies, doesn't actually do anything. It's just an i
 
 _Important: The `rsync` command below is a single long line. Do not put a newline in the middle!_
 
-    # The 'CouchDB' subfolder of the framework contains Erlang code and
-    # other resources needed at runtime. Copy it into the app bundle:
-    rsync -a "${SRCROOT}/Frameworks/Couchbase.framework/CouchDB" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}”
+    # The 'CouchbaseResources' subfolder of the framework contains Erlang code
+    # and other resources needed at runtime. Copy it into the app bundle:
+    rsync -a "${SRCROOT}/Frameworks/Couchbase.framework/CouchbaseResources" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}”
 
-That’s it. Of course you’ll still need to call [Couchbase start:] when the app launches, as before. (See DemoAppDelegate.m in the SDK sources.)
+That’s it for the project setup. In your application code, you’ll need to start the CouchbaseEmbeddedServer object at launch time. (See CouchbaseEmbeddedServer.h, and see EmptyAppDelegate.m for an example of how to call it.)
 
 
 ## License

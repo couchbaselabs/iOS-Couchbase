@@ -27,7 +27,7 @@
 
 
 /** Manages an embedded instance of CouchDB that runs in a background thread. */
-@interface Couchbase : NSObject
+@interface CouchbaseEmbeddedServer : NSObject
 {
     id<CouchbaseDelegate> _delegate;
     CFAbsoluteTime _timeStarted;
@@ -39,12 +39,14 @@
 }
 
 /** Convenience to instantiate and start a new instance. */
-+ (Couchbase*) startCouchbase: (id<CouchbaseDelegate>)delegate;
++ (CouchbaseEmbeddedServer*) startCouchbase: (id<CouchbaseDelegate>)delegate;
 
 /** Initializes the instance. */
 - (id) init;
 
-/** Initializes the instance with a nonstandard CouchDB bundle location. */
+/** Initializes the instance with a nonstandard location for the runtime resources.
+    (The default location is Resources/CouchbaseResources, but some application frameworks
+    require resources to go elsewhere, so in that case you might need to use a custom path.) */
 - (id) initWithBundlePath: (NSString*)bundlePath;
 
 /** The delegate object, which will be notified when the server starts. */

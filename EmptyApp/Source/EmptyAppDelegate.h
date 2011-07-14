@@ -1,5 +1,5 @@
 //
-//  Couchbase_Empty_AppAppDelegate.h
+//  EmptyAppDelegate.h
 //  Couchbase Empty App
 //
 //  Created by Jens Alfke on 7/8/11.
@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <Couchbase/Couchbase.h>
+#import <Couchbase/CouchbaseEmbeddedServer.h>
 
-@interface Couchbase_Empty_AppAppDelegate : UIResponder <UIApplicationDelegate, CouchbaseDelegate>
+@interface EmptyAppDelegate : UIResponder <UIApplicationDelegate, CouchbaseDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

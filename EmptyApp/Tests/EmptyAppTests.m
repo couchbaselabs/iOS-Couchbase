@@ -9,7 +9,7 @@
 #import "Couchbase_Empty_AppTests.h"
 #import <Couchbase/Couchbase.h>
 
-extern Couchbase* sCouchbase;  // Defined in EmptyAppDelegate.m
+extern CouchbaseEmbeddedServer* sCouchbase;  // Defined in EmptyAppDelegate.m
 
 @implementation Couchbase_Empty_AppTests
 

@@ -17,7 +17,7 @@
 // License for the specific language governing permissions and limitations under
 // the License.
 
-#import "Couchbase.h"
+#import "CouchbaseEmbeddedServer.h"
 
 #include <pthread.h>
 #include <stdlib.h>
@@ -32,7 +32,7 @@ void erl_start(int, char**);
 static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for CouchDB to start
 
 
-@interface Couchbase ()
+@interface CouchbaseEmbeddedServer ()
 @property (readwrite, retain) NSURL* serverURL;
 @property (readwrite, retain) NSError* error;
 - (BOOL)createDir:(NSString*)dirName;
@@ -42,11 +42,11 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 @end
 
 
-@implementation Couchbase
+@implementation CouchbaseEmbeddedServer
 
 
-+ (Couchbase*) startCouchbase: (id<CouchbaseDelegate>)delegate {
-    static Couchbase* sCouchbase;
++ (CouchbaseEmbeddedServer*) startCouchbase: (id<CouchbaseDelegate>)delegate {
+    static CouchbaseEmbeddedServer* sCouchbase;
     NSAssert(!sCouchbase, @"+startCouchbase has already been called");
 
     sCouchbase = [[self alloc] init];
@@ -73,8 +73,8 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 
 
 - (id)init {
-    NSString* bundlePath = [[NSBundle mainBundle] pathForResource:@"CouchDB" ofType:nil];
-    NSAssert(bundlePath, @"Couldn't find CouchDB bundle in app's Resources directory");
+    NSString* bundlePath = [[NSBundle mainBundle] pathForResource:@"CouchbaseResources" ofType:nil];
+    NSAssert(bundlePath, @"Couldn't find CouchbaseResources bundle in app's Resources directory");
     return [self initWithBundlePath: bundlePath];
 }
 

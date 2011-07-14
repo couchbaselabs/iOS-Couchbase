@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27167C5C13C4DB53001CC5B6 /* Couchbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27167C5E13C4DB53001CC5B6 /* Couchbase.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* Couchbase.m */; };
+		27167C5C13C4DB53001CC5B6 /* CouchbaseEmbeddedServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27167C5E13C4DB53001CC5B6 /* CouchbaseEmbeddedServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */; };
 		27167C6213C4DB53001CC5B6 /* libcrypto-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */; };
 		27167C6313C4DB53001CC5B6 /* libssl-iphonesimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */; };
 		27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
 		27167C6C13C4E002001CC5B6 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
 		27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECB13C4E644001CC5B6 /* libiErl14.a */; };
 		27167ECE13C4E64B001CC5B6 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECD13C4E64B001CC5B6 /* libiMonkey.a */; };
-		273A733613BD473D0078870D /* Couchbase.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* Couchbase.h */; };
+		273A733613BD473D0078870D /* CouchbaseEmbeddedServer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */; };
 		273A734013BD4DE90078870D /* erlang in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
 		273A734213BD4DE90078870D /* default.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		273A734313BD4DE90078870D /* icouch.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
@@ -38,14 +38,14 @@
 			dstPath = Headers;
 			dstSubfolderSpec = 1;
 			files = (
-				273A733613BD473D0078870D /* Couchbase.h in CopyFiles */,
+				273A733613BD473D0078870D /* CouchbaseEmbeddedServer.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		273A733F13BD4DDC0078870D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = CouchDB;
+			dstPath = CouchbaseResources;
 			dstSubfolderSpec = 1;
 			files = (
 				273A734013BD4DE90078870D /* erlang in CopyFiles */,
@@ -69,8 +69,8 @@
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
 		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
-		79C3C6F4131F011A00C8B96D /* Couchbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Couchbase.h; sourceTree = "<group>"; };
-		79C3C6F5131F011A00C8B96D /* Couchbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Couchbase.m; sourceTree = "<group>"; };
+		79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchbaseEmbeddedServer.h; sourceTree = "<group>"; };
+		79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchbaseEmbeddedServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +93,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				79C3C6F4131F011A00C8B96D /* Couchbase.h */,
-				79C3C6F5131F011A00C8B96D /* Couchbase.m */,
+				79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */,
+				79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27167C5C13C4DB53001CC5B6 /* Couchbase.h in Headers */,
+				27167C5C13C4DB53001CC5B6 /* CouchbaseEmbeddedServer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27167C5E13C4DB53001CC5B6 /* Couchbase.m in Sources */,
+				27167C5E13C4DB53001CC5B6 /* CouchbaseEmbeddedServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

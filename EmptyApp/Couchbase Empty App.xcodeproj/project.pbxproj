@@ -43,7 +43,7 @@
 		27A3ACF313C78BD9008CE9F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27A3ACF513C78BD9008CE9F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		27A3ACF713C78BD9008CE9F0 /* Couchbase Empty App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Couchbase Empty App-Prefix.pch"; sourceTree = "<group>"; };
-		27A3ACF813C78BD9008CE9F0 /* EmptyAppDelegate.h */ = {isa = PBXFileReference; path = EmptyAppDelegate.h; sourceTree = "<group>"; };
+		27A3ACF813C78BD9008CE9F0 /* EmptyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyAppDelegate.h; sourceTree = "<group>"; };
 		27A3ACF913C78BD9008CE9F0 /* EmptyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAppDelegate.m; sourceTree = "<group>"; };
 		27A3AD0013C78BD9008CE9F0 /* Couchbase Empty AppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Couchbase Empty AppTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A3AD0113C78BD9008CE9F0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -88,7 +88,6 @@
 				27A3ACEF13C78BD9008CE9F0 /* Source */,
 				27A3AD0813C78BD9008CE9F0 /* Tests */,
 				27A3ACE813C78BD9008CE9F0 /* Frameworks */,
-				27A3AD1C13C78DAC008CE9F0 /* libstdc++.dylib */,
 				27A3ACE613C78BD9008CE9F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,6 +104,7 @@
 		27A3ACE813C78BD9008CE9F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27A3AD1C13C78DAC008CE9F0 /* libstdc++.dylib */,
 				27A3AD1A13C78C32008CE9F0 /* Couchbase.framework */,
 				27A3ACE913C78BD9008CE9F0 /* UIKit.framework */,
 				27A3ACEB13C78BD9008CE9F0 /* Foundation.framework */,
@@ -164,7 +164,7 @@
 				27A3ACE113C78BD9008CE9F0 /* Sources */,
 				27A3ACE213C78BD9008CE9F0 /* Frameworks */,
 				27A3ACE313C78BD9008CE9F0 /* Resources */,
-				27A3AD1F13C78DF4008CE9F0 /* Copy CouchDB */,
+				27A3AD1F13C78DF4008CE9F0 /* Copy CouchbaseResources */,
 			);
 			buildRules = (
 			);
@@ -254,19 +254,19 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		27A3AD1F13C78DF4008CE9F0 /* Copy CouchDB */ = {
+		27A3AD1F13C78DF4008CE9F0 /* Copy CouchbaseResources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy CouchDB";
+			name = "Copy CouchbaseResources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The 'CouchDB' subfolder of the framework contains Erlang code and other resources needed at runtime. Copy it into the app bundle:\nrsync -a \"${TARGET_BUILD_DIR}/../Debug-universal/Couchbase.framework/CouchDB\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+			shellScript = "# The 'CouchbaseResources' subfolder of the framework contains Erlang code and other resources needed at runtime. Copy it into the app bundle:\nrsync -a \"${TARGET_BUILD_DIR}/../Debug-universal/Couchbase.framework/CouchbaseResources\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

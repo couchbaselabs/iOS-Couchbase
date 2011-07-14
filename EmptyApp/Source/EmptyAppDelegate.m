@@ -1,5 +1,5 @@
 //
-//  Couchbase_Empty_AppAppDelegate.m
+//  EmptyAppDelegate.m
 //  Couchbase Empty App
 //
 //  Created by Jens Alfke on 7/8/11.
@@ -8,7 +8,7 @@
 
 #import "EmptyAppDelegate.h"
 
-@implementation Couchbase_Empty_AppAppDelegate
+@implementation EmptyAppDelegate
 
 @synthesize window = _window;
 @synthesize serverURL = _serverURL;
@@ -20,7 +20,7 @@
     [self.window makeKeyAndVisible];
     
     // Initialize CouchDB:
-    Couchbase* cb = [[Couchbase alloc] init];
+    CouchbaseEmbeddedServer* cb = [[CouchbaseEmbeddedServer alloc] init];
     cb.delegate = self;
     NSAssert([cb start], @"Couchbase couldn't start! Error = %@", cb.error);
     return YES;
