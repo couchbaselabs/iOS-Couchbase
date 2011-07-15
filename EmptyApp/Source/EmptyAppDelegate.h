@@ -11,8 +11,8 @@
 
 @interface EmptyAppDelegate : UIResponder <UIApplicationDelegate, CouchbaseDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
 
-@property (retain) NSURL* serverURL;
+@property (retain, nonatomic) NSURL* serverURL;
 
 @end
