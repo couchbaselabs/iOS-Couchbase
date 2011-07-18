@@ -36,9 +36,9 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 @property (readwrite, retain) NSURL* serverURL;
 @property (readwrite, retain) NSError* error;
 - (BOOL)createDir:(NSString*)dirName;
+- (BOOL)createFile:(NSString*)path contents: (NSString*)contents;
 - (BOOL)installFileNamed:(NSString*)name fromDir:(NSString*)fromDir toDir:(NSString*)toDir;
 - (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir;
-- (BOOL)launchErlang;
 @end
 
 
@@ -82,13 +82,14 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 - (void)dealloc {
     [_documentsDirectory release];
     [_bundlePath release];
+    [_iniFilePath release];
     [_serverURL release];
     [_error release];
     [super dealloc];
 }
 
 
-@synthesize delegate = _delegate, serverURL = _serverURL, error = _error;
+@synthesize delegate = _delegate, iniFilePath=_iniFilePath, serverURL = _serverURL, error = _error;
 
 
 - (NSString*) logDirectory {
@@ -99,11 +100,15 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
     return [_documentsDirectory stringByAppendingPathComponent:@"couchdb"];
 }
 
+- (NSString*) localIniFilePath {
+    return [_documentsDirectory stringByAppendingPathComponent:@"couchdb_local.ini"];
+}
+
 
 - (BOOL) installDefaultDatabase: (NSString*)databasePath {
     NSString* dbDir = self.databaseDirectory;
     return [self createDir: dbDir] &&
-            [self installFileNamed: databasePath fromDir:nil toDir: dbDir];
+    [self installFileNamed: databasePath fromDir:nil toDir: dbDir];
 }
 
 
@@ -120,8 +125,7 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 
     if(![self createDir: self.logDirectory]
            || ![self createDir: self.databaseDirectory]
-           || ![self installFileNamed:@"icouch.ini" fromDir:_bundlePath
-                                toDir:_documentsDirectory]
+           || ![self createFile:self.localIniFilePath contents: @""]
            || ![self installFileNamed:@"erlang/emonk_mapred.js" fromDir:_bundlePath
                                 toDir:_documentsDirectory]
            || ![self installFileNamed:@"erlang/emonk_app.js" fromDir:_bundlePath
@@ -130,12 +134,14 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
     {
         return NO;
     }
+    
+    if (_iniFilePath && ![self installFileNamed:_iniFilePath fromDir:nil
+                                          toDir:_documentsDirectory])
+        return NO;
 
 	[[NSFileManager defaultManager] changeCurrentDirectoryPath: _documentsDirectory];    //FIX: Seems bad to do...
 
-    if (![self launchErlang])
-        return NO;
-
+    [self performSelectorInBackground: @selector(erlangThread) withObject: nil];
     [self performSelectorInBackground: @selector(waitForStart) withObject: nil];
     return YES;
 }
@@ -143,21 +149,29 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 
 #pragma mark LAUNCHING ERLANG:
 
-typedef struct {
-    char couchDBDirPath[1024];
-    char documentsDirPath[1024];
-} ErlangThreadParams;
-
-
 // Body of the pthread that runs Erlang (and CouchDB)
-static void* couchdb_erlang_thread(void* data) {
-    ErlangThreadParams* params = data;
-
-	char erl_root[1024];
-    sprintf(erl_root, "%s/erlang", params->couchDBDirPath);
-    
-    // Set some environment variables for Erlang:
+- (void)erlangThread {
+	char* erlang_args[12] = {"beam", "--", "-noinput",
+		"-eval", "application:start(couch).",
+		"-root", NULL, "-couch_ini"};
+    int erlang_argc;
     {
+        // Alloc some paths to pass in as args to erl_start:
+        NSAutoreleasePool* pool = [NSAutoreleasePool new];
+        char* erl_root = strdup([[_bundlePath stringByAppendingPathComponent:@"erlang"]
+                                            fileSystemRepresentation]);
+        erlang_args[6] = erl_root;
+        // Yes, there are up to four layers of .ini files: Default, iOS, app, local.
+        erlang_args[8] = strdup([[_bundlePath stringByAppendingPathComponent:@"default.ini"]
+                                            fileSystemRepresentation]);
+        erlang_args[9] = strdup([[_bundlePath stringByAppendingPathComponent:@"default_ios.ini"]
+                                            fileSystemRepresentation]);
+        erlang_argc = 10;
+        if (_iniFilePath)
+            erlang_args[erlang_argc++] = strdup([_iniFilePath fileSystemRepresentation]);
+        erlang_args[erlang_argc++] = strdup([self.localIniFilePath fileSystemRepresentation]);
+
+        // Set some environment variables for Erlang:
         char erl_bin[1024];
         char erl_inetrc[1024];
         sprintf(erl_bin, "%s/erts-5.7.5/bin", erl_root);
@@ -166,44 +180,11 @@ static void* couchdb_erlang_thread(void* data) {
         setenv("ROOTDIR", erl_root, 1);
         setenv("BINDIR", erl_bin, 1);
         setenv("ERL_INETRC", erl_inetrc, 1);
+        
+        [pool drain];
     }
 
-	char inipath[1024];
-	char inipath2[1024];
-	sprintf(inipath, "%s/default.ini", params->couchDBDirPath);
-	sprintf(inipath2, "%s/icouch.ini", params->documentsDirPath);
-
-    free(params);  // balances malloc call that created the pointer
-
-	char* erlang_args[10] = {"beam", "--", "-noinput",
-		"-eval", "application:start(couch).",
-		"-root", erl_root, "-couch_ini",
-		inipath, inipath2};
-	erl_start(10, erlang_args);     // This never returns (unless Erlang exits)
-	return NULL;
-}
-
-
-- (BOOL)launchErlang {
-    NSLog(@"Couchbase: Starting server thread...");
-
-    ErlangThreadParams* params = malloc(sizeof(ErlangThreadParams));
-    strlcpy(params->couchDBDirPath, [_bundlePath fileSystemRepresentation],
-            sizeof(params->couchDBDirPath));
-    strlcpy(params->documentsDirPath, [_documentsDirectory fileSystemRepresentation],
-            sizeof(params->documentsDirPath));
-
-	pthread_attr_t erlThreadAttr;
-	assert(!pthread_attr_init(&erlThreadAttr));
-	assert(!pthread_attr_setdetachstate(&erlThreadAttr, PTHREAD_CREATE_DETACHED));
-
-	int err = pthread_create(&_erlangThread, &erlThreadAttr, &couchdb_erlang_thread, params);
-    if (err) {
-        NSLog(@"Couchbase: Error starting Erlang pthread: %i", err);
-        self.error = [NSError errorWithDomain: NSPOSIXErrorDomain code: err userInfo: nil];
-        return NO;
-    }
-    return YES;
+	erl_start(erlang_argc, erlang_args);     // This never returns (unless Erlang exits)
 }
 
 
@@ -309,6 +290,22 @@ static void* couchdb_erlang_thread(void* data) {
         }
     } else if (!isDir) {
         NSLog(@"Couchbase: Error creating dir '%@': already exists as file", dirName);
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)createFile:(NSString*)path contents: (NSString*)contents {
+    BOOL isDir;
+	if(![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir]) {
+        NSError* error = nil;
+        if (![contents writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error: &error]) {
+			NSLog(@"Couchbase: Error creating file '%@': %@", path, error);
+            self.error = error;
+            return NO;
+        }
+    } else if (isDir) {
+        NSLog(@"Couchbase: Error creating file '%@': already exists as dir", path);
         return NO;
     }
     return YES;

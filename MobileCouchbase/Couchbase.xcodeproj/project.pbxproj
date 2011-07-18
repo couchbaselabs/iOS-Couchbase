@@ -18,7 +18,7 @@
 		273A733613BD473D0078870D /* CouchbaseEmbeddedServer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */; };
 		273A734013BD4DE90078870D /* erlang in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
 		273A734213BD4DE90078870D /* default.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
-		273A734313BD4DE90078870D /* icouch.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
+		27A74EAF13D4E64D00522F59 /* default_ios.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* default_ios.ini */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 			files = (
 				273A734013BD4DE90078870D /* erlang in CopyFiles */,
 				273A734213BD4DE90078870D /* default.ini in CopyFiles */,
-				273A734313BD4DE90078870D /* icouch.ini in CopyFiles */,
+				27A74EAF13D4E64D00522F59 /* default_ios.ini in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +67,7 @@
 		273A732813BD44670078870D /* Couchbase.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Couchbase.framework-Info.plist"; path = "Couchbase.framework/Couchbase.framework-Info.plist"; sourceTree = "<group>"; };
 		27A72C3413C502980096E41D /* libCouchbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCouchbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
-		3D4791CC12A19F6A00581D10 /* icouch.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = icouch.ini; sourceTree = "<group>"; };
+		3D4791CC12A19F6A00581D10 /* default_ios.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_ios.ini; sourceTree = "<group>"; };
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchbaseEmbeddedServer.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchbaseEmbeddedServer.m; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				273A732813BD44670078870D /* Couchbase.framework-Info.plist */,
 				3DEAEA6612A2D70B00EEBD22 /* erlang */,
 				3D4791CB12A19F6A00581D10 /* default.ini */,
-				3D4791CC12A19F6A00581D10 /* icouch.ini */,
+				3D4791CC12A19F6A00581D10 /* default_ios.ini */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
