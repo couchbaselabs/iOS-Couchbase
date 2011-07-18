@@ -176,7 +176,7 @@ static void* couchdb_erlang_thread(void* data) {
     free(params);  // balances malloc call that created the pointer
 
 	char* erlang_args[10] = {"beam", "--", "-noinput",
-		"-eval", "application:start(couch).",
+		"-eval", "R = application:start(couch), io:format(\"~w~n\",[R]).",
 		"-root", erl_root, "-couch_ini",
 		inipath, inipath2};
 	erl_start(10, erlang_args);     // This never returns (unless Erlang exits)
