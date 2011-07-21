@@ -73,13 +73,13 @@ The empty app, as the name implies, doesn't actually do anything. It's just an i
 3. Add an entry with the path of the parent directory of the framework; in our example, “$(SRCROOT)/Frameworks”.
 4. If your project doesn't already contain any C++ code, you'll need to add the C++ library: Go to the target's Build Phases, open "Link Binary With Libraries", click the "+" button, and add "libstdc++.dylib".
 5. Go to the target's Build Phases and add a new Run Script phase.
-6. Paste the following into the script content of the new phase. (If you put the Couchbase framework elsewhere, update the path in the 2nd argument to ‘rsync’ accordingly.)
+6. Paste the following into the script content of the new phase. (NOTE: If you put the Couchbase framework elsewhere, update the path in the 2nd argument to ‘rsync’ accordingly.)
 
 _Important: The `rsync` command below is a single long line. Do not put a newline in the middle!_
 
     # The 'CouchbaseResources' subfolder of the framework contains Erlang code
     # and other resources needed at runtime. Copy it into the app bundle:
-    rsync -a "${SRCROOT}/Frameworks/Couchbase.framework/CouchbaseResources" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}”
+    rsync -a "${SRCROOT}/Frameworks/Couchbase.framework/CouchbaseResources" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 
 That’s it for the project setup. In your application code, you’ll need to start the CouchbaseEmbeddedServer object at launch time. (See CouchbaseEmbeddedServer.h, and see EmptyAppDelegate.m for an example of how to call it.)
 
