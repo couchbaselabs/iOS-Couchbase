@@ -14,11 +14,11 @@
 		27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839481353ADE600D64D0D /* libcrypto-iphoneos.a */; };
 		27167C6C13C4E002001CC5B6 /* libssl-iphoneos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03E839491353ADE600D64D0D /* libssl-iphoneos.a */; };
 		27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECB13C4E644001CC5B6 /* libiErl14.a */; };
-		27167ECE13C4E64B001CC5B6 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECD13C4E64B001CC5B6 /* libiMonkey.a */; };
 		273A733613BD473D0078870D /* CouchbaseEmbeddedServer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */; };
 		273A734013BD4DE90078870D /* erlang in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
 		273A734213BD4DE90078870D /* default.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
 		273A734313BD4DE90078870D /* icouch.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* icouch.ini */; };
+		D912EEFE13DF7D0900E671FA /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D912EEFD13DF7D0900E671FA /* libiMonkey.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +71,7 @@
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchbaseEmbeddedServer.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchbaseEmbeddedServer.m; sourceTree = "<group>"; };
+		D912EEFD13DF7D0900E671FA /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiMonkey.a; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos/libiMonkey.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */,
-				27167ECE13C4E64B001CC5B6 /* libiMonkey.a in Frameworks */,
+				D912EEFE13DF7D0900E671FA /* libiMonkey.a in Frameworks */,
 				27167C6213C4DB53001CC5B6 /* libcrypto-iphonesimulator.a in Frameworks */,
 				27167C6313C4DB53001CC5B6 /* libssl-iphonesimulator.a in Frameworks */,
 				27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */,
@@ -111,6 +112,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D912EEFD13DF7D0900E671FA /* libiMonkey.a */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Libraries */,
@@ -310,12 +312,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos\"",
 				);
 				PRODUCT_NAME = Couchbase;
 			};
@@ -325,10 +333,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
 				COPY_PHASE_STRIP = YES;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = Couchbase;
@@ -340,6 +354,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-universal";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -366,6 +385,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)-universal";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -384,6 +408,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -401,6 +426,7 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = c99;
