@@ -37,7 +37,10 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 @property (readwrite, retain) NSError* error;
 - (BOOL)createDir:(NSString*)dirName;
 - (BOOL)createFile:(NSString*)path contents: (NSString*)contents;
-- (BOOL)installFileNamed:(NSString*)name fromDir:(NSString*)fromDir toDir:(NSString*)toDir;
+- (BOOL)installItemNamed:(NSString*)name
+                 fromDir:(NSString*)fromDir
+                   toDir:(NSString*)toDir
+                 replace:(BOOL)replace;
 - (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir;
 @end
 
@@ -108,7 +111,7 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 - (BOOL) installDefaultDatabase: (NSString*)databasePath {
     NSString* dbDir = self.databaseDirectory;
     return [self createDir: dbDir] &&
-    [self installFileNamed: databasePath fromDir:nil toDir: dbDir];
+    [self installItemNamed: databasePath fromDir:nil toDir: dbDir replace: NO];
 }
 
 
@@ -126,17 +129,20 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
     if(![self createDir: self.logDirectory]
            || ![self createDir: self.databaseDirectory]
            || ![self createFile:self.localIniFilePath contents: @""]
-           || ![self installFileNamed:@"erlang/emonk_mapred.js" fromDir:_bundlePath
-                                toDir:_documentsDirectory]
-           || ![self installFileNamed:@"erlang/emonk_app.js" fromDir:_bundlePath
-                                toDir:_documentsDirectory]
+           || ![self installItemNamed:@"erlang/emonk_mapred.js" fromDir:_bundlePath
+                                toDir:_documentsDirectory
+                              replace: YES]
+           || ![self installItemNamed:@"erlang/emonk_app.js" fromDir:_bundlePath
+                                toDir:_documentsDirectory
+                              replace: YES]
            || ![self deleteFile:@"couch.uri" fromDir:_documentsDirectory])
     {
         return NO;
     }
     
-    if (_iniFilePath && ![self installFileNamed:_iniFilePath fromDir:nil
-                                          toDir:_documentsDirectory])
+    if (_iniFilePath && ![self installItemNamed:_iniFilePath fromDir:nil
+                                          toDir:_documentsDirectory
+                                        replace: YES])
         return NO;
 
 	[[NSFileManager defaultManager] changeCurrentDirectoryPath: _documentsDirectory];    //FIX: Seems bad to do...
@@ -311,22 +317,49 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
     return YES;
 }
 
-- (BOOL)installFileNamed:(NSString*)name fromDir:(NSString*)fromDir toDir:(NSString*)toDir {
+// Copies the item if the destination does not exist; _or_ if it's outdated (if 'replace' is true)
+- (BOOL)installItemNamed:(NSString*)name
+                 fromDir:(NSString*)fromDir
+                   toDir:(NSString*)toDir
+                 replace:(BOOL)replace 
+{
 	NSString *source = fromDir ? [fromDir stringByAppendingPathComponent: name] : name;
 	NSString *target = [toDir stringByAppendingPathComponent: [name lastPathComponent]];
-
+    
+    NSError* error;
 	NSFileManager *fm= [NSFileManager defaultManager];
-    NSError* copyError = nil;
-	if(![fm fileExistsAtPath: target]) {
-        if ([fm copyItemAtPath: source toPath: target error: &copyError]) {
-            NSLog(@"Couchbase: Installed %@ into %@", [name lastPathComponent], target);
-        } else {
-            NSLog(@"Couchbase: Error copying %@: %@", name, copyError);
-            self.error = copyError;
+    NSDate* targetModDate = [[fm attributesOfItemAtPath: target error:NULL] fileModificationDate];
+    if (targetModDate) {
+        if (!replace)
+            return YES;     // Told not to overwrite, so return immediately
+        
+        NSDate* sourceModDate = [[fm attributesOfItemAtPath: source error:&error]
+                                        fileModificationDate];
+        if (!sourceModDate) {
+            NSLog(@"Couchbase: Unable to read %@: %@", source, error);
+            self.error = error;
+            return NO;
+        }
+        if ([targetModDate compare: sourceModDate] >= 0)
+            return YES;     // target exists and is at least as new as the source
+        
+        // Need to delete target first, or -copyItemAtPath will fail
+        if (![fm removeItemAtPath: target error: &error]) {
+            NSLog(@"Couchbase: Error installing to %@: %@", target, error);
+            self.error = error;
             return NO;
         }
     }
-    return YES;
+    
+    // OK, do the copy:
+    if ([fm copyItemAtPath: source toPath: target error: &error]) {
+        NSLog(@"Couchbase: Installed %@ into %@", [name lastPathComponent], target);
+        return YES;
+    } else {
+        NSLog(@"Couchbase: Error installing %@: %@", name, error);
+        self.error = error;
+        return NO;
+    }
 }
 
 - (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir {
