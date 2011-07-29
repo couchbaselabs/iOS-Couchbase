@@ -41,6 +41,9 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
                  fromDir:(NSString*)fromDir
                    toDir:(NSString*)toDir
                  replace:(BOOL)replace;
+- (BOOL)installTemplateNamed:(NSString*)name
+                     fromDir:(NSString*)fromDir
+                       toDir:(NSString*)toDir;
 - (BOOL)deleteFile:(NSString*)filename fromDir: (NSString*)fromDir;
 @end
 
@@ -129,12 +132,6 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
     if(![self createDir: self.logDirectory]
            || ![self createDir: self.databaseDirectory]
            || ![self createFile:self.localIniFilePath contents: @""]
-           || ![self installItemNamed:@"erlang/emonk_mapred.js" fromDir:_bundlePath
-                                toDir:_documentsDirectory
-                              replace: YES]
-           || ![self installItemNamed:@"erlang/emonk_app.js" fromDir:_bundlePath
-                                toDir:_documentsDirectory
-                              replace: YES]
            || ![self deleteFile:@"couch.uri" fromDir:_documentsDirectory])
     {
         return NO;
@@ -145,7 +142,11 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
                                         replace: YES])
         return NO;
 
-	[[NSFileManager defaultManager] changeCurrentDirectoryPath: _documentsDirectory];    //FIX: Seems bad to do...
+    // Customize & install default_ios.ini:
+    if (![self installTemplateNamed: @"default_ios.ini"
+                            fromDir: _bundlePath
+                              toDir: _documentsDirectory])
+        return NO;
 
     [self performSelectorInBackground: @selector(erlangThread) withObject: nil];
     [self performSelectorInBackground: @selector(waitForStart) withObject: nil];
@@ -170,8 +171,8 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
         // Yes, there are up to four layers of .ini files: Default, iOS, app, local.
         erlang_args[8] = strdup([[_bundlePath stringByAppendingPathComponent:@"default.ini"]
                                             fileSystemRepresentation]);
-        erlang_args[9] = strdup([[_bundlePath stringByAppendingPathComponent:@"default_ios.ini"]
-                                            fileSystemRepresentation]);
+        erlang_args[9] = strdup([[_documentsDirectory stringByAppendingPathComponent:
+                                            @"default_ios.ini"] fileSystemRepresentation]);
         erlang_argc = 10;
         if (_iniFilePath)
             erlang_args[erlang_argc++] = strdup([_iniFilePath fileSystemRepresentation]);
@@ -356,7 +357,7 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
         NSLog(@"Couchbase: Installed %@ into %@", [name lastPathComponent], target);
         return YES;
     } else {
-        NSLog(@"Couchbase: Error installing %@: %@", name, error);
+        NSLog(@"Couchbase: Error installing to %@: %@", target, error);
         self.error = error;
         return NO;
     }
@@ -374,6 +375,49 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
         }
 	}
     return YES;
+}
+
+- (BOOL)installTemplateNamed:(NSString*)name
+                     fromDir:(NSString*)fromDir
+                       toDir:(NSString*)toDir
+{
+	NSString *source = fromDir ? [fromDir stringByAppendingPathComponent: name] : name;
+	NSString *target = [toDir stringByAppendingPathComponent: [name lastPathComponent]];
+
+    // Get the template contents:
+    NSError* error;
+    NSMutableString* contents = [NSMutableString stringWithContentsOfFile: source
+                                                                 encoding:NSUTF8StringEncoding
+                                                                    error: &error];
+    if (!contents) {
+        NSLog(@"Couchbase: Error installing %@: %@", source, error);
+        self.error = error;
+        return NO;
+    }
+
+    [contents replaceOccurrencesOfString: @"$BUNDLEDIR"
+                              withString: _bundlePath
+                                 options: 0
+                                   range: NSMakeRange(0, contents.length)];
+    [contents replaceOccurrencesOfString: @"$INSTALLDIR"
+                              withString: _documentsDirectory
+                                 options: 0
+                                   range: NSMakeRange(0, contents.length)];
+    NSData* newData = [contents dataUsingEncoding: NSUTF8StringEncoding];
+
+    // Read the destination file:
+    NSData* oldData = [NSData dataWithContentsOfFile: target options: 0 error: nil];
+    if (oldData && [oldData isEqualToData: newData])
+        return YES;   // No need to copy
+
+    if ([newData writeToFile: target options: NSDataWritingFileProtectionNone error: &error]) {
+        NSLog(@"Couchbase: Installed customized %@ into %@", [name lastPathComponent], target);
+        return YES;
+    } else {
+        NSLog(@"Couchbase: Error installing to %@: %@", target, error);
+        self.error = error;
+        return NO;
+    }
 }
 
 @end
