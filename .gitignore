@@ -6,3 +6,4 @@
 xcuserdata/
 build
 DerivedData
+*.beam
