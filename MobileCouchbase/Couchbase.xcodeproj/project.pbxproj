@@ -17,8 +17,8 @@
 		273A733613BD473D0078870D /* CouchbaseEmbeddedServer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */; };
 		273A734013BD4DE90078870D /* erlang in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DEAEA6612A2D70B00EEBD22 /* erlang */; };
 		273A734213BD4DE90078870D /* default.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CB12A19F6A00581D10 /* default.ini */; };
+		278FE89713E74C7A009FEE49 /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27167ECD13C4E64B001CC5B6 /* libiMonkey.a */; };
 		27A74EAF13D4E64D00522F59 /* default_ios.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D4791CC12A19F6A00581D10 /* default_ios.ini */; };
-		D912EEFE13DF7D0900E671FA /* libiMonkey.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D912EEFD13DF7D0900E671FA /* libiMonkey.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		03E8394C1353ADF300D64D0D /* libcrypto-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libcrypto-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
 		03E8394D1353ADF300D64D0D /* libssl-iphonesimulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-iphonesimulator.a"; path = "Vendor/ios-openssl/lib/libssl-iphonesimulator.a"; sourceTree = SOURCE_ROOT; };
 		27167ECB13C4E644001CC5B6 /* libiErl14.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiErl14.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		27167ECD13C4E64B001CC5B6 /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiMonkey.a; path = "../DerivedXData/Couchbase/Build/Products/Release-iphoneos/libiMonkey.a"; sourceTree = "<group>"; };
+		27167ECD13C4E64B001CC5B6 /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiMonkey.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		273A731E13BD44670078870D /* Couchbase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		273A732813BD44670078870D /* Couchbase.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Couchbase.framework-Info.plist"; path = "Couchbase.framework/Couchbase.framework-Info.plist"; sourceTree = "<group>"; };
 		278FE82813E72604009FEE49 /* couchdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = couchdb; path = src/couchdb; sourceTree = "<group>"; };
@@ -77,7 +77,6 @@
 		3DEAEA6612A2D70B00EEBD22 /* erlang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = erlang; sourceTree = "<group>"; };
 		79C3C6F4131F011A00C8B96D /* CouchbaseEmbeddedServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchbaseEmbeddedServer.h; sourceTree = "<group>"; };
 		79C3C6F5131F011A00C8B96D /* CouchbaseEmbeddedServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchbaseEmbeddedServer.m; sourceTree = "<group>"; };
-		D912EEFD13DF7D0900E671FA /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiMonkey.a; path = "../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos/libiMonkey.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +85,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				27167ECC13C4E644001CC5B6 /* libiErl14.a in Frameworks */,
-				D912EEFE13DF7D0900E671FA /* libiMonkey.a in Frameworks */,
 				27167C6213C4DB53001CC5B6 /* libcrypto-iphonesimulator.a in Frameworks */,
 				27167C6313C4DB53001CC5B6 /* libssl-iphonesimulator.a in Frameworks */,
 				27167C6B13C4DFFF001CC5B6 /* libcrypto-iphoneos.a in Frameworks */,
 				27167C6C13C4E002001CC5B6 /* libssl-iphoneos.a in Frameworks */,
+				278FE89713E74C7A009FEE49 /* libiMonkey.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +131,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				D912EEFD13DF7D0900E671FA /* libiMonkey.a */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				278FE6AC13E70F75009FEE49 /* CouchDB */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -346,6 +344,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../DerivedXData/Couchbase/Build/Products/Release-iphoneos\"",
 				);
 				PRODUCT_NAME = Couchbase;
 			};
@@ -365,6 +364,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/ios-openssl/lib\"",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Couchbase-gyvkquztgxawwhdxxsubikvfarnp/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../DerivedXData/Couchbase/Build/Products/Release-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = Couchbase;
