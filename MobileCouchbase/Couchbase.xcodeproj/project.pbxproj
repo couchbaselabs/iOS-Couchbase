@@ -65,6 +65,12 @@
 		27167ECD13C4E64B001CC5B6 /* libiMonkey.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiMonkey.a; path = "../DerivedXData/Couchbase/Build/Products/Release-iphoneos/libiMonkey.a"; sourceTree = "<group>"; };
 		273A731E13BD44670078870D /* Couchbase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Couchbase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		273A732813BD44670078870D /* Couchbase.framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Couchbase.framework-Info.plist"; path = "Couchbase.framework/Couchbase.framework-Info.plist"; sourceTree = "<group>"; };
+		278FE82813E72604009FEE49 /* couchdb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = couchdb; path = src/couchdb; sourceTree = "<group>"; };
+		278FE82913E72604009FEE49 /* ejson */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ejson; path = src/ejson; sourceTree = "<group>"; };
+		278FE82A13E72604009FEE49 /* emonk */ = {isa = PBXFileReference; lastKnownFileType = folder; name = emonk; path = src/emonk; sourceTree = "<group>"; };
+		278FE82B13E72604009FEE49 /* erlang-oauth */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "erlang-oauth"; path = "src/erlang-oauth"; sourceTree = "<group>"; };
+		278FE82C13E72604009FEE49 /* ibrowse */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ibrowse; path = src/ibrowse; sourceTree = "<group>"; };
+		278FE82D13E72604009FEE49 /* mochiweb */ = {isa = PBXFileReference; lastKnownFileType = folder; name = mochiweb; path = src/mochiweb; sourceTree = "<group>"; };
 		27A72C3413C502980096E41D /* libCouchbase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCouchbase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4791CB12A19F6A00581D10 /* default.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.ini; sourceTree = "<group>"; };
 		3D4791CC12A19F6A00581D10 /* default_ios.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default_ios.ini; sourceTree = "<group>"; };
@@ -108,10 +114,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		278FE6AC13E70F75009FEE49 /* CouchDB */ = {
+			isa = PBXGroup;
+			children = (
+				278FE82813E72604009FEE49 /* couchdb */,
+				278FE82913E72604009FEE49 /* ejson */,
+				278FE82A13E72604009FEE49 /* emonk */,
+				278FE82B13E72604009FEE49 /* erlang-oauth */,
+				278FE82C13E72604009FEE49 /* ibrowse */,
+				278FE82D13E72604009FEE49 /* mochiweb */,
+			);
+			name = CouchDB;
+			path = Vendor/couchdb;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				278FE6AC13E70F75009FEE49 /* CouchDB */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Libraries */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -186,7 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 273A732F13BD44670078870D /* Build configuration list for PBXNativeTarget "Couchbase.framework" */;
 			buildPhases = (
-				D9B664DE13D48BE1008CD673 /* ShellScript */,
+				D9B664DE13D48BE1008CD673 /* Compile Erlang Libraries */,
 				273A731A13BD44670078870D /* Sources */,
 				273A733113BD44CF0078870D /* Headers */,
 				273A733513BD471A0078870D /* CopyFiles */,
@@ -263,13 +284,14 @@
 			shellScript = "cp \"${CONFIGURATION_BUILD_DIR}/libCouchbase.a\" \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"";
 			showEnvVarsInLog = 0;
 		};
-		D9B664DE13D48BE1008CD673 /* ShellScript */ = {
+		D9B664DE13D48BE1008CD673 /* Compile Erlang Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Compile Erlang Libraries";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

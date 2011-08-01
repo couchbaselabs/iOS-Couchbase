@@ -200,6 +200,7 @@
 		27A3ACDC13C78BD9008CE9F0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "CouchBase, Inc.";
 			};
 			buildConfigurationList = 27A3ACDF13C78BD9008CE9F0 /* Build configuration list for PBXProject "Couchbase Empty App" */;
@@ -384,6 +385,7 @@
 				INFOPLIST_FILE = "Source/Couchbase Empty App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Empty App";
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,11 +393,13 @@
 		27A3AD1613C78BD9008CE9F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Couchbase Empty App-Prefix.pch";
 				INFOPLIST_FILE = "Source/Couchbase Empty App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Empty App";
+				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

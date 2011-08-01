@@ -6,4 +6,9 @@
 xcuserdata/
 build
 DerivedData
-*.beam
+MobileCouchbase/erlang/lib/couch
+MobileCouchbase/erlang/lib/ejson
+MobileCouchbase/erlang/lib/emonk
+MobileCouchbase/erlang/lib/erlang-oauth
+MobileCouchbase/erlang/lib/ibrowse
+MobileCouchbase/erlang/lib/mochiweb
