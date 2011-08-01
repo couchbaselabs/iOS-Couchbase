@@ -8,31 +8,30 @@ What this means for you:
 * Your iOS apps can use Apache CouchDB's well-proven synchronization technology.
 * If you <3 CouchApps, you can deploy them as iOS apps.
 
-### Beta Release
+### Join us
 
-If you just want to get started, jump to **Building the Framework**.
+There is a [Google Group here for Mobile Couchbase][2]. Let's talk about how to optimize the Erlang build, what the best Cocoa APIs are for CouchDB, how to take advantage of replication on mobile devices. It'll be fun.
 
-The biggest thing we need help with is size optimization - currently a Release build adds about 15 MB to your application. We are targeting 5 MB for our initial round of optimizations. It can definitely go lower but that work might take longer.
+## Build Or Download?
 
-## Join us
+You have a choice: build the Couchbase framework from source, or [download a pre-compiled version][1]. **If you just want to _use_ Couchbase Mobile in your apps, you will probably want the pre-compiled version.** It will save you the trouble of having to check out this repository, acquire the prerequisites, configure and build. Download it [here][1], then skip to the section "Using The Framework In Your Xcode Projects".
 
-There is a [Google Group here for Mobile Couchbase](https://groups.google.com/group/mobile-couchbase). Let's talk about how to optimize the Erlang build, what the best Cocoa APIs are for CouchDB, how to take advantage of replication on mobile devices. It'll be fun.
-
-
-## Getting Started
-
-These instructions assume you are familiar with how to make an iPhone app because you've done it a lot already.
-
-If you have questions or get stuck or just want to say hi, email <mobile@couchbase.com> and let us know that you're interested in Couchbase on mobile.
-
-## Using Mobile Couchbase
-
-For details on how to use Mobile Couchbase in your own apps see [doc/using_mobile_couchbase.md](https://github.com/couchbaselabs/iOS-Couchbase/blob/master/doc/using_mobile_couchbase.md)
-
+But if you want to contribute to Couchbase Mobile itself, and don't mind getting your hands dirty with Erlang, SpiderMonkey, OpenSSL, fat static frameworks, armv6 vs. armv7 ... then read on.
 
 ## Building The Framework
 
 The following instructions can be used to build Mobile Couchbase for devices and simulators, using Xcode 4. (It is possible the projects might still work with Xcode 3, but we're not testing or supporting this anymore. It's difficult enough to get all the moving parts to mesh together in one version of Xcode at a time!)
+
+These instructions assume you are experienced with Xcode and iPhone development. If you have questions or get stuck, ask on the [Google group][2].
+
+### Install Erlang
+
+You will need to have the Erlang compiler installed on your Mac. The easiest way to do this is via the Homebrew package manager. (MacPorts also has Erlang, but it currently doesn't work correctly on Mac OS X 10.7.)
+
+1. If you haven't already, [install homebrew][3].
+2. Enter `sudo brew install erlang` at a shell.
+
+This may take a while to build.
 
 ### Get the main repository
 
@@ -50,8 +49,8 @@ The following instructions can be used to build Mobile Couchbase for devices and
 
 ### Build the framework
 
-* Select "CouchBase.framework" from the scheme popup in the toolbar (it doesn't matter whether you pick a device or simulator destination)
-* Select "Build" from the "Product" menu (Cmd-B)
+* Select "CouchBase.framework > iOS Device" from the scheme popup in the toolbar.
+* Select "Product > Build For > Build For Archiving" -- this will build an optimized version.
 
 The framework will be created at
 
@@ -67,13 +66,11 @@ The empty app, as the name implies, doesn't actually do anything. It's just an i
 
 ## Using The Framework In Your Xcode Projects
 
-0. Open your Xcode project.
-1. Drag the Couchbase.framework you built previously into the “Frameworks” section of the file list in your project window.
-2. Open your target build settings, find the “Search Paths” group, and double-click “Framework Search Paths”.
-3. Add an entry with the path of the parent directory of the framework; in our example, “$(SRCROOT)/Frameworks”.
-4. If your project doesn't already contain any C++ code, you'll need to add the C++ library: Go to the target's Build Phases, open "Link Binary With Libraries", click the "+" button, and add "libstdc++.dylib".
-5. Go to the target's Build Phases and add a new Run Script phase.
-6. Paste the following into the script content of the new phase. (NOTE: If you put the Couchbase framework elsewhere, update the path in the 2nd argument to ‘rsync’ accordingly.)
+1. Open your Xcode project.
+2. Drag the Couchbase.framework you built previously into the “Frameworks” section of the file list in your project window.
+3. If your project doesn't already contain any C++ code, you'll need to add the C++ library: Go to the target's Build Phases, open "Link Binary With Libraries", click the "+" button, and add "libstdc++.dylib".
+4. Go to the target's Build Phases and add a new Run Script phase.
+5. Paste the following into the script content of the new phase. (NOTE: If you put the Couchbase framework elsewhere, update the path in the 2nd argument to ‘rsync’ accordingly.)
 
 _Important: The `rsync` command below is a single long line. Do not put a newline in the middle!_
 
@@ -91,3 +88,7 @@ Portions under Apache, Erlang, and other licenses.
 The overall package is released under the Apache license, 2.0.
 
 Copyright 2011, Couchbase, Inc.
+
+[1]: https://github.com/downloads/couchbaselabs/iOS-Couchbase/iOS-Couchbase.zip
+[2]: https://groups.google.com/group/mobile-couchbase
+[3]: https://github.com/mxcl/homebrew
