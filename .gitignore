@@ -6,10 +6,3 @@
 xcuserdata/
 build
 DerivedData
-Framework/erlang/lib/couch
-Framework/erlang/lib/ejson
-Framework/erlang/lib/emonk
-Framework/erlang/lib/erlang-oauth
-Framework/erlang/lib/ibrowse
-Framework/erlang/lib/mochiweb
-Framework/erlang/lib/snappy
