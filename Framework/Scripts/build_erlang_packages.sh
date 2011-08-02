@@ -21,3 +21,8 @@ $COMPILE mochiweb "mochifmt.erl mochifmt_records.erl mochifmt_std.erl mochigloba
 $COMPILE ejson "ejson.erl mochijson2.erl mochinum.erl" "$ERLANG_DSTDIR/lib/ejson/ebin"
 $COMPILE snappy "snappy.erl" "$ERLANG_DSTDIR/lib/snappy/ebin"
 $COMPILE emonk/src "emonk.erl" "$ERLANG_DSTDIR/lib/emonk/ebin"
+
+# Strip debug info & symbols out of the .beam files -- this saves a LOT of disk space:
+echo "Stripping .beam files..."
+cd "${ERLANG_DSTDIR}"
+erl -noinput -eval 'erlang:display(beam_lib:strip_release("."))' -s init stop

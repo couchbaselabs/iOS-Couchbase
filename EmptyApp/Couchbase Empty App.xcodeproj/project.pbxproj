@@ -267,7 +267,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# The 'CouchbaseResources' subfolder of the framework contains Erlang code and other resources needed at runtime. Copy it into the app bundle:\nrsync -a \"${TARGET_BUILD_DIR}/../Debug-universal/Couchbase.framework/CouchbaseResources\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
+			shellScript = "# The 'CouchbaseResources' subfolder of the framework contains Erlang code and other resources needed at runtime. Copy it into the app bundle:\nrm -rf \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CouchbaseResources\"\nrsync -a \"${TARGET_BUILD_DIR}/../Debug-universal/Couchbase.framework/CouchbaseResources\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\"";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
