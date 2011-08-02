@@ -8,15 +8,15 @@
       location = "group:EmptyApp/Couchbase Empty App.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MobileCouchbase/Couchbase.xcodeproj">
+      location = "group:Framework/Couchbase.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MobileCouchbase/Vendor/iErl14/iErl14.xcodeproj">
+      location = "group:../vendor/iErl14/iErl14.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MobileCouchbase/Vendor/iMonkey/iMonkey.xcodeproj">
+      location = "group:../vendor/iMonkey/iMonkey.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MobileCouchbase/Vendor/ios-openssl/openssl.xcodeproj">
+      location = "group:../vendor/ios-openssl/openssl.xcodeproj">
    </FileRef>
 </Workspace>
