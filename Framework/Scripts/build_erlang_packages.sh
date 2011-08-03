@@ -5,6 +5,7 @@
 # The current directory is assumed to be the parent of Couchbase.xcodeproj.
 
 set -e  # Bail out if any command returns an error
+export PATH=$PATH:/usr/local/bin:/opt/local/bin  # Erlang is often installed in nonstandard places
 
 ERLANG_DSTDIR="${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/CouchbaseResources/erlang"
 COMPILE=Scripts/compile_erlang_dir.sh
