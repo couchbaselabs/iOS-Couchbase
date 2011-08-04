@@ -39,15 +39,15 @@
 		27A3ACE913C78BD9008CE9F0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		27A3ACEB13C78BD9008CE9F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27A3ACED13C78BD9008CE9F0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		27A3ACF113C78BD9008CE9F0 /* Couchbase Empty App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Couchbase Empty App-Info.plist"; sourceTree = "<group>"; };
+		27A3ACF113C78BD9008CE9F0 /* Empty App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Empty App-Info.plist"; sourceTree = "<group>"; };
 		27A3ACF313C78BD9008CE9F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27A3ACF513C78BD9008CE9F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		27A3ACF713C78BD9008CE9F0 /* Couchbase Empty App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Couchbase Empty App-Prefix.pch"; sourceTree = "<group>"; };
+		27A3ACF713C78BD9008CE9F0 /* Empty App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Empty App-Prefix.pch"; sourceTree = "<group>"; };
 		27A3ACF813C78BD9008CE9F0 /* EmptyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyAppDelegate.h; sourceTree = "<group>"; };
 		27A3ACF913C78BD9008CE9F0 /* EmptyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAppDelegate.m; sourceTree = "<group>"; };
-		27A3AD0013C78BD9008CE9F0 /* Couchbase Empty AppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Couchbase Empty AppTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A3AD0013C78BD9008CE9F0 /* Empty AppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Empty AppTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A3AD0113C78BD9008CE9F0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		27A3AD0A13C78BD9008CE9F0 /* Couchbase Empty AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Couchbase Empty AppTests-Info.plist"; sourceTree = "<group>"; };
+		27A3AD0A13C78BD9008CE9F0 /* Empty AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Empty AppTests-Info.plist"; sourceTree = "<group>"; };
 		27A3AD0C13C78BD9008CE9F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27A3AD0E13C78BD9008CE9F0 /* EmptyAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyAppTests.h; sourceTree = "<group>"; };
 		27A3AD1013C78BD9008CE9F0 /* EmptyAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyAppTests.m; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				27A3ACE513C78BD9008CE9F0 /* Empty App.app */,
-				27A3AD0013C78BD9008CE9F0 /* Couchbase Empty AppTests.octest */,
+				27A3AD0013C78BD9008CE9F0 /* Empty AppTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,10 +127,10 @@
 		27A3ACF013C78BD9008CE9F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				27A3ACF113C78BD9008CE9F0 /* Couchbase Empty App-Info.plist */,
+				27A3ACF113C78BD9008CE9F0 /* Empty App-Info.plist */,
 				27A3ACF213C78BD9008CE9F0 /* InfoPlist.strings */,
 				27A3ACF513C78BD9008CE9F0 /* main.m */,
-				27A3ACF713C78BD9008CE9F0 /* Couchbase Empty App-Prefix.pch */,
+				27A3ACF713C78BD9008CE9F0 /* Empty App-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,7 +148,7 @@
 		27A3AD0913C78BD9008CE9F0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				27A3AD0A13C78BD9008CE9F0 /* Couchbase Empty AppTests-Info.plist */,
+				27A3AD0A13C78BD9008CE9F0 /* Empty AppTests-Info.plist */,
 				27A3AD0B13C78BD9008CE9F0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27A3ACE413C78BD9008CE9F0 /* Couchbase Empty App */ = {
+		27A3ACE413C78BD9008CE9F0 /* Empty App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27A3AD1413C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Couchbase Empty App" */;
+			buildConfigurationList = 27A3AD1413C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Empty App" */;
 			buildPhases = (
 				27A3ACE113C78BD9008CE9F0 /* Sources */,
 				27A3ACE213C78BD9008CE9F0 /* Frameworks */,
@@ -170,14 +170,14 @@
 			);
 			dependencies = (
 			);
-			name = "Couchbase Empty App";
+			name = "Empty App";
 			productName = "Couchbase Empty App";
 			productReference = 27A3ACE513C78BD9008CE9F0 /* Empty App.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27A3ACFF13C78BD9008CE9F0 /* Couchbase Empty AppTests */ = {
+		27A3ACFF13C78BD9008CE9F0 /* Empty AppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27A3AD1713C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Couchbase Empty AppTests" */;
+			buildConfigurationList = 27A3AD1713C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Empty AppTests" */;
 			buildPhases = (
 				27A3ACFB13C78BD9008CE9F0 /* Sources */,
 				27A3ACFC13C78BD9008CE9F0 /* Frameworks */,
@@ -189,9 +189,9 @@
 			dependencies = (
 				27A3AD0713C78BD9008CE9F0 /* PBXTargetDependency */,
 			);
-			name = "Couchbase Empty AppTests";
+			name = "Empty AppTests";
 			productName = "Couchbase Empty AppTests";
-			productReference = 27A3AD0013C78BD9008CE9F0 /* Couchbase Empty AppTests.octest */;
+			productReference = 27A3AD0013C78BD9008CE9F0 /* Empty AppTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -203,7 +203,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "CouchBase, Inc.";
 			};
-			buildConfigurationList = 27A3ACDF13C78BD9008CE9F0 /* Build configuration list for PBXProject "Couchbase Empty App" */;
+			buildConfigurationList = 27A3ACDF13C78BD9008CE9F0 /* Build configuration list for PBXProject "Empty App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -215,8 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27A3ACE413C78BD9008CE9F0 /* Couchbase Empty App */,
-				27A3ACFF13C78BD9008CE9F0 /* Couchbase Empty AppTests */,
+				27A3ACE413C78BD9008CE9F0 /* Empty App */,
+				27A3ACFF13C78BD9008CE9F0 /* Empty AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -295,7 +295,7 @@
 /* Begin PBXTargetDependency section */
 		27A3AD0713C78BD9008CE9F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27A3ACE413C78BD9008CE9F0 /* Couchbase Empty App */;
+			target = 27A3ACE413C78BD9008CE9F0 /* Empty App */;
 			targetProxy = 27A3AD0613C78BD9008CE9F0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -335,7 +335,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Couchbase Empty App-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Empty App-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -345,8 +345,8 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -364,14 +364,14 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Couchbase Empty App-Prefix.pch";
+				GCC_PREFIX_HEADER = "Source/Empty App-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -381,8 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Couchbase Empty App-Prefix.pch";
-				INFOPLIST_FILE = "Source/Couchbase Empty App-Info.plist";
+				INFOPLIST_FILE = "Source/Empty App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Empty App";
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -395,8 +394,7 @@
 			buildSettings = {
 				DEPLOYMENT_POSTPROCESSING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Couchbase Empty App-Prefix.pch";
-				INFOPLIST_FILE = "Source/Couchbase Empty App-Info.plist";
+				INFOPLIST_FILE = "Source/Empty App-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "Empty App";
 				STRIP_INSTALLED_PRODUCT = YES;
@@ -407,13 +405,13 @@
 		27A3AD1813C78BD9008CE9F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Couchbase Empty App.app/Couchbase Empty App";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Empty App.app/Empty App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(TARGET_BUILD_DIR)/../Debug-universal\"",
 					"$(SDKROOT)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = "Tests/Couchbase Empty AppTests-Info.plist";
+				INFOPLIST_FILE = "Tests/Empty AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -423,13 +421,13 @@
 		27A3AD1913C78BD9008CE9F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Couchbase Empty App.app/Couchbase Empty App";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Empty App.app/Empty App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(TARGET_BUILD_DIR)/../Debug-universal\"",
 					"$(SDKROOT)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = "Tests/Couchbase Empty AppTests-Info.plist";
+				INFOPLIST_FILE = "Tests/Empty AppTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -439,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27A3ACDF13C78BD9008CE9F0 /* Build configuration list for PBXProject "Couchbase Empty App" */ = {
+		27A3ACDF13C78BD9008CE9F0 /* Build configuration list for PBXProject "Empty App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A3AD1213C78BD9008CE9F0 /* Debug */,
@@ -448,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27A3AD1413C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Couchbase Empty App" */ = {
+		27A3AD1413C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Empty App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A3AD1513C78BD9008CE9F0 /* Debug */,
@@ -457,7 +455,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27A3AD1713C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Couchbase Empty AppTests" */ = {
+		27A3AD1713C78BD9008CE9F0 /* Build configuration list for PBXNativeTarget "Empty AppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27A3AD1813C78BD9008CE9F0 /* Debug */,

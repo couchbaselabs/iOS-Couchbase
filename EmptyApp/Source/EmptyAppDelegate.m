@@ -12,6 +12,10 @@
 @implementation EmptyAppDelegate
 
 
+BOOL sUnitTesting;
+CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
+
+
 @synthesize window = _window;
 @synthesize serverURL = _serverURL;
 
@@ -26,6 +30,7 @@
     CouchbaseEmbeddedServer* cb = [[CouchbaseEmbeddedServer alloc] init];
     cb.delegate = self;
     NSAssert([cb start], @"Couchbase couldn't start! Error = %@", cb.error);
+    sCouchbase = cb;
     return YES;
 }
 
@@ -64,14 +69,15 @@
 	NSLog(@"CouchDB is Ready, go!");
     self.serverURL = serverURL;
     
-    [self send: @"GET" toPath: @"/" body: nil];
-    [self send: @"PUT" toPath: @"/testdb" body: nil];
-    [self send: @"GET" toPath: @"/testdb" body: nil];
-    [self send: @"POST" toPath: @"/testdb/" body: @"{\"txt\":\"foobar\"}"];
-    [self send: @"PUT" toPath: @"/testdb/doc1" body: @"{\"txt\":\"O HAI\"}"];
-    [self send: @"GET" toPath: @"/testdb/doc1" body: nil];
-    
-    NSLog(@"Everything works!");
+    if (!sUnitTesting) {
+        [self send: @"GET" toPath: @"/" body: nil];
+        [self send: @"PUT" toPath: @"/testdb" body: nil];
+        [self send: @"GET" toPath: @"/testdb" body: nil];
+        [self send: @"POST" toPath: @"/testdb/" body: @"{\"txt\":\"foobar\"}"];
+        [self send: @"PUT" toPath: @"/testdb/doc1" body: @"{\"txt\":\"O HAI\"}"];
+        [self send: @"GET" toPath: @"/testdb/doc1" body: nil];
+        NSLog(@"Everything works!");
+    }    
 }
 
 

@@ -5,7 +5,7 @@
       location = "group:README.md">
    </FileRef>
    <FileRef
-      location = "group:EmptyApp/Couchbase Empty App.xcodeproj">
+      location = "group:EmptyApp/Empty App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Framework/Couchbase.xcodeproj">

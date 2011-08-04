@@ -1,6 +1,6 @@
 //
-//  Couchbase_Empty_AppTests.h
-//  Couchbase Empty AppTests
+//  EmptyAppTests.h
+//  Couchbase Mobile
 //
 //  Created by Jens Alfke on 7/8/11.
 //  Copyright 2011 Couchbase, Inc. All rights reserved.
@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface Couchbase_Empty_AppTests : SenTestCase
+@interface EmptyAppTests : SenTestCase
 
 @end
