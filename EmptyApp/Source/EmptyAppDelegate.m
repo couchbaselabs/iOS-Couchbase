@@ -97,9 +97,82 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
         [self send: @"POST" toPath: @"/testdb/" body: @"{\"txt\":\"foobar\"}"];
         [self send: @"PUT" toPath: @"/testdb/doc1" body: @"{\"txt\":\"O HAI\"}"];
         [self send: @"GET" toPath: @"/testdb/doc1" body: nil];
+        
         NSLog(@"Everything works!");
-    }    
+        
+        [self replicationPerformance];
+        [self downloadPerformance];
+        [self replicationPerformanceTweets];
+        [self downloadPerformanceTweets];
+    }
 }
 
+- (void) replicationPerformance {
+    NSLog(@"Replication performance testing...");
+    [self send: @"PUT" toPath: @"/target" body: nil];
+    NSDate *date1 = [NSDate date];
+    [self send: @"POST" toPath: @"/_replicate" body: 
+     @"{\"source\":\"http://10.0.1.71:5984/dhl-filtered\", \"target\":\"target\"}"];
+    NSDate *date2 = [NSDate date];
+    NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"Pull replication took %lu seconds", (unsigned long)diff);    
+}
+
+- (void) downloadPerformance {
+    NSLog(@"Downloading equivalent file");
+    NSDate *date1 = [NSDate date];
+    NSURL* url = [NSURL URLWithString: @"http://10.0.1.71:5984/files/test/dhl-filtered.couch"];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: url];
+    request.HTTPMethod = @"GET";
+    NSURLResponse* response = nil;
+    NSError* error = nil;
+    NSData* responseBody = [NSURLConnection sendSynchronousRequest: request
+                                                 returningResponse: &response
+                                                             error: &error];
+    NSAssert(responseBody != nil && response != nil,
+             @"Request to <%@> failed: %@", url.absoluteString, error);
+    int statusCode = ((NSHTTPURLResponse*)response).statusCode;
+    NSAssert(statusCode < 300,
+             @"Request to <%@> failed: HTTP error %i", url.absoluteString, statusCode);
+    NSLog(@"Writing to disk");
+    [responseBody writeToFile: @"filename.couch" atomically:NO];
+    NSDate *date2 = [NSDate date];
+    NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"Download file took %lu seconds", (unsigned long)diff);
+}
+
+- (void) replicationPerformanceTweets {
+    NSLog(@"Replication performance testing Tweets...");
+    [self send: @"PUT" toPath: @"/target-tweets" body: nil];
+    NSDate *date1 = [NSDate date];
+    [self send: @"POST" toPath: @"/_replicate" body: 
+     @"{\"source\":\"http://10.0.1.71:5984/tweets\", \"target\":\"target-tweets\"}"];
+    NSDate *date2 = [NSDate date];
+    NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"Pull replication took %lu seconds", (unsigned long)diff);    
+}
+
+- (void) downloadPerformanceTweets {
+    NSLog(@"Downloading equivalent file Tweets");
+    NSDate *date1 = [NSDate date];
+    NSURL* url = [NSURL URLWithString: @"http://10.0.1.71:5984/files/test/tweets.couch"];
+    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: url];
+    request.HTTPMethod = @"GET";
+    NSURLResponse* response = nil;
+    NSError* error = nil;
+    NSData* responseBody = [NSURLConnection sendSynchronousRequest: request
+                                                 returningResponse: &response
+                                                             error: &error];
+    NSAssert(responseBody != nil && response != nil,
+             @"Request to <%@> failed: %@", url.absoluteString, error);
+    int statusCode = ((NSHTTPURLResponse*)response).statusCode;
+    NSAssert(statusCode < 300,
+             @"Request to <%@> failed: HTTP error %i", url.absoluteString, statusCode);
+    NSLog(@"Writing to disk");
+    [responseBody writeToFile: @"filenametweets.couch" atomically:NO];
+    NSDate *date2 = [NSDate date];
+    NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"Download file took %lu seconds", (unsigned long)diff);
+}
 
 @end
