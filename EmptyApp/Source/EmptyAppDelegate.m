@@ -81,12 +81,4 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
 }
 
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // In its current early state of development, Mobile Couchbase doesn't yet work properly when
-    // returning to the foreground. To work around this, quit instead of backgrounding:
-    exit(1);
-}
-
-
 @end
