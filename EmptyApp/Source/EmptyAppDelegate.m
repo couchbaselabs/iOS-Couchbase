@@ -112,7 +112,7 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
     [self send: @"PUT" toPath: @"/target" body: nil];
     NSDate *date1 = [NSDate date];
     [self send: @"POST" toPath: @"/_replicate" body: 
-     @"{\"source\":\"http://10.0.1.71:5984/dhl-filtered\", \"target\":\"target\"}"];
+     @"{\"source\":\"http://10.17.16.88:5984/dhl-filtered\", \"target\":\"target\"}"];
     NSDate *date2 = [NSDate date];
     NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
     NSLog(@"Pull replication took %lu seconds", (unsigned long)diff);    
@@ -121,7 +121,7 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
 - (void) downloadPerformance {
     NSLog(@"Downloading equivalent file");
     NSDate *date1 = [NSDate date];
-    NSURL* url = [NSURL URLWithString: @"http://10.0.1.71:5984/files/test/dhl-filtered.couch"];
+    NSURL* url = [NSURL URLWithString: @"http://10.17.16.88:5984/files/test/dhl-filtered.couch"];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: url];
     request.HTTPMethod = @"GET";
     NSURLResponse* response = nil;
@@ -146,7 +146,7 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
     [self send: @"PUT" toPath: @"/target-tweets" body: nil];
     NSDate *date1 = [NSDate date];
     [self send: @"POST" toPath: @"/_replicate" body: 
-     @"{\"source\":\"http://10.0.1.71:5984/tweets\", \"target\":\"target-tweets\"}"];
+     @"{\"source\":\"http://10.17.16.88:5984/tweets\", \"target\":\"target-tweets\"}"];
     NSDate *date2 = [NSDate date];
     NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
     NSLog(@"Pull replication took %lu seconds", (unsigned long)diff);    
@@ -155,7 +155,7 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
 - (void) downloadPerformanceTweets {
     NSLog(@"Downloading equivalent file Tweets");
     NSDate *date1 = [NSDate date];
-    NSURL* url = [NSURL URLWithString: @"http://10.0.1.71:5984/files/test/tweets.couch"];
+    NSURL* url = [NSURL URLWithString: @"http://10.17.16.88:5984/files/test/tweets.couch"];
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL: url];
     request.HTTPMethod = @"GET";
     NSURLResponse* response = nil;
