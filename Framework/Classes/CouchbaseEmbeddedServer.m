@@ -153,22 +153,23 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
 
 // Body of the pthread that runs Erlang (and CouchDB)
 - (void)erlangThread {
-	char* erlang_args[12] = {"beam", "--", "-noinput",
+	char* erlang_args[15] = {"beam", "--", "-noinput",
+        "-sasl", "errlog_type", "error",  // Change "error" to "all" to re-enable progress reports
 		"-eval", "R = application:start(couch), io:format(\"~w~n\",[R]).",
-		"-root", NULL, "-couch_ini"};
+		"-root", NULL, "-couch_ini", NULL, NULL, NULL, NULL};
     int erlang_argc;
     {
         // Alloc some paths to pass in as args to erl_start:
         NSAutoreleasePool* pool = [NSAutoreleasePool new];
         char* erl_root = strdup([[_bundlePath stringByAppendingPathComponent:@"erlang"]
                                             fileSystemRepresentation]);
-        erlang_args[6] = erl_root;
+        erlang_args[9] = erl_root;
         // Yes, there are up to four layers of .ini files: Default, iOS, app, local.
-        erlang_args[8] = strdup([[_bundlePath stringByAppendingPathComponent:@"default.ini"]
+        erlang_args[11] = strdup([[_bundlePath stringByAppendingPathComponent:@"default.ini"]
                                             fileSystemRepresentation]);
-        erlang_args[9] = strdup([[_documentsDirectory stringByAppendingPathComponent:
+        erlang_args[12] = strdup([[_documentsDirectory stringByAppendingPathComponent:
                                             @"default_ios.ini"] fileSystemRepresentation]);
-        erlang_argc = 10;
+        erlang_argc = 13;
         if (_iniFilePath)
             erlang_args[erlang_argc++] = strdup([_iniFilePath fileSystemRepresentation]);
         erlang_args[erlang_argc++] = strdup([self.localIniFilePath fileSystemRepresentation]);
