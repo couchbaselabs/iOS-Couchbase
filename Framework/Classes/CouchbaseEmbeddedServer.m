@@ -137,11 +137,6 @@ static const NSTimeInterval kWaitTimeout = 10.0;    // How long to wait for Couc
         return NO;
     }
     
-    if (_iniFilePath && ![self installItemNamed:_iniFilePath fromDir:nil
-                                          toDir:_documentsDirectory
-                                        replace: YES])
-        return NO;
-
     // Customize & install default_ios.ini:
     if (![self installTemplateNamed: @"default_ios.ini"
                             fromDir: _bundlePath
