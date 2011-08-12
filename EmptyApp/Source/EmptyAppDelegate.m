@@ -23,6 +23,7 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"------ Empty App: application:didFinishLaunchingWithOptions:");
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
@@ -32,6 +33,26 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
     NSAssert([cb start], @"Couchbase couldn't start! Error = %@", cb.error);
     sCouchbase = cb;
     return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@"------ Empty App: applicationWillResignActive");
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    NSLog(@"------ Empty App: applicationDidEnterBackground");
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    NSLog(@"------ Empty App: applicationWillEnterForeground");
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@"------ Empty App: applicationDidBecomeActive");
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSLog(@"------ Empty App: applicationWillTerminate");
 }
 
 
