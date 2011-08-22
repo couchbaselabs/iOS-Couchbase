@@ -99,12 +99,24 @@ CouchbaseEmbeddedServer* sCouchbase;  // Used by the unit tests
         [self send: @"GET" toPath: @"/testdb/doc1" body: nil];
         
         NSLog(@"Everything works!");
-        
-        [self replicationPerformance];
-        [self downloadPerformance];
-        [self replicationPerformanceTweets];
-        [self downloadPerformanceTweets];
+
+        [self replicationSingle];        
+//        [self replicationPerformance];
+//        [self downloadPerformance];
+//        [self replicationPerformanceTweets];
+//        [self downloadPerformanceTweets];
     }
+}
+
+- (void) replicationSingle {
+    NSLog(@"Replication single testing...");
+    [self send: @"PUT" toPath: @"/photoshare" body: nil];
+    NSDate *date1 = [NSDate date];
+    [self send: @"POST" toPath: @"/_replicate" body: 
+     @"{\"source\":\"http://single.couchbase.net/example\", \"target\":\"photoshare\"}"];
+    NSDate *date2 = [NSDate date];
+    NSTimeInterval diff = [date2 timeIntervalSinceDate:date1];
+    NSLog(@"Photo replication took %lu seconds", (unsigned long)diff);    
 }
 
 - (void) replicationPerformance {
